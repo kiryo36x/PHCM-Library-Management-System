@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73D361C2-6DED-4057-A939-777B39862C75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PHCM_last_na_to</RootNamespace>
+    <AssemblyName>PHCM last na to</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BooksDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catana Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CatanaDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CatanaPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="catana_button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBooks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBooks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exited.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exited.Designer.cs">
+      <DependentUpon>Exited.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBooksForm.Designer.cs">
+      <DependentUpon>AddBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddStudentInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddStudentInformationForm.Designer.cs">
+      <DependentUpon>AddStudentInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministratorForm.Designer.cs">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueBooksForm.Designer.cs">
+      <DependentUpon>IssueBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuickOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuickOverviewForm.Designer.cs">
+      <DependentUpon>QuickOverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReturnBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReturnBookForm.Designer.cs">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReturnDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReturnDetailsForm.Designer.cs">
+      <DependentUpon>ReturnDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowIssueBookData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowIssueBookData.Designer.cs">
+      <DependentUpon>ShowIssueBookData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\showReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\showReturnBook.Designer.cs">
+      <DependentUpon>showReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentDetailsForm.Designer.cs">
+      <DependentUpon>StudentDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewBooksForm.Designer.cs">
+      <DependentUpon>ViewBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewStudent.Designer.cs">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBooks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueBooks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBooksData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueBooksData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssueDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="issueDetails1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>issueDetails1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogInCapstoneDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="returnbook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>returnbook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnBook1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnBook1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnBookDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReturnDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentdetails1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentdetails1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentDetails2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDetails2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Information.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_Information.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxNiCatana.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxNiCatana.Designer.cs">
+      <DependentUpon>TextBoxNiCatana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add books\AddedSuccessfully.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add books\AddedSuccessfully.Designer.cs">
+      <DependentUpon>AddedSuccessfully.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add books\Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add books\Author.Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add books\Deleting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add books\Deleting.Designer.cs">
+      <DependentUpon>Deleting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add books\Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add books\Quantity.Designer.cs">
+      <DependentUpon>Quantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\EmptyField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\EmptyField.Designer.cs">
+      <DependentUpon>EmptyField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\EmptyPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\EmptyPicture.Designer.cs">
+      <DependentUpon>EmptyPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentContact1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentContact1.Designer.cs">
+      <DependentUpon>StudentContact1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentName.Designer.cs">
+      <DependentUpon>StudentName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentNumber.Designer.cs">
+      <DependentUpon>StudentNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toast Message for add student information\Successfully Registered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\Successfully Registered.Designer.cs">
+      <DependentUpon>Successfully Registered.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Catana Button.resx">
+      <DependentUpon>Catana Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exited.resx">
+      <DependentUpon>Exited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddBooksForm.resx">
+      <DependentUpon>AddBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddStudentInformationForm.resx">
+      <DependentUpon>AddStudentInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdministratorForm.resx">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IssueBooksForm.resx">
+      <DependentUpon>IssueBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuickOverviewForm.resx">
+      <DependentUpon>QuickOverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReturnBookForm.resx">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReturnDetailsForm.resx">
+      <DependentUpon>ReturnDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowIssueBookData.resx">
+      <DependentUpon>ShowIssueBookData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\showReturnBook.resx">
+      <DependentUpon>showReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentDetailsForm.resx">
+      <DependentUpon>StudentDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewBooksForm.resx">
+      <DependentUpon>ViewBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewStudent.resx">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxNiCatana.resx">
+      <DependentUpon>TextBoxNiCatana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add books\AddedSuccessfully.resx">
+      <DependentUpon>AddedSuccessfully.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add books\Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add books\Deleting.resx">
+      <DependentUpon>Deleting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add books\Quantity.resx">
+      <DependentUpon>Quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\EmptyField.resx">
+      <DependentUpon>EmptyField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\EmptyPicture.resx">
+      <DependentUpon>EmptyPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\StudentContact1.resx">
+      <DependentUpon>StudentContact1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\StudentName.resx">
+      <DependentUpon>StudentName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\StudentNumber.resx">
+      <DependentUpon>StudentNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\Successfully Registered.resx">
+      <DependentUpon>Successfully Registered.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Admin.xsc">
+      <DependentUpon>Admin.xsd</DependentUpon>
+    </None>
+    <None Include="Admin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Admin.xss">
+      <DependentUpon>Admin.xsd</DependentUpon>
+    </None>
+    <None Include="BooksDatabase.xsc">
+      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+    </None>
+    <None Include="BooksDatabase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BooksDatabase.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BooksDatabase.xss">
+      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBooks.xsc">
+      <DependentUpon>DataBooks.xsd</DependentUpon>
+    </None>
+    <None Include="DataBooks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBooks.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBooks.xss">
+      <DependentUpon>DataBooks.xsd</DependentUpon>
+    </None>
+    <None Include="IssueBooks.xsc">
+      <DependentUpon>IssueBooks.xsd</DependentUpon>
+    </None>
+    <None Include="IssueBooks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueBooks.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssueBooks.xss">
+      <DependentUpon>IssueBooks.xsd</DependentUpon>
+    </None>
+    <None Include="IssueBooksData.xsc">
+      <DependentUpon>IssueBooksData.xsd</DependentUpon>
+    </None>
+    <None Include="IssueBooksData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueBooksData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssueBooksData.xss">
+      <DependentUpon>IssueBooksData.xsd</DependentUpon>
+    </None>
+    <None Include="IssueDetails.xsc">
+      <DependentUpon>IssueDetails.xsd</DependentUpon>
+    </None>
+    <None Include="IssueDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssueDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssueDetails.xss">
+      <DependentUpon>IssueDetails.xsd</DependentUpon>
+    </None>
+    <None Include="issueDetails1.xsc">
+      <DependentUpon>issueDetails1.xsd</DependentUpon>
+    </None>
+    <None Include="issueDetails1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>issueDetails1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="issueDetails1.xss">
+      <DependentUpon>issueDetails1.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet.xsc">
+      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet.xss">
+      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet1.xsc">
+      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet1.xss">
+      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet2.xsc">
+      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet2.xss">
+      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet3.xsc">
+      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet3.xss">
+      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet4.xsc">
+      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet4.xss">
+      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet5.xsc">
+      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet5.xss">
+      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet6.xsc">
+      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet6.xss">
+      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet7.xsc">
+      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet7.xss">
+      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet8.xsc">
+      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="LogInCapstoneDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogInCapstoneDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LogInCapstoneDataSet8.xss">
+      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="returnbook.xsc">
+      <DependentUpon>returnbook.xsd</DependentUpon>
+    </None>
+    <None Include="returnbook.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>returnbook.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="returnbook.xss">
+      <DependentUpon>returnbook.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnBook1.xsc">
+      <DependentUpon>ReturnBook1.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnBook1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnBook1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReturnBook1.xss">
+      <DependentUpon>ReturnBook1.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnBookDetails.xsc">
+      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnBookDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnBookDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReturnBookDetails.xss">
+      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnDetails.xsc">
+      <DependentUpon>ReturnDetails.xsd</DependentUpon>
+    </None>
+    <None Include="ReturnDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReturnDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReturnDetails.xss">
+      <DependentUpon>ReturnDetails.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDetails.xsc">
+      <DependentUpon>StudentDetails.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDetails.xss">
+      <DependentUpon>StudentDetails.xsd</DependentUpon>
+    </None>
+    <None Include="studentdetails1.xsc">
+      <DependentUpon>studentdetails1.xsd</DependentUpon>
+    </None>
+    <None Include="studentdetails1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentdetails1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentdetails1.xss">
+      <DependentUpon>studentdetails1.xsd</DependentUpon>
+    </None>
+    <None Include="studentDetails2.xsc">
+      <DependentUpon>studentDetails2.xsd</DependentUpon>
+    </None>
+    <None Include="studentDetails2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDetails2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDetails2.xss">
+      <DependentUpon>studentDetails2.xsd</DependentUpon>
+    </None>
+    <None Include="Student_Details.xsc">
+      <DependentUpon>Student_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Student_Details.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_Details.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_Details.xss">
+      <DependentUpon>Student_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Student_Information.xsc">
+      <DependentUpon>Student_Information.xsd</DependentUpon>
+    </None>
+    <None Include="Student_Information.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_Information.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_Information.xss">
+      <DependentUpon>Student_Information.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Music and Sound\Notice.wav" />
+    <Content Include="Music and Sound\Windows Exclamation.wav" />
+    <Content Include="Resources1\background.jpg" />
+    <Content Include="Resources1\canva.png" />
+    <Content Include="Resources1\download.png" />
+    <Content Include="Resources1\image %283%29.ico" />
+    <Content Include="Resources1\image %283%29.png" />
+    <Content Include="Resources1\image %284%29.ico" />
+    <Content Include="Resources1\image %284%29.png" />
+    <Content Include="Resources1\image %285%29.png" />
+    <Content Include="Resources1\image %286%29.png" />
+    <Content Include="Resources1\images.png" />
+    <Content Include="Resources1\incorrect.png" />
+    <Content Include="Resources1\library.jpg" />
+    <Content Include="Resources1\library1.jpg" />
+    <Content Include="Resources1\Loading.png" />
+    <Content Include="Resources1\lock.png" />
+    <Content Include="Resources1\perpetual help header.png" />
+    <Content Include="Resources1\Untitled %28700 x 468 px%29.png" />
+    <Content Include="Resources1\users-alt %281%29 %281%29.ico" />
+    <Content Include="Resources1\users-alt %281%29 %281%291.ico" />
+    <Content Include="Resources1\users-alt %281%29.ico" />
+    <None Include="Resources\issue book.png" />
+    <None Include="Resources\bokokosk.png" />
+    <None Include="Resources\Book one.png" />
+    <None Include="Resources\Book.png" />
+    <None Include="Resources\Book.jpg" />
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\Your paragraph text2.png" />
+    <None Include="Resources\design purposes3.png" />
+    <None Include="Resources\design purposes2.png" />
+    <None Include="Resources\Add books.png" />
+    <None Include="Resources\design purposes.png" />
+    <None Include="Resources\Design.png" />
+    <None Include="Resources\16410.png" />
+    <None Include="Resources\Triangle.png" />
+    <None Include="Resources\Your paragraph text.png" />
+    <None Include="Resources\Literally last.png" />
+    <None Include="Resources\Last student.jpg" />
+    <None Include="Resources\Student.jpg" />
+    <None Include="Resources\Student Information1.png" />
+    <None Include="Resources\Student Information.png" />
+    <None Include="Resources\1_BMdNGcek6kqR5J5pwjQwAw.png" />
+    <None Include="Resources\559011235c7aee8908b633df2172cd17.jpg" />
+    <None Include="Resources\28-coding-memes-for-smart-and-spicy-ladies-fixing-bugs-and-forgoing-romance.jpeg" />
+    <None Include="Resources\1_KcQUEkOQ1LoMDHkMZ-Yymw.jpg" />
+    <None Include="Resources\1_Yb2W5n4-ZyQZ8ggggHGCZA.png" />
+    <None Include="Resources\hq720.jpg" />
+    <None Include="Resources\67b9538cb16dab9dc8111046f1d1eff9.jpg" />
+    <None Include="Resources\hero-bg-1-scaled-1.jpeg" />
+    <None Include="Resources\Construction1.png" />
+    <None Include="Resources\Construction.png" />
+    <None Include="Resources\Legit na logo.png" />
+    <None Include="Resources\Real Logo.png" />
+    <None Include="Resources\perpetual help header.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\image %286%29.png" />
+    <None Include="Resources\image %285%29.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\canva.png" />
+    <None Include="Resources\Untitled %28700 x 468 px%29.png" />
+    <None Include="Resources\Loading.png" />
+    <None Include="Resources\image %283%29.png" />
+    <None Include="Resources\image %284%29.png" />
+    <None Include="Resources\incorrect.png" />
+    <None Include="Resources\library.jpg" />
+    <None Include="Resources\users-alt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Picture of the books\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
