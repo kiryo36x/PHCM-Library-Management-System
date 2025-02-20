@@ -56,6 +56,22 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.takePicture = new System.Windows.Forms.Button();
+            this.CameraPanel = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.realTimeCamera = new System.Windows.Forms.PictureBox();
+            this.takepicbtn = new System.Windows.Forms.Button();
+            this.exitCmbtn = new System.Windows.Forms.Button();
+            this.saveimgbtn = new System.Windows.Forms.Button();
+            this.cameraSelection = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureEffect = new System.Windows.Forms.Panel();
+            this.PictureTake = new System.Windows.Forms.PictureBox();
+            this.fileName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
@@ -65,11 +81,15 @@
             this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.CameraPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureTake)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.takePicture);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.ImagePath);
             this.panel1.Controls.Add(this.changeImagebtn);
@@ -160,7 +180,7 @@
             this.changeImagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeImagebtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeImagebtn.ForeColor = System.Drawing.Color.White;
-            this.changeImagebtn.Location = new System.Drawing.Point(229, 527);
+            this.changeImagebtn.Location = new System.Drawing.Point(95, 530);
             this.changeImagebtn.Name = "changeImagebtn";
             this.changeImagebtn.Size = new System.Drawing.Size(216, 66);
             this.changeImagebtn.TabIndex = 12;
@@ -376,6 +396,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.CameraPanel);
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.panel2);
             this.panel11.Controls.Add(this.View);
@@ -411,6 +432,197 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "STUDENT INFORMATION";
             // 
+            // takePicture
+            // 
+            this.takePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.takePicture.FlatAppearance.BorderSize = 0;
+            this.takePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.takePicture.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takePicture.ForeColor = System.Drawing.Color.White;
+            this.takePicture.Location = new System.Drawing.Point(341, 530);
+            this.takePicture.Name = "takePicture";
+            this.takePicture.Size = new System.Drawing.Size(216, 66);
+            this.takePicture.TabIndex = 16;
+            this.takePicture.Text = "Take Picture";
+            this.takePicture.UseVisualStyleBackColor = false;
+            this.takePicture.Click += new System.EventHandler(this.takePicture_Click);
+            // 
+            // CameraPanel
+            // 
+            this.CameraPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.CameraPanel.Controls.Add(this.label3);
+            this.CameraPanel.Controls.Add(this.fileName);
+            this.CameraPanel.Controls.Add(this.pictureEffect);
+            this.CameraPanel.Controls.Add(this.PictureTake);
+            this.CameraPanel.Controls.Add(this.label2);
+            this.CameraPanel.Controls.Add(this.cameraSelection);
+            this.CameraPanel.Controls.Add(this.saveimgbtn);
+            this.CameraPanel.Controls.Add(this.exitCmbtn);
+            this.CameraPanel.Controls.Add(this.takepicbtn);
+            this.CameraPanel.Controls.Add(this.realTimeCamera);
+            this.CameraPanel.Controls.Add(this.panel17);
+            this.CameraPanel.Controls.Add(this.panel16);
+            this.CameraPanel.Controls.Add(this.panel15);
+            this.CameraPanel.Controls.Add(this.panel14);
+            this.CameraPanel.Location = new System.Drawing.Point(0, 93);
+            this.CameraPanel.Name = "CameraPanel";
+            this.CameraPanel.Size = new System.Drawing.Size(1287, 651);
+            this.CameraPanel.TabIndex = 17;
+            this.CameraPanel.Visible = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1287, 2);
+            this.panel14.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(1285, 2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(2, 649);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(0, 649);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1285, 2);
+            this.panel16.TabIndex = 1;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(0, 2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(2, 647);
+            this.panel17.TabIndex = 1;
+            // 
+            // realTimeCamera
+            // 
+            this.realTimeCamera.Location = new System.Drawing.Point(174, 69);
+            this.realTimeCamera.Name = "realTimeCamera";
+            this.realTimeCamera.Size = new System.Drawing.Size(964, 430);
+            this.realTimeCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.realTimeCamera.TabIndex = 2;
+            this.realTimeCamera.TabStop = false;
+            // 
+            // takepicbtn
+            // 
+            this.takepicbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.takepicbtn.FlatAppearance.BorderSize = 0;
+            this.takepicbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.takepicbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takepicbtn.ForeColor = System.Drawing.Color.White;
+            this.takepicbtn.Location = new System.Drawing.Point(545, 562);
+            this.takepicbtn.Name = "takepicbtn";
+            this.takepicbtn.Size = new System.Drawing.Size(216, 66);
+            this.takepicbtn.TabIndex = 17;
+            this.takepicbtn.Text = "TAKE PICTURE";
+            this.takepicbtn.UseVisualStyleBackColor = false;
+            this.takepicbtn.Click += new System.EventHandler(this.takepicbtn_Click);
+            // 
+            // exitCmbtn
+            // 
+            this.exitCmbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.exitCmbtn.FlatAppearance.BorderSize = 0;
+            this.exitCmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitCmbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitCmbtn.ForeColor = System.Drawing.Color.White;
+            this.exitCmbtn.Location = new System.Drawing.Point(222, 562);
+            this.exitCmbtn.Name = "exitCmbtn";
+            this.exitCmbtn.Size = new System.Drawing.Size(216, 66);
+            this.exitCmbtn.TabIndex = 18;
+            this.exitCmbtn.Text = "EXIT";
+            this.exitCmbtn.UseVisualStyleBackColor = false;
+            this.exitCmbtn.Click += new System.EventHandler(this.exitCmbtn_Click);
+            // 
+            // saveimgbtn
+            // 
+            this.saveimgbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.saveimgbtn.FlatAppearance.BorderSize = 0;
+            this.saveimgbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveimgbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveimgbtn.ForeColor = System.Drawing.Color.White;
+            this.saveimgbtn.Location = new System.Drawing.Point(855, 562);
+            this.saveimgbtn.Name = "saveimgbtn";
+            this.saveimgbtn.Size = new System.Drawing.Size(216, 66);
+            this.saveimgbtn.TabIndex = 19;
+            this.saveimgbtn.Text = "SAVE";
+            this.saveimgbtn.UseVisualStyleBackColor = false;
+            this.saveimgbtn.Click += new System.EventHandler(this.saveimgbtn_Click);
+            // 
+            // cameraSelection
+            // 
+            this.cameraSelection.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.cameraSelection.FormattingEnabled = true;
+            this.cameraSelection.Location = new System.Drawing.Point(658, 16);
+            this.cameraSelection.Name = "cameraSelection";
+            this.cameraSelection.Size = new System.Drawing.Size(236, 39);
+            this.cameraSelection.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(491, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "SELECT CAMERA:";
+            // 
+            // pictureEffect
+            // 
+            this.pictureEffect.BackColor = System.Drawing.Color.White;
+            this.pictureEffect.Location = new System.Drawing.Point(174, 69);
+            this.pictureEffect.Name = "pictureEffect";
+            this.pictureEffect.Size = new System.Drawing.Size(964, 430);
+            this.pictureEffect.TabIndex = 22;
+            this.pictureEffect.Visible = false;
+            // 
+            // PictureTake
+            // 
+            this.PictureTake.Location = new System.Drawing.Point(174, 69);
+            this.PictureTake.Name = "PictureTake";
+            this.PictureTake.Size = new System.Drawing.Size(964, 430);
+            this.PictureTake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureTake.TabIndex = 25;
+            this.PictureTake.TabStop = false;
+            this.PictureTake.Visible = false;
+            // 
+            // fileName
+            // 
+            this.fileName.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.fileName.ForeColor = System.Drawing.Color.Black;
+            this.fileName.Location = new System.Drawing.Point(495, 517);
+            this.fileName.Name = "fileName";
+            this.fileName.Size = new System.Drawing.Size(321, 36);
+            this.fileName.TabIndex = 27;
+            this.fileName.Enter += new System.EventHandler(this.fileName_Enter);
+            this.fileName.Leave += new System.EventHandler(this.fileName_Leave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(496, 520);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 30);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Enter Picture Name                    ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // AddStudentInformationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -439,6 +651,10 @@
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.CameraPanel.ResumeLayout(false);
+            this.CameraPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureTake)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,5 +689,21 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button takePicture;
+        private System.Windows.Forms.Panel CameraPanel;
+        private System.Windows.Forms.PictureBox realTimeCamera;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button exitCmbtn;
+        private System.Windows.Forms.Button takepicbtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cameraSelection;
+        private System.Windows.Forms.Button saveimgbtn;
+        private System.Windows.Forms.Panel pictureEffect;
+        private System.Windows.Forms.PictureBox PictureTake;
+        private System.Windows.Forms.TextBox fileName;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -53,6 +53,9 @@
             this.ImagePath = new System.Windows.Forms.TextBox();
             this.changeImagebtn = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.genrelbl = new System.Windows.Forms.Label();
+            this.genretxtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,11 +64,13 @@
             this.panel7.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
@@ -84,7 +89,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel8.Controls.Add(this.issuedDate);
-            this.panel8.Location = new System.Drawing.Point(47, 547);
+            this.panel8.Location = new System.Drawing.Point(49, 623);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(593, 67);
             this.panel8.TabIndex = 17;
@@ -382,6 +387,41 @@
             this.textBox2.Size = new System.Drawing.Size(421, 39);
             this.textBox2.TabIndex = 14;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.panel3.Controls.Add(this.genrelbl);
+            this.panel3.Controls.Add(this.genretxtbox);
+            this.panel3.Location = new System.Drawing.Point(47, 543);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(593, 67);
+            this.panel3.TabIndex = 22;
+            // 
+            // genrelbl
+            // 
+            this.genrelbl.AutoSize = true;
+            this.genrelbl.BackColor = System.Drawing.Color.White;
+            this.genrelbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genrelbl.ForeColor = System.Drawing.Color.DimGray;
+            this.genrelbl.Location = new System.Drawing.Point(89, 16);
+            this.genrelbl.Name = "genrelbl";
+            this.genrelbl.Size = new System.Drawing.Size(424, 41);
+            this.genrelbl.TabIndex = 5;
+            this.genrelbl.Text = "Select a Book to Display Genre";
+            // 
+            // genretxtbox
+            // 
+            this.genretxtbox.BackColor = System.Drawing.Color.White;
+            this.genretxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.genretxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.genretxtbox.ForeColor = System.Drawing.Color.Black;
+            this.genretxtbox.Location = new System.Drawing.Point(7, 5);
+            this.genretxtbox.Name = "genretxtbox";
+            this.genretxtbox.ReadOnly = true;
+            this.genretxtbox.Size = new System.Drawing.Size(582, 69);
+            this.genretxtbox.TabIndex = 3;
+            this.genretxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // IssueBooksForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -408,6 +448,8 @@
             this.ButtonPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,5 +481,8 @@
         private System.Windows.Forms.TextBox issuedDate;
         private System.Windows.Forms.ComboBox bookNameComboBox;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label genrelbl;
+        private System.Windows.Forms.TextBox genretxtbox;
     }
 }

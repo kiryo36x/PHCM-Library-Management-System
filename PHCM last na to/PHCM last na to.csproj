@@ -48,6 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -73,10 +82,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Admin.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BooksDatabase.Designer.cs">
+    <Compile Include="Books.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+      <DependentUpon>Books.xsd</DependentUpon>
     </Compile>
     <Compile Include="Catana Button.cs">
       <SubType>Component</SubType>
@@ -89,16 +98,6 @@
     </Compile>
     <Compile Include="catana_button.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Database1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataBooks.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBooks.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -208,70 +207,10 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
-    <Compile Include="IssueBooks.Designer.cs">
+    <Compile Include="IssuedBooks.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IssueBooks.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IssueBooksData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IssueBooksData.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IssueDetails.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IssueDetails.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="issueDetails1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>issueDetails1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LogInCapstoneDataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
+      <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -281,50 +220,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources.Designer.cs" />
-    <Compile Include="returnbook.Designer.cs">
+    <Compile Include="ReturnBooks.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>returnbook.xsd</DependentUpon>
+      <DependentUpon>ReturnBooks.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ReturnBook1.Designer.cs">
+    <Compile Include="StudentInformation.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ReturnBook1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ReturnBookDetails.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ReturnDetails.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReturnDetails.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StudentDetails.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentDetails.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="studentdetails1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>studentdetails1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="studentDetails2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>studentDetails2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Student_Details.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student_Details.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Student_Information.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Student_Information.xsd</DependentUpon>
+      <DependentUpon>StudentInformation.xsd</DependentUpon>
     </Compile>
     <Compile Include="TextBoxNiCatana.cs">
       <SubType>UserControl</SubType>
@@ -498,181 +402,27 @@
     <None Include="Admin.xss">
       <DependentUpon>Admin.xsd</DependentUpon>
     </None>
-    <None Include="BooksDatabase.xsc">
-      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+    <None Include="Books.xsc">
+      <DependentUpon>Books.xsd</DependentUpon>
     </None>
-    <None Include="BooksDatabase.xsd">
+    <None Include="Books.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BooksDatabase.Designer.cs</LastGenOutput>
+      <LastGenOutput>Books.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BooksDatabase.xss">
-      <DependentUpon>BooksDatabase.xsd</DependentUpon>
+    <None Include="Books.xss">
+      <DependentUpon>Books.xsd</DependentUpon>
     </None>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    <None Include="IssuedBooks.xsc">
+      <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </None>
-    <None Include="Database1DataSet.xsd">
+    <None Include="IssuedBooks.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>IssuedBooks.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataBooks.xsc">
-      <DependentUpon>DataBooks.xsd</DependentUpon>
-    </None>
-    <None Include="DataBooks.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataBooks.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataBooks.xss">
-      <DependentUpon>DataBooks.xsd</DependentUpon>
-    </None>
-    <None Include="IssueBooks.xsc">
-      <DependentUpon>IssueBooks.xsd</DependentUpon>
-    </None>
-    <None Include="IssueBooks.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IssueBooks.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IssueBooks.xss">
-      <DependentUpon>IssueBooks.xsd</DependentUpon>
-    </None>
-    <None Include="IssueBooksData.xsc">
-      <DependentUpon>IssueBooksData.xsd</DependentUpon>
-    </None>
-    <None Include="IssueBooksData.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IssueBooksData.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IssueBooksData.xss">
-      <DependentUpon>IssueBooksData.xsd</DependentUpon>
-    </None>
-    <None Include="IssueDetails.xsc">
-      <DependentUpon>IssueDetails.xsd</DependentUpon>
-    </None>
-    <None Include="IssueDetails.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IssueDetails.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IssueDetails.xss">
-      <DependentUpon>IssueDetails.xsd</DependentUpon>
-    </None>
-    <None Include="issueDetails1.xsc">
-      <DependentUpon>issueDetails1.xsd</DependentUpon>
-    </None>
-    <None Include="issueDetails1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>issueDetails1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="issueDetails1.xss">
-      <DependentUpon>issueDetails1.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet.xsc">
-      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet.xss">
-      <DependentUpon>LogInCapstoneDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet1.xsc">
-      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet1.xss">
-      <DependentUpon>LogInCapstoneDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet2.xsc">
-      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet2.xss">
-      <DependentUpon>LogInCapstoneDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet3.xsc">
-      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet3.xss">
-      <DependentUpon>LogInCapstoneDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet4.xsc">
-      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet4.xss">
-      <DependentUpon>LogInCapstoneDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet5.xsc">
-      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet5.xss">
-      <DependentUpon>LogInCapstoneDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet6.xsc">
-      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet6.xss">
-      <DependentUpon>LogInCapstoneDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet7.xsc">
-      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet7.xss">
-      <DependentUpon>LogInCapstoneDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet8.xsc">
-      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="LogInCapstoneDataSet8.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInCapstoneDataSet8.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInCapstoneDataSet8.xss">
-      <DependentUpon>LogInCapstoneDataSet8.xsd</DependentUpon>
+    <None Include="IssuedBooks.xss">
+      <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -684,104 +434,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="returnbook.xsc">
-      <DependentUpon>returnbook.xsd</DependentUpon>
+    <None Include="ReturnBooks.xsc">
+      <DependentUpon>ReturnBooks.xsd</DependentUpon>
     </None>
-    <None Include="returnbook.xsd">
+    <None Include="ReturnBooks.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>returnbook.Designer.cs</LastGenOutput>
+      <LastGenOutput>ReturnBooks.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="returnbook.xss">
-      <DependentUpon>returnbook.xsd</DependentUpon>
+    <None Include="ReturnBooks.xss">
+      <DependentUpon>ReturnBooks.xsd</DependentUpon>
     </None>
-    <None Include="ReturnBook1.xsc">
-      <DependentUpon>ReturnBook1.xsd</DependentUpon>
+    <None Include="StudentInformation.xsc">
+      <DependentUpon>StudentInformation.xsd</DependentUpon>
     </None>
-    <None Include="ReturnBook1.xsd">
+    <None Include="StudentInformation.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReturnBook1.Designer.cs</LastGenOutput>
+      <LastGenOutput>StudentInformation.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ReturnBook1.xss">
-      <DependentUpon>ReturnBook1.xsd</DependentUpon>
-    </None>
-    <None Include="ReturnBookDetails.xsc">
-      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
-    </None>
-    <None Include="ReturnBookDetails.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReturnBookDetails.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ReturnBookDetails.xss">
-      <DependentUpon>ReturnBookDetails.xsd</DependentUpon>
-    </None>
-    <None Include="ReturnDetails.xsc">
-      <DependentUpon>ReturnDetails.xsd</DependentUpon>
-    </None>
-    <None Include="ReturnDetails.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ReturnDetails.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ReturnDetails.xss">
-      <DependentUpon>ReturnDetails.xsd</DependentUpon>
-    </None>
-    <None Include="StudentDetails.xsc">
-      <DependentUpon>StudentDetails.xsd</DependentUpon>
-    </None>
-    <None Include="StudentDetails.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StudentDetails.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StudentDetails.xss">
-      <DependentUpon>StudentDetails.xsd</DependentUpon>
-    </None>
-    <None Include="studentdetails1.xsc">
-      <DependentUpon>studentdetails1.xsd</DependentUpon>
-    </None>
-    <None Include="studentdetails1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>studentdetails1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="studentdetails1.xss">
-      <DependentUpon>studentdetails1.xsd</DependentUpon>
-    </None>
-    <None Include="studentDetails2.xsc">
-      <DependentUpon>studentDetails2.xsd</DependentUpon>
-    </None>
-    <None Include="studentDetails2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>studentDetails2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="studentDetails2.xss">
-      <DependentUpon>studentDetails2.xsd</DependentUpon>
-    </None>
-    <None Include="Student_Details.xsc">
-      <DependentUpon>Student_Details.xsd</DependentUpon>
-    </None>
-    <None Include="Student_Details.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Student_Details.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Student_Details.xss">
-      <DependentUpon>Student_Details.xsd</DependentUpon>
-    </None>
-    <None Include="Student_Information.xsc">
-      <DependentUpon>Student_Information.xsd</DependentUpon>
-    </None>
-    <None Include="Student_Information.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Student_Information.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Student_Information.xss">
-      <DependentUpon>Student_Information.xsd</DependentUpon>
+    <None Include="StudentInformation.xss">
+      <DependentUpon>StudentInformation.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -791,13 +464,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="Music and Sound\Notice.wav" />
     <Content Include="Music and Sound\Windows Exclamation.wav" />
     <Content Include="Resources1\background.jpg" />
@@ -884,6 +550,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Picture of the books\" />
+    <Folder Include="Student Picture\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

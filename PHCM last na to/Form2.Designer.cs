@@ -80,12 +80,6 @@
             this.titleText3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.USERincMG1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.BGPnL.SuspendLayout();
             this.CTPNLAppearBX.SuspendLayout();
             this.SRNPNLAppearbx.SuspendLayout();
@@ -95,14 +89,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.USERincMG1)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // BGPnL
             // 
             this.BGPnL.BackColor = System.Drawing.Color.Black;
             this.BGPnL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BGPnL.Controls.Add(this.panel5);
             this.BGPnL.Controls.Add(this.label6);
             this.BGPnL.Controls.Add(this.CHCKPW);
             this.BGPnL.Controls.Add(this.CTPNLAppearBX);
@@ -164,7 +156,7 @@
             this.CTPNLAppearBX.Controls.Add(this.panel16);
             this.CTPNLAppearBX.Controls.Add(this.panel17);
             this.CTPNLAppearBX.Controls.Add(this.CTReminder);
-            this.CTPNLAppearBX.Location = new System.Drawing.Point(232, 287);
+            this.CTPNLAppearBX.Location = new System.Drawing.Point(232, 282);
             this.CTPNLAppearBX.Name = "CTPNLAppearBX";
             this.CTPNLAppearBX.Size = new System.Drawing.Size(543, 18);
             this.CTPNLAppearBX.TabIndex = 19;
@@ -225,7 +217,7 @@
             this.SRNPNLAppearbx.Controls.Add(this.panel12);
             this.SRNPNLAppearbx.Controls.Add(this.panel13);
             this.SRNPNLAppearbx.Controls.Add(this.SRREMINDER);
-            this.SRNPNLAppearbx.Location = new System.Drawing.Point(232, 233);
+            this.SRNPNLAppearbx.Location = new System.Drawing.Point(232, 228);
             this.SRNPNLAppearbx.Name = "SRNPNLAppearbx";
             this.SRNPNLAppearbx.Size = new System.Drawing.Size(543, 18);
             this.SRNPNLAppearbx.TabIndex = 18;
@@ -286,7 +278,7 @@
             this.MDNPNLAppearbx.Controls.Add(this.panel8);
             this.MDNPNLAppearbx.Controls.Add(this.panel9);
             this.MDNPNLAppearbx.Controls.Add(this.MDNReminder);
-            this.MDNPNLAppearbx.Location = new System.Drawing.Point(232, 179);
+            this.MDNPNLAppearbx.Location = new System.Drawing.Point(232, 174);
             this.MDNPNLAppearbx.Name = "MDNPNLAppearbx";
             this.MDNPNLAppearbx.Size = new System.Drawing.Size(543, 18);
             this.MDNPNLAppearbx.TabIndex = 17;
@@ -347,7 +339,7 @@
             this.FNPNLappearbx.Controls.Add(this.panel2);
             this.FNPNLappearbx.Controls.Add(this.panel1);
             this.FNPNLappearbx.Controls.Add(this.FNlettersREMINDbx);
-            this.FNPNLappearbx.Location = new System.Drawing.Point(232, 125);
+            this.FNPNLappearbx.Location = new System.Drawing.Point(232, 119);
             this.FNPNLappearbx.Name = "FNPNLappearbx";
             this.FNPNLappearbx.Size = new System.Drawing.Size(543, 18);
             this.FNPNLappearbx.TabIndex = 13;
@@ -693,67 +685,6 @@
             this.USERincMG1.TabStop = false;
             this.USERincMG1.Visible = false;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.panel18);
-            this.panel5.Controls.Add(this.panel19);
-            this.panel5.Controls.Add(this.panel20);
-            this.panel5.Controls.Add(this.panel21);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(232, 341);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(543, 18);
-            this.panel5.TabIndex = 20;
-            this.panel5.Visible = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Black;
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel18.Location = new System.Drawing.Point(542, 1);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(1, 16);
-            this.panel18.TabIndex = 15;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Black;
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel19.Location = new System.Drawing.Point(1, 17);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(542, 1);
-            this.panel19.TabIndex = 16;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Black;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(0, 1);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1, 17);
-            this.panel20.TabIndex = 14;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Black;
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(543, 1);
-            this.panel21.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(243, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Numbers only!";
-            this.label1.Visible = false;
-            // 
             // Register
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -796,8 +727,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.USERincMG1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -856,11 +785,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconPictureBox USERincMG1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label1;
     }
 }

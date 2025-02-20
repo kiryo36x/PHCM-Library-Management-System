@@ -58,6 +58,9 @@
             this.SaveBtn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.genrelbl = new System.Windows.Forms.Label();
+            this.genretxtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -68,11 +71,13 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel3);
@@ -94,7 +99,7 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.conditiontxtbox);
-            this.panel10.Location = new System.Drawing.Point(52, 660);
+            this.panel10.Location = new System.Drawing.Point(54, 674);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(593, 67);
             this.panel10.TabIndex = 5124125;
@@ -132,7 +137,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel8.Controls.Add(this.returnDatelbl);
             this.panel8.Controls.Add(this.returnDatetxtbox);
-            this.panel8.Location = new System.Drawing.Point(52, 581);
+            this.panel8.Location = new System.Drawing.Point(54, 513);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(593, 67);
             this.panel8.TabIndex = 21;
@@ -166,7 +171,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel3.Controls.Add(this.issueDatelbl);
             this.panel3.Controls.Add(this.issueDatetxtbox);
-            this.panel3.Location = new System.Drawing.Point(51, 499);
+            this.panel3.Location = new System.Drawing.Point(53, 431);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(593, 67);
             this.panel3.TabIndex = 20;
@@ -200,7 +205,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel5.Controls.Add(this.publishedDatelbl);
             this.panel5.Controls.Add(this.publishedDatetxtbox);
-            this.panel5.Location = new System.Drawing.Point(51, 416);
+            this.panel5.Location = new System.Drawing.Point(53, 347);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(593, 67);
             this.panel5.TabIndex = 19;
@@ -235,7 +240,7 @@
             this.panel7.Controls.Add(this.studentNamelbl);
             this.panel7.Controls.Add(this.textBox2);
             this.panel7.Controls.Add(this.studentNameComboBox);
-            this.panel7.Location = new System.Drawing.Point(51, 330);
+            this.panel7.Location = new System.Drawing.Point(53, 265);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(593, 67);
             this.panel7.TabIndex = 18;
@@ -286,7 +291,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.panel6.Controls.Add(this.Authorlbl);
             this.panel6.Controls.Add(this.Authortxtbox);
-            this.panel6.Location = new System.Drawing.Point(52, 240);
+            this.panel6.Location = new System.Drawing.Point(54, 185);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(593, 67);
             this.panel6.TabIndex = 17;
@@ -297,11 +302,11 @@
             this.Authorlbl.BackColor = System.Drawing.Color.White;
             this.Authorlbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Authorlbl.ForeColor = System.Drawing.Color.DimGray;
-            this.Authorlbl.Location = new System.Drawing.Point(39, 17);
+            this.Authorlbl.Location = new System.Drawing.Point(34, 17);
             this.Authorlbl.Name = "Authorlbl";
-            this.Authorlbl.Size = new System.Drawing.Size(532, 41);
+            this.Authorlbl.Size = new System.Drawing.Size(538, 41);
             this.Authorlbl.TabIndex = 1241412;
-            this.Authorlbl.Text = "Select a Book to display Authors Name";
+            this.Authorlbl.Text = "Select a Book to display Author\'s Name";
             // 
             // Authortxtbox
             // 
@@ -322,7 +327,7 @@
             this.panel4.Controls.Add(this.Booknamelbl);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.bookNameComboBox);
-            this.panel4.Location = new System.Drawing.Point(51, 152);
+            this.panel4.Location = new System.Drawing.Point(53, 106);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(593, 67);
             this.panel4.TabIndex = 16;
@@ -445,6 +450,41 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "RETURN BOOK";
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.panel11.Controls.Add(this.genrelbl);
+            this.panel11.Controls.Add(this.genretxtbox);
+            this.panel11.Location = new System.Drawing.Point(54, 594);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(593, 67);
+            this.panel11.TabIndex = 1241413;
+            // 
+            // genrelbl
+            // 
+            this.genrelbl.AutoSize = true;
+            this.genrelbl.BackColor = System.Drawing.Color.White;
+            this.genrelbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genrelbl.ForeColor = System.Drawing.Color.DimGray;
+            this.genrelbl.Location = new System.Drawing.Point(98, 17);
+            this.genrelbl.Name = "genrelbl";
+            this.genrelbl.Size = new System.Drawing.Size(421, 41);
+            this.genrelbl.TabIndex = 1241412;
+            this.genrelbl.Text = "Select a Book to display Genre";
+            // 
+            // genretxtbox
+            // 
+            this.genretxtbox.BackColor = System.Drawing.Color.White;
+            this.genretxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.genretxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.genretxtbox.ForeColor = System.Drawing.Color.Black;
+            this.genretxtbox.Location = new System.Drawing.Point(6, 6);
+            this.genretxtbox.Name = "genretxtbox";
+            this.genretxtbox.ReadOnly = true;
+            this.genretxtbox.Size = new System.Drawing.Size(582, 69);
+            this.genretxtbox.TabIndex = 1;
+            this.genretxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ReturnBookForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -476,6 +516,8 @@
             this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -512,5 +554,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox studentNameComboBox;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label genrelbl;
+        private System.Windows.Forms.TextBox genretxtbox;
     }
 }

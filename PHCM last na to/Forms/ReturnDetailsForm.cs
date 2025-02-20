@@ -51,8 +51,10 @@ namespace PHCM_last_na_to.Forms
 
         private void ReturnDetailsForm_Load(object sender, EventArgs e)  // This runs when the form loads
         {
-            // TODO: This line of code loads data into the 'returnDetails.returnBook' table. You can move, or remove it, as needed.
-            this.returnBookTableAdapter.Fill(this.returnDetails.returnBook);
+            // TODO: This line of code loads data into the 'returnBooks.returnBook' table. You can move, or remove it, as needed.
+            this.returnBookTableAdapter.Fill(this.returnBooks.returnBook);
+            // TODO: This line of code loads data into the 'returnBooks.returnBook' table. You can move, or remove it, as needed.
+            this.returnBookTableAdapter.Fill(this.returnBooks.returnBook);            
         }
 
         private void searchbox_Enter(object sender, EventArgs e)  // This runs when you click inside the search box
@@ -146,7 +148,7 @@ namespace PHCM_last_na_to.Forms
                 DataTable dt = new DataTable();  // Creates a new table for all the books
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition FROM returnBook";  // SQL query to get all books
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition, genre FROM returnBook";  // SQL query to get all books
                     using (SqlCommand cmd = new SqlCommand(query, connect))  // Executes the SQL query
                     {
                         connect.Open();  // Opens the database connection
@@ -198,7 +200,7 @@ namespace PHCM_last_na_to.Forms
                     DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                     // Retrieves the id from the selected row in the DataGridView
-                    int id = Convert.ToInt32(selectedRow.Cells["idDataGridViewTextBoxColumn"].Value); // Gets the id
+                    int id = Convert.ToInt32(selectedRow.Cells["idDataGridViewTextBoxColumn1"].Value); // Gets the id
 
                     // Calls the DeleteRow method with the id of the selected row
                     DeleteRow(id);

@@ -5,7 +5,11 @@ using System.Windows.Forms;  // Provides classes for creating Windows Forms appl
 using System.IO;  // Allows for file input/output operations, like reading/writing files (e.g., File, FileStream, StreamReader).
 using System.Data.SqlClient;  // Includes classes needed to interact with SQL Server databases (e.g., SqlConnection, SqlCommand).
 using PHCM_last_na_to.Toast_Messsage_Form;  // Custom class for displaying toast messages related to a specific form in your project (e.g., notifications).
-using PHCM_last_na_to.Toast_Message_for_add_student_information;  // Custom class for showing toast messages related to adding student information.
+using PHCM_last_na_to.Toast_Message_for_add_student_information;
+using AForge.Video.DirectShow;
+using AForge.Video;
+using System.Drawing;
+using System.Threading.Tasks;
 
 namespace PHCM_last_na_to.Forms
 {
@@ -15,6 +19,9 @@ namespace PHCM_last_na_to.Forms
         SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30");
         // This variable holds the currently opened child form
         private Form currentChildForm;
+        private readonly object _imageLock = new object();
+        VideoCaptureDevice Capture;
+        FilterInfoCollection info;
 
         // Constructor for AddStudentInformationForm - Initializes the form
         public AddStudentInformationForm()
@@ -281,6 +288,12 @@ namespace PHCM_last_na_to.Forms
             changeImagebtn.Text = "Add Picture";
             Picture.Image = Properties.Resources._16410; // Reset image to default
             Nametxtbox.Focus(); // Focus back on the Name textbox
+
+            // Make sure labels are visible again after saving
+            Namelbl.Visible = true;
+            Numberlbl.Visible = true;
+            Contactlbl.Visible = true;
+            Departmentlbl.Visible = true;
         }
 
         // Click event for the PictureBox, prevents it from receiving focus when clicked
@@ -318,5 +331,148 @@ namespace PHCM_last_na_to.Forms
             Nametxtbox.Focus(); // Focus on the Name textbox for user input
         }
 
+        private void takePicture_Click(object sender, EventArgs e)
+        {
+            CameraPanel.Visible = true;
+            info = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            int usbCameraIndex = -1; // Store index of USB Camera
+            cameraSelection.Items.Clear();
+
+            for (int i = 0; i < info.Count; i++)
+            {
+                cameraSelection.Items.Add(info[i].Name);
+
+                // Automatically select USB Camera
+                if (info[i].Name.ToLower().Contains("usb"))
+                {
+                    usbCameraIndex = i;
+                }
+            }
+
+            // Select USB Camera if found, otherwise default to index 0
+            cameraSelection.SelectedIndex = usbCameraIndex != -1 ? usbCameraIndex : 0;
+
+            Capture = new VideoCaptureDevice(info[cameraSelection.SelectedIndex].MonikerString);
+            Capture.NewFrame += Camera_on;
+            Capture.Start();
+        }
+
+        private void exitCmbtn_Click(object sender, EventArgs e)
+        {
+            CameraPanel.Visible = false;
+            PictureTake.Visible = false;
+            takepicbtn.Text = "TAKE PICTURE";
+            StopCamera();
+        }
+        private void StopCamera()
+        {
+            if (Capture != null && Capture.IsRunning)
+            {
+                Capture.SignalToStop();
+                Capture.WaitForStop();
+                Capture.NewFrame -= Camera_on;
+            }
+        }
+        private void Camera_on(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap frame = (Bitmap)eventArgs.Frame.Clone();
+            frame.RotateFlip(RotateFlipType.RotateNoneFlipX);           
+            realTimeCamera.Image = frame;
+        }        
+
+        private void takepicbtn_Click(object sender, EventArgs e)
+        {
+            if (takepicbtn.Text == "TAKE PICTURE")
+            {
+                CaptureImage();
+                PictureTake.Visible = true;
+                takepicbtn.Text = "RESET";
+            }
+            else if (takepicbtn.Text == "RESET")
+            {
+                PictureTake.Visible = false;
+                takepicbtn.Text = "TAKE PICTURE";
+            }
+        }
+        private async void CaptureImage()
+        {
+            pictureEffect.Visible = true;
+            PictureTake.Image = realTimeCamera.Image; // Assuming realTimeCamera is a PictureBox displaying the camera feed
+            await Task.Delay(1000);
+            pictureEffect.Visible = false;
+        }
+
+        private void saveimgbtn_Click(object sender, EventArgs e)
+        {
+            // Check if the PictureTake image is not null
+            if (PictureTake.Image != null)
+            {
+                if (string.IsNullOrEmpty(fileName.Text))
+                {
+                    EmptyField emptyField = new EmptyField();
+                    emptyField.Show();
+                }
+                else
+                {
+                    // Sanitize the file name to remove invalid characters
+                    string sanitizedFileName = SanitizeFileName(fileName.Text);
+                    string Filename = @"C:\Users\blood\source\repos\PHCM last na to\PHCM last na to\Student Picture\" + sanitizedFileName + ".jpg";
+
+                    try
+                    {
+                        // Save the PictureTake image as JPEG
+                        PictureTake.Image.Save(Filename, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                        // Load the saved image into the PictureBox
+                        Picture.Image = Image.FromFile(Filename); // Load the image from the saved file path
+                        ImagePath.Text = Filename; // Update the ImagePath textbox with the saved file path
+
+                        // Hide the camera panel and reset the button text
+                        CameraPanel.Visible = false;
+                        PictureTake.Visible = false;
+                        takepicbtn.Text = "TAKE PICTURE";
+                        StopCamera();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error saving or loading image: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                EmptyPicture emptyPicture = new EmptyPicture();
+                emptyPicture.Show();
+            }
+        }
+
+        // Method to sanitize the file name
+        private string SanitizeFileName(string fileName)
+        {
+            foreach (char c in System.IO.Path.GetInvalidFileNameChars())
+            {
+                fileName = fileName.Replace(c.ToString(), "");
+            }
+            return fileName;
+        }
+
+        private void fileName_Enter(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            fileName.Focus();
+        }
+
+        private void fileName_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(fileName.Text))
+            {
+                label3.Visible = true;
+            }
+        }       
     }
 }

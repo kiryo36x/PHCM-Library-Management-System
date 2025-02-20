@@ -1,22 +1,14 @@
-﻿// Including external code files that handle toast messages related to adding books, student information, and general message forms
-using PHCM_last_na_to.Toast_Message_for_add_books;
-using PHCM_last_na_to.Toast_Message_for_add_student_information;
-
-// Importing basic namespaces required for working with data, graphics, and user interface components in a Windows Forms application
+﻿using PHCM_last_na_to.Toast_Message_for_add_student_information; // Importing basic namespaces required for working with data, graphics, and user interface components in a Windows Forms application
 using System;  // This is for basic programming functionality
-using System.Data;  // This is used for working with data, such as retrieving or sending information to a database
 using System.Data.SqlClient;  // This is for connecting to and interacting with a SQL database
 using System.Drawing;  // This helps in working with colors, fonts, and other visual elements
-using System.Linq;  // This provides functionality for processing collections of data in an easy-to-read way
 using System.Windows.Forms;  // This is for creating windows (forms) and controls, like buttons and text boxes, that users interact with in the application
 
 
 namespace PHCM_last_na_to.Forms
 {
     public partial class ReturnBookForm : Form
-    {
-        //connecting to database
-        SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30");
+    {       
         // Declaring a variable to hold the current form that's being shown inside the parent form
         private Form currentChildForm;
 
@@ -72,8 +64,8 @@ namespace PHCM_last_na_to.Forms
             }
 
             // SQL query to insert the returned book details into the returnBook table
-            string insertQuery = "INSERT INTO returnBook (bookName, author, studentName, publishedDate, issueDate, returnDate, condition) " +
-                                 "VALUES(@bookName, @author, @studentName, @publishedDate, @issueDate, @returnDate, @condition)";
+            string insertQuery = "INSERT INTO returnBook (bookName, author, studentName, publishedDate, issueDate, returnDate, condition, genre) " +
+                                 "VALUES(@bookName, @author, @studentName, @publishedDate, @issueDate, @returnDate, @condition, @genre)";
 
             // SQL query to increase the quantity of the returned book in the books table
             string updateQuery = "UPDATE books SET quantity = quantity + 1 WHERE bookName = @bookName";
@@ -95,10 +87,11 @@ namespace PHCM_last_na_to.Forms
                         cmdInsert.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
                         cmdInsert.Parameters.AddWithValue("@author", Authortxtbox.Text); // Author Name
                         cmdInsert.Parameters.AddWithValue("@studentName", studentNameComboBox.SelectedItem.ToString()); // Student Name
-                        cmdInsert.Parameters.AddWithValue("@publishedDate", publishedDatetxtbox.Text); // Published Date
-                        cmdInsert.Parameters.AddWithValue("@issueDate", issueDatetxtbox.Text); // Issue Date
-                        cmdInsert.Parameters.AddWithValue("@returnDate", returnDatetxtbox.Text); // Return Date
+                        cmdInsert.Parameters.AddWithValue("@publishedDate", DateTime.Parse(publishedDatetxtbox.Text).Date); // Published Date
+                        cmdInsert.Parameters.AddWithValue("@issueDate", DateTime.Parse(issueDatetxtbox.Text).Date); // Issue Date
+                        cmdInsert.Parameters.AddWithValue("@returnDate", DateTime.Parse(returnDatetxtbox.Text).Date); // Return Date
                         cmdInsert.Parameters.AddWithValue("@condition", conditiontxtbox.Text); // Condition of the Book
+                        cmdInsert.Parameters.AddWithValue("@genre", genretxtbox.Text); // Author Name
                         cmdInsert.ExecuteNonQuery(); // Execute the query to insert data
                     }
 
@@ -129,6 +122,7 @@ namespace PHCM_last_na_to.Forms
                     returnDatetxtbox.Clear(); // Clear return date textbox
                     textBox1.Clear(); // Clear additional textbox (if used)
                     textBox2.Clear(); // Clear additional textbox (if used)
+                    genretxtbox.Clear(); // Clear genre textbox
 
                     bookNameComboBox.SelectedIndex = -1; // Reset book selection
                     studentNameComboBox.SelectedIndex = -1; // Reset student selection
@@ -141,6 +135,7 @@ namespace PHCM_last_na_to.Forms
                     publishedDatelbl.Visible = true;
                     issueDatelbl.Visible = true;
                     returnDatelbl.Visible = true;
+                    genrelbl.Visible = true;
 
                     conditiontxtbox.Clear(); // Clear condition textbox
                     label2.Visible = true; // Make label visible
@@ -170,6 +165,7 @@ namespace PHCM_last_na_to.Forms
             returnDatetxtbox.Clear();
             textBox1.Clear();
             textBox2.Clear();
+            genretxtbox.Clear();
 
             bookNameComboBox.SelectedIndex = -1;  //unselect the Combo Box
             studentNameComboBox.SelectedIndex = -1;
@@ -182,6 +178,7 @@ namespace PHCM_last_na_to.Forms
             publishedDatelbl.Visible = true;
             issueDatelbl.Visible = true;
             returnDatelbl.Visible = true;
+            genrelbl.Visible = true;
 
             conditiontxtbox.Clear(); //Clear the text box inside of Condition
             label2.Visible = true; //Make all label visible again
@@ -295,6 +292,7 @@ namespace PHCM_last_na_to.Forms
                 Authorlbl.Visible = false;
                 publishedDatelbl.Visible = false;
                 returnDatelbl.Visible = false;
+                genrelbl.Visible = false;
 
                 // Reset the student name ComboBox
                 studentNameComboBox.SelectedIndex = -1; // Unselect any previous selection
@@ -321,7 +319,7 @@ namespace PHCM_last_na_to.Forms
                 textBox1.Text = selectedBookName; // Display selected book name in textBox1
 
                 // SQL query to retrieve book details (author, published date, and issue date)
-                string query = "SELECT author, publishedDate, issueDate FROM issue WHERE bookName = @bookName";
+                string query = "SELECT author, publishedDate, issueDate, genre FROM issue WHERE bookName = @bookName";
 
                 // SQL query to retrieve student names who have borrowed this book
                 string studentQuery = "SELECT DISTINCT studentName FROM issue WHERE bookName = @bookName";
@@ -344,6 +342,7 @@ namespace PHCM_last_na_to.Forms
                                 {
                                     // Store the retrieved author name in the text box
                                     Authortxtbox.Text = reader["author"].ToString();
+                                    genretxtbox.Text = reader["genre"].ToString(); // Store the genre in the text box
 
                                     // Check if the published date exists in the database and format it properly
                                     publishedDatetxtbox.Text = reader["publishedDate"] != DBNull.Value

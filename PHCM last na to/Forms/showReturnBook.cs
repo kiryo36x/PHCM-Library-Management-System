@@ -34,8 +34,8 @@ namespace PHCM_last_na_to.Forms
         }
         private void showReturnBook_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'returnBook.returnBook' table. You can move, or remove it, as needed.
-            this.returnBookTableAdapter.Fill(this.returnBook.returnBook);
+            // TODO: This line of code loads data into the 'returnBooks.returnBook' table. You can move, or remove it, as needed.
+            this.returnBookTableAdapter.Fill(this.returnBooks.returnBook);                   
         }
         private void SearchBooks(string searchTerm)
         {
@@ -104,7 +104,7 @@ namespace PHCM_last_na_to.Forms
                 DataTable dt = new DataTable(); // Creates a new table to load all books.
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition FROM returnBook"; // SQL query to get all books.
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition, genre FROM returnBook"; // SQL query to get all books.
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         connect.Open(); // Opens the connection to the database.

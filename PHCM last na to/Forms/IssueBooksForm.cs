@@ -90,12 +90,14 @@ namespace PHCM_last_na_to.Forms
             studentNametxtbox.Clear(); // Clear student name textbox
             publishedDatetxtBox.Clear(); // Clear published date textbox
             textBox1.Clear(); // Clear additional textbox (if used)
+            genretxtbox.Clear(); // Clear genre textbox
 
             // Make labels visible again
             Booknamelbl.Visible = true;
             Authorlbl.Visible = true;
             studentNamelbl.Visible = true;
             publishedDatelbl.Visible = true;
+            genrelbl.Visible = true;
             publishedDatelbl.BringToFront(); // Bring label to front
         }
 
@@ -103,8 +105,8 @@ namespace PHCM_last_na_to.Forms
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             // SQL query to insert the issued book details into the "issue" table
-            string insertQuery = "INSERT INTO issue (bookName, author, studentName, publishedDate, issueDate) " +
-                                 "VALUES(@bookName, @author, @studentName, @publishedDate, @issueDate)";
+            string insertQuery = "INSERT INTO issue (bookName, author, studentName, publishedDate, issueDate, genre) " +
+                                 "VALUES(@bookName, @author, @studentName, @publishedDate, @issueDate, @genre)";
 
             // SQL query to reduce the book quantity in the "books" table (only if stock is available)
             string updateQuery = "UPDATE books SET quantity = quantity - 1 WHERE bookName = @bookName AND quantity > 0";
@@ -130,11 +132,12 @@ namespace PHCM_last_na_to.Forms
                         cmdInsert.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
                         cmdInsert.Parameters.AddWithValue("@author", AuthortxtBox.Text); // Author Name
                         cmdInsert.Parameters.AddWithValue("@studentName", studentNametxtbox.Text); // Student Name
-                        cmdInsert.Parameters.AddWithValue("@publishedDate", publishedDatetxtBox.Text); // Published Date
-                        cmdInsert.Parameters.AddWithValue("@issueDate", issuedDate.Text); // Issue Date
+                        cmdInsert.Parameters.AddWithValue("@publishedDate", DateTime.Parse(publishedDatetxtBox.Text).Date); // Published Date
+                        cmdInsert.Parameters.AddWithValue("@issueDate", DateTime.Parse(issuedDate.Text).Date); // Issue Date
 
                         // Set value for the update query
                         cmdUpdate.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
+                        cmdInsert.Parameters.AddWithValue("@genre", genretxtbox.Text); // Student Name
 
                         connect.Open(); // Open the database connection
 
@@ -158,12 +161,14 @@ namespace PHCM_last_na_to.Forms
                         studentNametxtbox.Clear(); // Clear student name textbox
                         publishedDatetxtBox.Clear(); // Clear published date textbox
                         textBox1.Clear(); // Clear additional textbox (if used)
+                        genretxtbox.Clear(); // Clear genre textbox
 
                         // Make labels visible again
                         Booknamelbl.Visible = true;
                         Authorlbl.Visible = true;
                         studentNamelbl.Visible = true;
                         publishedDatelbl.Visible = true;
+                        genrelbl.Visible = true;
                         publishedDatelbl.BringToFront(); // Bring label to front
                     }
                 }
@@ -236,13 +241,14 @@ namespace PHCM_last_na_to.Forms
                 Booknamelbl.Visible = false;
                 Authorlbl.Visible = false;
                 publishedDatelbl.Visible = false;
-                
+                genrelbl.Visible = false;
+
                 // Get selected book name
                 string selectedBookName = bookNameComboBox.SelectedItem.ToString();
                 textBox1.Text = selectedBookName;
                 // Fetch the details for the selected book
                 string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30";
-                string query = "SELECT datePick, author FROM books WHERE bookName = @bookName";
+                string query = "SELECT datePick, author, genre FROM books WHERE bookName = @bookName";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -256,6 +262,7 @@ namespace PHCM_last_na_to.Forms
                         // Display datePick and author in their respective TextBoxes
                         publishedDatetxtBox.Text = reader["datePick"].ToString();
                         AuthortxtBox.Text = reader["author"].ToString();
+                        genretxtbox.Text = reader["genre"].ToString();
                     }
                     connection.Close();
                 }

@@ -19,8 +19,8 @@ namespace PHCM_last_na_to.Forms
 
         private void QuickOverviewForm_Load(object sender, EventArgs e)
         {
-            // This code loads data from the 'issue' table into the form when it loads.
-            this.issueTableAdapter.Fill(this.issueDetails.issue);                                 
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);                                    
         }        
 
         private void next_Click(object sender, EventArgs e)

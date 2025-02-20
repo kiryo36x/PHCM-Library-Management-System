@@ -28,7 +28,8 @@ CREATE TABLE books
     datePick DATE NOT NULL,
     quantity BIGINT NOT NULL,
     bookPicture NVARCHAR(255) NOT NULL,
-    picture IMAGE NOT NULL
+    picture IMAGE NOT NULL,
+    genre NVARCHAR(100) NOT NULL
 )
 
 CREATE TABLE issue
@@ -38,7 +39,8 @@ CREATE TABLE issue
     author NVARCHAR(50) NOT NULL,
     studentName NVARCHAR(50) NOT NULL,
     publishedDate DATE NOT NULL,
-    issueDate DATE NOT NULL
+    issueDate DATE NOT NULL,
+    genre NVARCHAR(100) NOT NULL
 )
 
 CREATE TABLE returnBook
@@ -50,6 +52,7 @@ CREATE TABLE returnBook
     publishedDate DATE NOT NULL,
     issueDate DATE NOT NULL,
     returnDate DATE NOT NULL,
+    genre NVARCHAR(100) NOT NULL,
     condition NVARCHAR(4000) NOT NULL
 )
 
@@ -60,15 +63,15 @@ SELECT * FROM books
 SELECT * FROM issue
 SELECT * FROM returnBook
 
-ALTER TABLE returnBook
-ALTER COLUMN condition NVARCHAR(4000) NOT NULL;
+ALTER TABLE issue
+ADD genre NVARCHAR(100) NOT NULL
 
 DROP TABLE returnBook;
 ALTER TABLE books DROP COLUMN isDeleted;
 
 
-DELETE FROM books
-WHERE author = 'naruto';
+DELETE FROM returnBook
+WHERE author = 'NARUTO';
 
 UPDATE admin
 SET isAdmin = 1

@@ -17,8 +17,8 @@ namespace PHCM_last_na_to.Forms
 
         private void ViewStudent_Load(object sender, EventArgs e)
         {
-            // Loads data from the 'student' table into the studentDetails dataset
-            this.studentTableAdapter.Fill(this.studentDetails.student);
+            // TODO: This line of code loads data into the 'studentInformation.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.studentInformation.student);            
         }
 
         private void ReturnAddStudent_Click(object sender, EventArgs e)

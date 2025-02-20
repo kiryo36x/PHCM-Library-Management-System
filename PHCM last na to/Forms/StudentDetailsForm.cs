@@ -53,8 +53,8 @@ namespace PHCM_last_na_to.Forms
         // Event handler for when the StudentDetailsForm is loaded
         private void StudentDetailsForm_Load(object sender, EventArgs e)
         {
-            // Load data into the student table when the form is loaded
-            this.studentTableAdapter.Fill(this.student_Details.student);
+            // TODO: This line of code loads data into the 'studentInformation.student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.studentInformation.student);                   
         }
 
         // Event handler when the user clicks into the search box
@@ -214,15 +214,15 @@ namespace PHCM_last_na_to.Forms
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                 // Populate the textboxes with values from the selected row
-                studentNametxtbox.Text = selectedRow.Cells["studentNameDataGridViewTextBoxColumn"].Value?.ToString() ?? "";
-                studentNumbertxtbox.Text = selectedRow.Cells["studentNumberDataGridViewTextBoxColumn"].Value?.ToString() ?? "";
-                departmenttxtbox.Text = selectedRow.Cells["departmentDataGridViewTextBoxColumn"].Value?.ToString() ?? "";
-                contacttxtbox.Text = selectedRow.Cells["studentContactDataGridViewTextBoxColumn"].Value?.ToString() ?? "";
+                studentNametxtbox.Text = selectedRow.Cells["dataGridViewTextBoxColumn1"].Value?.ToString() ?? "";
+                studentNumbertxtbox.Text = selectedRow.Cells["dataGridViewTextBoxColumn2"].Value?.ToString() ?? "";
+                departmenttxtbox.Text = selectedRow.Cells["dataGridViewTextBoxColumn3"].Value?.ToString() ?? "";
+                contacttxtbox.Text = selectedRow.Cells["dataGridViewTextBoxColumn4"].Value?.ToString() ?? "";
 
                 // Check if there's an image associated with the row
-                if (selectedRow.Cells["studentImageDataGridViewImageColumn"].Value != DBNull.Value)
+                if (selectedRow.Cells["dataGridViewImageColumn1"].Value != DBNull.Value)
                 {
-                    byte[] imageData = (byte[])selectedRow.Cells["studentImageDataGridViewImageColumn"].Value; // Get image data from the database
+                    byte[] imageData = (byte[])selectedRow.Cells["dataGridViewImageColumn1"].Value; // Get image data from the database
                     using (MemoryStream ms = new MemoryStream(imageData)) // Convert byte data to image
                     {
                         Image originalImage = Image.FromStream(ms); // Create an image object from the byte data
@@ -261,7 +261,7 @@ namespace PHCM_last_na_to.Forms
                     DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                     // Retrieve the ID of the selected row
-                    int id = Convert.ToInt32(selectedRow.Cells["idDataGridViewTextBoxColumn"].Value); // Get the ID
+                    int id = Convert.ToInt32(selectedRow.Cells["idDataGridViewTextBoxColumn1"].Value); // Get the ID
 
                     // Call DeleteRow method to delete the record from the database
                     DeleteRow(id);
@@ -324,17 +324,17 @@ namespace PHCM_last_na_to.Forms
                     int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
                     // Retrieve the ID of the selected record
-                    int id = Convert.ToInt32(dataGridView1.Rows[rowIndex].Cells["idDataGridViewTextBoxColumn"].Value);
+                    int id = Convert.ToInt32(dataGridView1.Rows[rowIndex].Cells["idDataGridViewTextBoxColumn1"].Value);
 
                     // Call UpdateRow method to update the record in the database
                     UpdateRow(id);
                     
                     // Update the data grid with the new values
-                    dataGridView1.Rows[rowIndex].Cells["studentNameDataGridViewTextBoxColumn"].Value = studentNametxtbox.Text;
-                    dataGridView1.Rows[rowIndex].Cells["studentNumberDataGridViewTextBoxColumn"].Value = studentNumbertxtbox.Text;
-                    dataGridView1.Rows[rowIndex].Cells["departmentDataGridViewTextBoxColumn"].Value = departmenttxtbox.Text;
-                    dataGridView1.Rows[rowIndex].Cells["studentContactDataGridViewTextBoxColumn"].Value = contacttxtbox.Text;
-                    dataGridView1.Rows[rowIndex].Cells["studentImageDataGridViewImageColumn"].Value = picture.Image;
+                    dataGridView1.Rows[rowIndex].Cells["dataGridViewTextBoxColumn1"].Value = studentNametxtbox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["dataGridViewTextBoxColumn2"].Value = studentNumbertxtbox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["dataGridViewTextBoxColumn3"].Value = departmenttxtbox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["dataGridViewTextBoxColumn4"].Value = contacttxtbox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["dataGridViewImageColumn1"].Value = picture.Image;
                     LoadData(); // Reload the data
                 }
             }

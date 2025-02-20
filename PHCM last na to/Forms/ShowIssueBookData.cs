@@ -34,8 +34,8 @@ namespace PHCM_last_na_to.Forms
         }
         private void ShowIssueBookData_Load(object sender, EventArgs e)
         {
-            // This line loads data into the 'issue' table of the database when the form loads.
-            this.issueTableAdapter.Fill(this.issueBooksData.issue);
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);                     
         }
 
         private void srcbtn_Click(object sender, EventArgs e)

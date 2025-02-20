@@ -100,7 +100,7 @@ namespace PHCM_last_na_to.Forms
                 quantity.Show();  // Shows an error message if the condition contains letters
             }
             else if (string.IsNullOrEmpty(Booknametxtbox.Text) || string.IsNullOrEmpty(Authortxtbox.Text) ||
-                     string.IsNullOrEmpty(Conditiontxtbox.Text))
+                     string.IsNullOrEmpty(Conditiontxtbox.Text) || string.IsNullOrEmpty(genretxtbox.Text))
             {
                 EmptyField emptyField = new EmptyField();
                 emptyField.Show();  // Shows an error if any required field is empty
@@ -194,7 +194,7 @@ namespace PHCM_last_na_to.Forms
                             }
 
                             // SQL query to insert the new book into the database
-                            string insertQuery = "INSERT INTO books (bookName, author, datePick, quantity, bookPicture, picture) VALUES (@bookName, @author, @datePick, @quantity, @bookPicture, @picture)";
+                            string insertQuery = "INSERT INTO books (bookName, author, datePick, quantity, bookPicture, picture, genre) VALUES (@bookName, @author, @datePick, @quantity, @bookPicture, @picture, @genre)";
                             using (SqlCommand insertCmd = new SqlCommand(insertQuery, connect))
                             {
                                 insertCmd.Parameters.AddWithValue("@bookName", Booknametxtbox.Text);  // Add the book name to the query
@@ -202,6 +202,7 @@ namespace PHCM_last_na_to.Forms
                                 insertCmd.Parameters.AddWithValue("@datePick", publishedDate.Value.Date);  // Add the date selected to the query
                                 insertCmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(Conditiontxtbox.Text));  // Add the quantity to the query
                                 insertCmd.Parameters.AddWithValue("@bookPicture", finalFilePath);  // Add the path of the image to the query
+                                insertCmd.Parameters.AddWithValue("@genre", genretxtbox.Text);  // Add the author's name to the query
 
                                 // Save the image as a byte array
                                 if (Picture.Image != null)
@@ -235,10 +236,11 @@ namespace PHCM_last_na_to.Forms
                     addedSuccessfully.ShowDialog();  // Display the success message dialog
 
                     // Clear the input fields after saving the book
-                    Booknametxtbox.Text = "";
-                    Authortxtbox.Text = "";
-                    Conditiontxtbox.Text = "";
-                    ImagePath.Text = "";
+                    Booknametxtbox.Clear();
+                    Authortxtbox.Clear();
+                    Conditiontxtbox.Clear();
+                    ImagePath.Clear();
+                    genretxtbox.Clear();
                     changeImagebtn.Text = "Add Picture";
                     publishedDate.TextColor = Color.White;
                     textBox1.Clear();
@@ -248,6 +250,7 @@ namespace PHCM_last_na_to.Forms
                     Authorlbl.Visible = true;
                     Datelbl.Visible = true;
                     Conditionlbl.Visible = true;
+                    genrelbl.Visible = true;
                     Picture.Image = Properties.Resources._16410;  // Set a default image
                     Booknametxtbox.Focus();  // Focus on the book name text box again
                 }
@@ -273,10 +276,11 @@ namespace PHCM_last_na_to.Forms
         private void Deletebtn_Click(object sender, EventArgs e)
         {
             // Resets all the input fields and image
-            Booknametxtbox.Text = "";
-            Authortxtbox.Text = "";
-            Conditiontxtbox.Text = "";
-            ImagePath.Text = "";
+            Booknametxtbox.Clear();
+            Authortxtbox.Clear();
+            Conditiontxtbox.Clear();
+            ImagePath.Clear();
+            genretxtbox.Clear();
             changeImagebtn.Text = "Add Picture";
             publishedDate.TextColor = Color.White;
             textBox1.Clear();
@@ -286,6 +290,7 @@ namespace PHCM_last_na_to.Forms
             Authorlbl.Visible = true;
             Datelbl.Visible = true;
             Conditionlbl.Visible = true;
+            genrelbl.Visible = true;
             Picture.Image = Properties.Resources._16410;
             Booknametxtbox.Focus();  // Focus on the book name text box again
         }
@@ -418,6 +423,47 @@ namespace PHCM_last_na_to.Forms
         private void Datelbl_Click(object sender, EventArgs e)
         {
             publishedDate.Focus();
+        }
+
+        private void genrelbl_Click(object sender, EventArgs e)
+        {
+            genreselectorpanel.Visible = true;
+        }
+
+        private void genretxtbox_Click(object sender, EventArgs e)
+        {
+            genreselectorpanel.Visible = true;
+        }
+
+        private void closepnl_Click(object sender, EventArgs e)
+        {
+            genreselectorpanel.Visible = false;
+        }
+
+        private void hoverSelection(object sender, EventArgs e) // If the mouse hover is entered from the label  
+        {
+            if (sender is Label Hover)
+            {
+                Hover.BackColor = Color.FromArgb(76, 75, 105);
+            }
+        }
+
+        private void genreSelection(object sender, EventArgs e) // when the label is pressed
+        { 
+            if (sender is Label selection)
+            {
+                genretxtbox.Text = selection.Text;
+                genrelbl.Visible = false;
+                genreselectorpanel.Visible = false;
+            }
+        }
+
+        private void label44_MouseLeave(object sender, EventArgs e) // If the mouse hover is removed from the label       
+        {
+            if (sender is Label Hover)
+            {
+                Hover.BackColor = Color.FromArgb(31, 30, 68);
+            }   
         }
     }
 }

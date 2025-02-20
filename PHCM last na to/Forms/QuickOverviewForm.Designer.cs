@@ -41,22 +41,24 @@
             this.form1 = new System.Windows.Forms.Label();
             this.next = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publishedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.issueDetails = new PHCM_last_na_to.issueDetails();
             this.label1 = new System.Windows.Forms.Label();
-            this.issueTableAdapter = new PHCM_last_na_to.issueDetailsTableAdapters.issueTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.issuedBooks = new PHCM_last_na_to.IssuedBooks();
+            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.issueTableAdapter = new PHCM_last_na_to.IssuedBooksTableAdapters.issueTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issueDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // Question
@@ -176,12 +178,13 @@
             this.dataGridView1.ColumnHeadersHeight = 38;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookNameDataGridViewTextBoxColumn,
-            this.authorDataGridViewTextBoxColumn,
-            this.studentNameDataGridViewTextBoxColumn,
-            this.publishedDateDataGridViewTextBoxColumn,
-            this.issueDateDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
+            this.idDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.genreDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.issueBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -221,50 +224,37 @@
             this.dataGridView1.Size = new System.Drawing.Size(1287, 631);
             this.dataGridView1.TabIndex = 0;
             // 
-            // bookNameDataGridViewTextBoxColumn
+            // label1
             // 
-            this.bookNameDataGridViewTextBoxColumn.DataPropertyName = "bookName";
-            this.bookNameDataGridViewTextBoxColumn.HeaderText = "Book Name";
-            this.bookNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
-            this.bookNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookNameDataGridViewTextBoxColumn.Width = 300;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 11;
             // 
-            // authorDataGridViewTextBoxColumn
+            // label2
             // 
-            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
-            this.authorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
-            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.authorDataGridViewTextBoxColumn.Width = 250;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(505, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(295, 54);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ISSUE DETAILS";
             // 
-            // studentNameDataGridViewTextBoxColumn
+            // issuedBooks
             // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "studentName";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
-            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studentNameDataGridViewTextBoxColumn.Width = 250;
+            this.issuedBooks.DataSetName = "IssuedBooks";
+            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // publishedDateDataGridViewTextBoxColumn
+            // issueBindingSource
             // 
-            this.publishedDateDataGridViewTextBoxColumn.DataPropertyName = "publishedDate";
-            this.publishedDateDataGridViewTextBoxColumn.HeaderText = "Published Date";
-            this.publishedDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.publishedDateDataGridViewTextBoxColumn.Name = "publishedDateDataGridViewTextBoxColumn";
-            this.publishedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.publishedDateDataGridViewTextBoxColumn.Width = 250;
+            this.issueBindingSource.DataMember = "issue";
+            this.issueBindingSource.DataSource = this.issuedBooks;
             // 
-            // issueDateDataGridViewTextBoxColumn
+            // issueTableAdapter
             // 
-            this.issueDateDataGridViewTextBoxColumn.DataPropertyName = "issueDate";
-            this.issueDateDataGridViewTextBoxColumn.HeaderText = "Issued Date";
-            this.issueDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.issueDateDataGridViewTextBoxColumn.Name = "issueDateDataGridViewTextBoxColumn";
-            this.issueDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.issueDateDataGridViewTextBoxColumn.Width = 250;
+            this.issueTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -276,30 +266,59 @@
             this.idDataGridViewTextBoxColumn.Visible = false;
             this.idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // issueBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.issueBindingSource.DataMember = "issue";
-            this.issueBindingSource.DataSource = this.issueDetails;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "bookName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Book Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 250;
             // 
-            // issueDetails
+            // dataGridViewTextBoxColumn2
             // 
-            this.issueDetails.DataSetName = "issueDetails";
-            this.issueDetails.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "author";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Author";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 250;
             // 
-            // label1
+            // dataGridViewTextBoxColumn3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(536, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ISSUED DETAILS";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "studentName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Student Name";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 250;
             // 
-            // issueTableAdapter
+            // dataGridViewTextBoxColumn4
             // 
-            this.issueTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "publishedDate";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Published Date";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "issueDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Issue Date";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 250;
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            this.genreDataGridViewTextBoxColumn.DataPropertyName = "genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            this.genreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            this.genreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genreDataGridViewTextBoxColumn.Width = 250;
             // 
             // QuickOverviewForm
             // 
@@ -307,6 +326,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1287, 744);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.form1);
             this.Controls.Add(this.next);
             this.Controls.Add(this.searchbox);
@@ -325,8 +345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issueDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,14 +362,22 @@
         private System.Windows.Forms.TextBox searchbox;
         private FontAwesome.Sharp.IconPictureBox Question;
         private System.Windows.Forms.Label Notfound;
-        private issueDetails issueDetails;
-        private System.Windows.Forms.BindingSource issueBindingSource;
-        private issueDetailsTableAdapters.issueTableAdapter issueTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publishedDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private IssuedBooks issuedBooks;
+        private System.Windows.Forms.BindingSource issueBindingSource;
+        private IssuedBooksTableAdapters.issueTableAdapter issueTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
     }
 }
