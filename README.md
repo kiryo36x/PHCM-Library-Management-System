@@ -1,8 +1,3 @@
-# PHCM last na to
-Here's a structured project description for your **PHCM Library Management System**:  
-
----
-
 # **PHCM Library Management System**  
 
 The **PHCM Library Management System** is a digital solution designed to streamline book lending, student record management, and administrative tasks within the **Perpetual Help College of Manila** library. This system ensures efficient tracking of books, borrowing records, and user accounts, enhancing the overall library experience for both students and administrators.  
@@ -46,8 +41,15 @@ The **PHCM Library Management System** is a digital solution designed to streaml
 ✅ **User-Friendly Interface** – Simple navigation for both admins and students.  
 ✅ **Improved Library Workflow** – Reduces manual paperwork and speeds up book transactions.  
 
-This system is designed to enhance the **library experience** at PHCM, making borrowing and returning books more efficient while ensuring proper management of student and book records. 🚀📚  
+This system is designed to enhance the **library experience** at PHCM, making borrowing and returning books more efficient while ensuring proper management of student and book records. 
 
----
+### **ABOUT ADMINISTRATION MENU** ###
+To Access the Administration Menu. 
+Open Database, Find:
+"
+Where admin
+SET isAdmin = 1
+WHERE surname = 'catana';
+"
 
-Let me know if you need modifications! 😊
+Edit the surname and enter your existed account. 
