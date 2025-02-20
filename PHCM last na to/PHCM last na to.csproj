@@ -7,7 +7,7 @@
     <ProjectGuid>{73D361C2-6DED-4057-A939-777B39862C75}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PHCM_last_na_to</RootNamespace>
-    <AssemblyName>PHCM last na to</AssemblyName>
+    <AssemblyName>PHCM Library Management System</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PHCM-Library-Management-System-Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
@@ -466,6 +469,7 @@
   <ItemGroup>
     <Content Include="Music and Sound\Notice.wav" />
     <Content Include="Music and Sound\Windows Exclamation.wav" />
+    <Content Include="PHCM-Library-Management-System-Logo.ico" />
     <Content Include="Resources1\background.jpg" />
     <Content Include="Resources1\canva.png" />
     <Content Include="Resources1\download.png" />
