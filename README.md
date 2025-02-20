@@ -53,3 +53,13 @@ WHERE surname = 'catana';
 "
 
 Edit the surname and enter your existed account. 
+
+
+### FOR creating shortcut of this Project ###
+1. Import this Repository to you Visual studio
+2. Open Project in Visual Studio 2022
+3. Find the Drop-Down Box that says Debug, Near the Start Button.Change it from Debug to Release then Build (Ctrl + Shift + B).
+4. Close the Visual Studio 2022 then open File Explorer and find your project. Normally it's located in source\repos\(project name)
+5. open the folder > PHCM last na to > bin > Release
+6. Righ Click the Application type and More options, Click "Send To" then Desktop (Shortcut)
+7. Open the Project
