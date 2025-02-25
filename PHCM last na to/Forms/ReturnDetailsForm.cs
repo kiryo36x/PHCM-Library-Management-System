@@ -1,11 +1,7 @@
-﻿using PHCM_last_na_to.Toast_Message_for_add_books; // Imports the namespace for adding books toast messages
-using PHCM_last_na_to.Toast_Message_for_add_student_information; // Imports the namespace for adding student information toast messages
-using PHCM_last_na_to.Toast_Messsage_Form; // Imports the namespace for displaying toast message forms
-using System; // Imports the System namespace for basic functionality like console IO, basic types (e.g., string, int)
+﻿using System; // Imports the System namespace for basic functionality like console IO, basic types (e.g., string, int)
 using System.Data; // Imports the System.Data namespace for data-related functionalities like working with databases
 using System.Data.SqlClient; // Imports the namespace for SQL Server-specific data operations
 using System.Drawing; // Imports the System.Drawing namespace for working with graphics, colors, and images
-using System.Linq; // Imports the System.Linq namespace for LINQ (Language Integrated Query) operations like filtering and manipulating collections
 using System.Windows.Forms; // Imports the Windows Forms namespace for creating and managing forms, controls, and events in a Windows desktop application
 
 
@@ -193,7 +189,7 @@ namespace PHCM_last_na_to.Forms
             // Ensures that a row is selected in the DataGridView
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                DialogResult askUSR = MessageBox.Show("Do you wish to delete this account?", "You're About to Delete a Data!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult askUSR = MessageBox.Show("Do you wish to delete the selected Data?", "You're About to Delete a Data!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (askUSR == DialogResult.Yes)  // If user confirms deletion
                 {
                     // Gets the selected row

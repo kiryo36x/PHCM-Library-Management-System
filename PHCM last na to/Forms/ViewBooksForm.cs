@@ -49,13 +49,6 @@ namespace PHCM_last_na_to.Forms
             panel11.Visible = true; // Show a specific panel
             panel11.Enabled = true; // Enable the panel
         }
-
-        private void srcbtn_Click(object sender, EventArgs e)
-        {
-            // When the search button is clicked, search for books based on the text in the search box
-            SearchBooks(searchbox.Text);
-        }
-
         private void SearchBooks(string searchTerm)
         {
             Notfound.Visible = false; // Hide 'Not Found' message
@@ -169,6 +162,8 @@ namespace PHCM_last_na_to.Forms
         {
             try
             {
+                Notfound.Visible = false; // Hide 'Not Found' message
+                Question.Visible = false; // Hide 'Question' message
                 DataTable dt = new DataTable(); // Create a new DataTable for all books
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {

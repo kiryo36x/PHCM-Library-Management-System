@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.takePicture = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -41,9 +42,8 @@
             this.Nametxtbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Namelbl = new System.Windows.Forms.Label();
-            this.Numbertxtbox = new System.Windows.Forms.TextBox();
+            this.FirstNumbertxtbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Numberlbl = new System.Windows.Forms.Label();
             this.Departmenttxtbox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Departmentlbl = new System.Windows.Forms.Label();
@@ -54,24 +54,29 @@
             this.Deletebtn = new System.Windows.Forms.Button();
             this.View = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.takePicture = new System.Windows.Forms.Button();
             this.CameraPanel = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.realTimeCamera = new System.Windows.Forms.PictureBox();
-            this.takepicbtn = new System.Windows.Forms.Button();
-            this.exitCmbtn = new System.Windows.Forms.Button();
-            this.saveimgbtn = new System.Windows.Forms.Button();
-            this.cameraSelection = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fileName = new System.Windows.Forms.TextBox();
             this.pictureEffect = new System.Windows.Forms.Panel();
             this.PictureTake = new System.Windows.Forms.PictureBox();
-            this.fileName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cameraSelection = new System.Windows.Forms.ComboBox();
+            this.saveimgbtn = new System.Windows.Forms.Button();
+            this.exitCmbtn = new System.Windows.Forms.Button();
+            this.takepicbtn = new System.Windows.Forms.Button();
+            this.realTimeCamera = new System.Windows.Forms.PictureBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.startingIndexLbl = new System.Windows.Forms.Label();
+            this.SecondNumbertxtbox = new System.Windows.Forms.TextBox();
+            this.secondIndexLbl = new System.Windows.Forms.Label();
+            this.thirdIndexLbl = new System.Windows.Forms.Label();
+            this.ThirdNumbertxtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
@@ -80,10 +85,11 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.CameraPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureTake)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +105,21 @@
             this.panel1.Size = new System.Drawing.Size(615, 644);
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // takePicture
+            // 
+            this.takePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.takePicture.FlatAppearance.BorderSize = 0;
+            this.takePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.takePicture.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takePicture.ForeColor = System.Drawing.Color.White;
+            this.takePicture.Location = new System.Drawing.Point(341, 530);
+            this.takePicture.Name = "takePicture";
+            this.takePicture.Size = new System.Drawing.Size(216, 66);
+            this.takePicture.TabIndex = 16;
+            this.takePicture.Text = "Take Picture";
+            this.takePicture.UseVisualStyleBackColor = false;
+            this.takePicture.Click += new System.EventHandler(this.takePicture_Click);
             // 
             // panel6
             // 
@@ -237,42 +258,27 @@
             this.Namelbl.Text = "Enter Student Name";
             this.Namelbl.Click += new System.EventHandler(this.Namelbl_Click);
             // 
-            // Numbertxtbox
+            // FirstNumbertxtbox
             // 
-            this.Numbertxtbox.BackColor = System.Drawing.Color.White;
-            this.Numbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Numbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.Numbertxtbox.ForeColor = System.Drawing.Color.Black;
-            this.Numbertxtbox.Location = new System.Drawing.Point(6, 6);
-            this.Numbertxtbox.Name = "Numbertxtbox";
-            this.Numbertxtbox.Size = new System.Drawing.Size(582, 69);
-            this.Numbertxtbox.TabIndex = 1;
-            this.Numbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Numbertxtbox.Enter += new System.EventHandler(this.Numbertxtbox_Enter);
-            this.Numbertxtbox.Leave += new System.EventHandler(this.Numbertxtbox_Leave);
+            this.FirstNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
+            this.FirstNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FirstNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.FirstNumbertxtbox.ForeColor = System.Drawing.Color.Black;
+            this.FirstNumbertxtbox.Location = new System.Drawing.Point(124, 3);
+            this.FirstNumbertxtbox.Name = "FirstNumbertxtbox";
+            this.FirstNumbertxtbox.Size = new System.Drawing.Size(95, 69);
+            this.FirstNumbertxtbox.TabIndex = 1;
+            this.FirstNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.FirstNumbertxtbox.TextChanged += new System.EventHandler(this.FirstNumbertxtbox_TextChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
-            this.panel3.Controls.Add(this.Numberlbl);
-            this.panel3.Controls.Add(this.Numbertxtbox);
+            this.panel3.Controls.Add(this.panel13);
             this.panel3.Location = new System.Drawing.Point(13, 310);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(593, 67);
             this.panel3.TabIndex = 5;
-            // 
-            // Numberlbl
-            // 
-            this.Numberlbl.AutoSize = true;
-            this.Numberlbl.BackColor = System.Drawing.Color.White;
-            this.Numberlbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numberlbl.ForeColor = System.Drawing.Color.DimGray;
-            this.Numberlbl.Location = new System.Drawing.Point(145, 13);
-            this.Numberlbl.Name = "Numberlbl";
-            this.Numberlbl.Size = new System.Drawing.Size(314, 41);
-            this.Numberlbl.TabIndex = 3;
-            this.Numberlbl.Text = "Enter Student Number";
-            this.Numberlbl.Click += new System.EventHandler(this.Numberlbl_Click);
             // 
             // Departmenttxtbox
             // 
@@ -412,41 +418,6 @@
             this.panel11.Size = new System.Drawing.Size(1287, 744);
             this.panel11.TabIndex = 16;
             // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel12.Controls.Add(this.label1);
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1287, 100);
-            this.panel12.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(325, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(746, 81);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "STUDENT INFORMATION";
-            // 
-            // takePicture
-            // 
-            this.takePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.takePicture.FlatAppearance.BorderSize = 0;
-            this.takePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.takePicture.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.takePicture.ForeColor = System.Drawing.Color.White;
-            this.takePicture.Location = new System.Drawing.Point(341, 530);
-            this.takePicture.Name = "takePicture";
-            this.takePicture.Size = new System.Drawing.Size(216, 66);
-            this.takePicture.TabIndex = 16;
-            this.takePicture.Text = "Take Picture";
-            this.takePicture.UseVisualStyleBackColor = false;
-            this.takePicture.Click += new System.EventHandler(this.takePicture_Click);
-            // 
             // CameraPanel
             // 
             this.CameraPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -470,80 +441,68 @@
             this.CameraPanel.TabIndex = 17;
             this.CameraPanel.Visible = false;
             // 
-            // panel14
+            // label3
             // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1287, 2);
-            this.panel14.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(496, 520);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 30);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Enter Picture Name                    ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panel15
+            // fileName
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(1285, 2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(2, 649);
-            this.panel15.TabIndex = 1;
+            this.fileName.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.fileName.ForeColor = System.Drawing.Color.Black;
+            this.fileName.Location = new System.Drawing.Point(495, 517);
+            this.fileName.Name = "fileName";
+            this.fileName.Size = new System.Drawing.Size(321, 36);
+            this.fileName.TabIndex = 27;
+            this.fileName.Enter += new System.EventHandler(this.fileName_Enter);
+            this.fileName.Leave += new System.EventHandler(this.fileName_Leave);
             // 
-            // panel16
+            // pictureEffect
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(0, 649);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1285, 2);
-            this.panel16.TabIndex = 1;
+            this.pictureEffect.BackColor = System.Drawing.Color.White;
+            this.pictureEffect.Location = new System.Drawing.Point(173, 72);
+            this.pictureEffect.Name = "pictureEffect";
+            this.pictureEffect.Size = new System.Drawing.Size(964, 430);
+            this.pictureEffect.TabIndex = 22;
+            this.pictureEffect.Visible = false;
             // 
-            // panel17
+            // PictureTake
             // 
-            this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel17.Location = new System.Drawing.Point(0, 2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(2, 647);
-            this.panel17.TabIndex = 1;
+            this.PictureTake.Location = new System.Drawing.Point(174, 69);
+            this.PictureTake.Name = "PictureTake";
+            this.PictureTake.Size = new System.Drawing.Size(964, 430);
+            this.PictureTake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureTake.TabIndex = 25;
+            this.PictureTake.TabStop = false;
+            this.PictureTake.Visible = false;
             // 
-            // realTimeCamera
+            // label2
             // 
-            this.realTimeCamera.Location = new System.Drawing.Point(174, 69);
-            this.realTimeCamera.Name = "realTimeCamera";
-            this.realTimeCamera.Size = new System.Drawing.Size(964, 430);
-            this.realTimeCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.realTimeCamera.TabIndex = 2;
-            this.realTimeCamera.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(491, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "SELECT CAMERA:";
             // 
-            // takepicbtn
+            // cameraSelection
             // 
-            this.takepicbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
-            this.takepicbtn.FlatAppearance.BorderSize = 0;
-            this.takepicbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.takepicbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.takepicbtn.ForeColor = System.Drawing.Color.White;
-            this.takepicbtn.Location = new System.Drawing.Point(545, 562);
-            this.takepicbtn.Name = "takepicbtn";
-            this.takepicbtn.Size = new System.Drawing.Size(216, 66);
-            this.takepicbtn.TabIndex = 17;
-            this.takepicbtn.Text = "TAKE PICTURE";
-            this.takepicbtn.UseVisualStyleBackColor = false;
-            this.takepicbtn.Click += new System.EventHandler(this.takepicbtn_Click);
-            // 
-            // exitCmbtn
-            // 
-            this.exitCmbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
-            this.exitCmbtn.FlatAppearance.BorderSize = 0;
-            this.exitCmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitCmbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitCmbtn.ForeColor = System.Drawing.Color.White;
-            this.exitCmbtn.Location = new System.Drawing.Point(222, 562);
-            this.exitCmbtn.Name = "exitCmbtn";
-            this.exitCmbtn.Size = new System.Drawing.Size(216, 66);
-            this.exitCmbtn.TabIndex = 18;
-            this.exitCmbtn.Text = "EXIT";
-            this.exitCmbtn.UseVisualStyleBackColor = false;
-            this.exitCmbtn.Click += new System.EventHandler(this.exitCmbtn_Click);
+            this.cameraSelection.Font = new System.Drawing.Font("Nirmala UI", 14F);
+            this.cameraSelection.FormattingEnabled = true;
+            this.cameraSelection.Location = new System.Drawing.Point(658, 16);
+            this.cameraSelection.Name = "cameraSelection";
+            this.cameraSelection.Size = new System.Drawing.Size(236, 39);
+            this.cameraSelection.TabIndex = 20;
             // 
             // saveimgbtn
             // 
@@ -560,68 +519,170 @@
             this.saveimgbtn.UseVisualStyleBackColor = false;
             this.saveimgbtn.Click += new System.EventHandler(this.saveimgbtn_Click);
             // 
-            // cameraSelection
+            // exitCmbtn
             // 
-            this.cameraSelection.Font = new System.Drawing.Font("Nirmala UI", 14F);
-            this.cameraSelection.FormattingEnabled = true;
-            this.cameraSelection.Location = new System.Drawing.Point(658, 16);
-            this.cameraSelection.Name = "cameraSelection";
-            this.cameraSelection.Size = new System.Drawing.Size(236, 39);
-            this.cameraSelection.TabIndex = 20;
+            this.exitCmbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.exitCmbtn.FlatAppearance.BorderSize = 0;
+            this.exitCmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitCmbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitCmbtn.ForeColor = System.Drawing.Color.White;
+            this.exitCmbtn.Location = new System.Drawing.Point(222, 562);
+            this.exitCmbtn.Name = "exitCmbtn";
+            this.exitCmbtn.Size = new System.Drawing.Size(216, 66);
+            this.exitCmbtn.TabIndex = 18;
+            this.exitCmbtn.Text = "EXIT";
+            this.exitCmbtn.UseVisualStyleBackColor = false;
+            this.exitCmbtn.Click += new System.EventHandler(this.exitCmbtn_Click);
             // 
-            // label2
+            // takepicbtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(491, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 23);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "SELECT CAMERA:";
+            this.takepicbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.takepicbtn.FlatAppearance.BorderSize = 0;
+            this.takepicbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.takepicbtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takepicbtn.ForeColor = System.Drawing.Color.White;
+            this.takepicbtn.Location = new System.Drawing.Point(545, 562);
+            this.takepicbtn.Name = "takepicbtn";
+            this.takepicbtn.Size = new System.Drawing.Size(216, 66);
+            this.takepicbtn.TabIndex = 17;
+            this.takepicbtn.Text = "TAKE PICTURE";
+            this.takepicbtn.UseVisualStyleBackColor = false;
+            this.takepicbtn.Click += new System.EventHandler(this.takepicbtn_Click);
             // 
-            // pictureEffect
+            // realTimeCamera
             // 
-            this.pictureEffect.BackColor = System.Drawing.Color.White;
-            this.pictureEffect.Location = new System.Drawing.Point(174, 69);
-            this.pictureEffect.Name = "pictureEffect";
-            this.pictureEffect.Size = new System.Drawing.Size(964, 430);
-            this.pictureEffect.TabIndex = 22;
-            this.pictureEffect.Visible = false;
+            this.realTimeCamera.Location = new System.Drawing.Point(174, 69);
+            this.realTimeCamera.Name = "realTimeCamera";
+            this.realTimeCamera.Size = new System.Drawing.Size(964, 430);
+            this.realTimeCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.realTimeCamera.TabIndex = 2;
+            this.realTimeCamera.TabStop = false;
             // 
-            // PictureTake
+            // panel17
             // 
-            this.PictureTake.Location = new System.Drawing.Point(174, 69);
-            this.PictureTake.Name = "PictureTake";
-            this.PictureTake.Size = new System.Drawing.Size(964, 430);
-            this.PictureTake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureTake.TabIndex = 25;
-            this.PictureTake.TabStop = false;
-            this.PictureTake.Visible = false;
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(0, 2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(2, 647);
+            this.panel17.TabIndex = 1;
             // 
-            // fileName
+            // panel16
             // 
-            this.fileName.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.fileName.ForeColor = System.Drawing.Color.Black;
-            this.fileName.Location = new System.Drawing.Point(495, 517);
-            this.fileName.Name = "fileName";
-            this.fileName.Size = new System.Drawing.Size(321, 36);
-            this.fileName.TabIndex = 27;
-            this.fileName.Enter += new System.EventHandler(this.fileName_Enter);
-            this.fileName.Leave += new System.EventHandler(this.fileName_Leave);
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(0, 649);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1285, 2);
+            this.panel16.TabIndex = 1;
             // 
-            // label3
+            // panel15
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(496, 520);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 30);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Enter Picture Name                    ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(1285, 2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(2, 649);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1287, 2);
+            this.panel14.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel12.Controls.Add(this.label1);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1287, 100);
+            this.panel12.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(325, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(746, 81);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "STUDENT INFORMATION";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.ThirdNumbertxtbox);
+            this.panel13.Controls.Add(this.SecondNumbertxtbox);
+            this.panel13.Controls.Add(this.thirdIndexLbl);
+            this.panel13.Controls.Add(this.FirstNumbertxtbox);
+            this.panel13.Controls.Add(this.secondIndexLbl);
+            this.panel13.Controls.Add(this.startingIndexLbl);
+            this.panel13.Location = new System.Drawing.Point(5, 6);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(582, 69);
+            this.panel13.TabIndex = 18;
+            // 
+            // startingIndexLbl
+            // 
+            this.startingIndexLbl.AutoSize = true;
+            this.startingIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.startingIndexLbl.Location = new System.Drawing.Point(61, -7);
+            this.startingIndexLbl.Name = "startingIndexLbl";
+            this.startingIndexLbl.Size = new System.Drawing.Size(75, 70);
+            this.startingIndexLbl.TabIndex = 4;
+            this.startingIndexLbl.Text = "m";
+            // 
+            // SecondNumbertxtbox
+            // 
+            this.SecondNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
+            this.SecondNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SecondNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.SecondNumbertxtbox.ForeColor = System.Drawing.Color.Black;
+            this.SecondNumbertxtbox.Location = new System.Drawing.Point(247, 3);
+            this.SecondNumbertxtbox.Name = "SecondNumbertxtbox";
+            this.SecondNumbertxtbox.Size = new System.Drawing.Size(119, 69);
+            this.SecondNumbertxtbox.TabIndex = 5;
+            this.SecondNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SecondNumbertxtbox.TextChanged += new System.EventHandler(this.SecondNumbertxtbox_TextChanged);
+            // 
+            // secondIndexLbl
+            // 
+            this.secondIndexLbl.AutoSize = true;
+            this.secondIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.secondIndexLbl.Location = new System.Drawing.Point(208, -5);
+            this.secondIndexLbl.Name = "secondIndexLbl";
+            this.secondIndexLbl.Size = new System.Drawing.Size(51, 70);
+            this.secondIndexLbl.TabIndex = 6;
+            this.secondIndexLbl.Text = "-";
+            // 
+            // thirdIndexLbl
+            // 
+            this.thirdIndexLbl.AutoSize = true;
+            this.thirdIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.thirdIndexLbl.Location = new System.Drawing.Point(358, -7);
+            this.thirdIndexLbl.Name = "thirdIndexLbl";
+            this.thirdIndexLbl.Size = new System.Drawing.Size(51, 70);
+            this.thirdIndexLbl.TabIndex = 7;
+            this.thirdIndexLbl.Text = "-";
+            // 
+            // ThirdNumbertxtbox
+            // 
+            this.ThirdNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
+            this.ThirdNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ThirdNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.ThirdNumbertxtbox.ForeColor = System.Drawing.Color.Black;
+            this.ThirdNumbertxtbox.Location = new System.Drawing.Point(400, 3);
+            this.ThirdNumbertxtbox.Name = "ThirdNumbertxtbox";
+            this.ThirdNumbertxtbox.Size = new System.Drawing.Size(95, 69);
+            this.ThirdNumbertxtbox.TabIndex = 8;
+            this.ThirdNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ThirdNumbertxtbox.TextChanged += new System.EventHandler(this.ThirdNumbertxtbox_TextChanged);
             // 
             // AddStudentInformationForm
             // 
@@ -643,18 +704,19 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.CameraPanel.ResumeLayout(false);
             this.CameraPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureTake)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -664,14 +726,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Nametxtbox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox Numbertxtbox;
+        private System.Windows.Forms.TextBox FirstNumbertxtbox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox Departmenttxtbox;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox Contacttxtbox;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label Namelbl;
-        private System.Windows.Forms.Label Numberlbl;
         private System.Windows.Forms.Label Departmentlbl;
         private System.Windows.Forms.Label Contactlbl;
         private System.Windows.Forms.Button SaveBtn;
@@ -705,5 +766,11 @@
         private System.Windows.Forms.PictureBox PictureTake;
         private System.Windows.Forms.TextBox fileName;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TextBox SecondNumbertxtbox;
+        private System.Windows.Forms.Label startingIndexLbl;
+        private System.Windows.Forms.Label secondIndexLbl;
+        private System.Windows.Forms.TextBox ThirdNumbertxtbox;
+        private System.Windows.Forms.Label thirdIndexLbl;
     }
 }

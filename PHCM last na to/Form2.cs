@@ -368,7 +368,7 @@ namespace PHCM_last_na_to
                         {
                             Connect.Open();  // Open the database connection
                             String checkFirstname = "Select * FROM admin WHERE username = '"
-                                + USRNMbx.Text.Trim() + "'";  // Create a query to check if the entered username already exists
+                                + USRNMbx.Text.Trim() + "'";  // Create a query to check if the user entered username already exists
 
                             using (SqlCommand checkUser = new SqlCommand(checkFirstname, Connect))  // Execute the query using SqlCommand
                             {

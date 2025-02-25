@@ -24,10 +24,10 @@ namespace PHCM_last_na_to
         {
             InitializeComponent();    
             loggInUsername = takeUsername; //taking a data from Log in Form using the created variable 
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new System.Drawing.Size(7, 65);
-            panelMenu.Controls.Add(leftBorderBtn);
-            ActivateButton(HomeButton, RGBColors.color1);
+            leftBorderBtn = new Panel(); //creating a panel
+            leftBorderBtn.Size = new System.Drawing.Size(7, 80); // Size of the border
+            panelMenu.Controls.Add(leftBorderBtn); // Add the left border to the panel
+            ActivateButton(HomeButton, RGBColors.color1); // Activate the Home button by default
 
         }
         // Method to activate the clicked button with custom colors and effects
@@ -221,7 +221,7 @@ namespace PHCM_last_na_to
             QuickOverviewForm quickOverviewForm = new QuickOverviewForm();
             OpenChildForm(quickOverviewForm);
 
-            // 🔥 Ensure the child form gets focus
+            // Focusing the child form to enable keyboard navigation
             quickOverviewForm.Focus();
             quickOverviewForm.Select();
             quickOverviewForm.Activate();

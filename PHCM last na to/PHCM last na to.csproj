@@ -215,6 +215,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Other Toast Message\SelectBooksFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Toast Message\SelectBooksFirst.Designer.cs">
+      <DependentUpon>SelectBooksFirst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -293,6 +299,12 @@
     <Compile Include="Toast Message for add student information\StudentNumber.Designer.cs">
       <DependentUpon>StudentNumber.cs</DependentUpon>
     </Compile>
+    <Compile Include="Toast Message for add student information\StudentNumberAlreadyExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toast Message for add student information\StudentNumberAlreadyExist.Designer.cs">
+      <DependentUpon>StudentNumberAlreadyExist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Toast Message for add student information\Successfully Registered.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +368,9 @@
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Other Toast Message\SelectBooksFirst.resx">
+      <DependentUpon>SelectBooksFirst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -390,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Toast Message for add student information\StudentNumber.resx">
       <DependentUpon>StudentNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toast Message for add student information\StudentNumberAlreadyExist.resx">
+      <DependentUpon>StudentNumberAlreadyExist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Toast Message for add student information\Successfully Registered.resx">
       <DependentUpon>Successfully Registered.cs</DependentUpon>

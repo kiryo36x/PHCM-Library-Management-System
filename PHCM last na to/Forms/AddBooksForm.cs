@@ -394,76 +394,103 @@ namespace PHCM_last_na_to.Forms
 
         private void publishedDate_CloseUp(object sender, EventArgs e)
         {
+            // When the date selection closes (after choosing a date),
+            // if the text color of the date control is white,
             if (publishedDate.TextColor == Color.White)
             {
+                // then show the label next to the date.
                 Datelbl.Visible = true;
             }
         }
+
         private void publishedDate_DropDown(object sender, EventArgs e)
         {
+            // When the user clicks to open the date picker (drop down),
+            // hide the label next to the date.
             Datelbl.Visible = false;
         }
 
         private void publishedDate_Enter(object sender, EventArgs e)
         {
+            // When the user enters or clicks into the date picker,
+            // automatically open the drop-down calendar (simulate pressing F4).
             SendKeys.Send("{F4}");
         }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
+            // When the user clicks on textBox1,
+            // move the focus (cursor) to the date picker.
             publishedDate.Focus();
         }
 
         private void publishedDate_ValueChanged(object sender, EventArgs e)
         {
+            // When the user selects a new date,
+            // change the text color of the date control to black,
             publishedDate.TextColor = Color.Black;
+            // and update textBox1 to show the selected date.
             textBox1.Text = publishedDate.Value.ToString();
         }
 
         private void Datelbl_Click(object sender, EventArgs e)
         {
+            // When the user clicks on the label next to the date,
+            // move the focus (cursor) to the date picker.
             publishedDate.Focus();
         }
 
         private void genrelbl_Click(object sender, EventArgs e)
         {
+            // When the user clicks the genre label,
+            // show the panel where genres are listed.
             genreselectorpanel.Visible = true;
         }
 
         private void genretxtbox_Click(object sender, EventArgs e)
         {
+            // When the user clicks the textbox for genre,
+            // show the panel where genres are listed.
             genreselectorpanel.Visible = true;
         }
 
         private void closepnl_Click(object sender, EventArgs e)
         {
+            // When the user clicks the close button on the genre panel,
+            // hide the genre selection panel.
             genreselectorpanel.Visible = false;
         }
 
-        private void hoverSelection(object sender, EventArgs e) // If the mouse hover is entered from the label  
+        private void hoverSelection(object sender, EventArgs e) // When the mouse moves over a label
         {
             if (sender is Label Hover)
             {
+                // Change the label's background color to a lighter shade,
+                // indicating it is being hovered over.
                 Hover.BackColor = Color.FromArgb(76, 75, 105);
             }
         }
 
-        private void genreSelection(object sender, EventArgs e) // when the label is pressed
-        { 
+        private void genreSelection(object sender, EventArgs e) // When a genre label is clicked
+        {
             if (sender is Label selection)
             {
+                // Set the genre textbox to the text from the clicked label,
                 genretxtbox.Text = selection.Text;
+                // hide the genre label (possibly to avoid duplicate information),
                 genrelbl.Visible = false;
+                // and hide the genre selection panel.
                 genreselectorpanel.Visible = false;
             }
         }
 
-        private void label44_MouseLeave(object sender, EventArgs e) // If the mouse hover is removed from the label       
+        private void label44_MouseLeave(object sender, EventArgs e) // When the mouse stops hovering over a label
         {
             if (sender is Label Hover)
             {
+                // Reset the label's background color to a darker shade.
                 Hover.BackColor = Color.FromArgb(31, 30, 68);
-            }   
+            }
         }
     }
 }

@@ -1,7 +1,10 @@
-﻿using PHCM_last_na_to.Toast_Message_for_add_student_information; // Importing basic namespaces required for working with data, graphics, and user interface components in a Windows Forms application
+﻿using PHCM_last_na_to.Other_Toast_Message; // Importing basic namespaces required for working with data, graphics, and user interface components in a Windows Forms application
+using PHCM_last_na_to.Toast_Message_for_add_student_information; // Importing basic namespaces required for working with data, graphics, and user interface components in a Windows Forms application
 using System;  // This is for basic programming functionality
+using System.Data; // Provides classes for managing and working with data, such as datasets, data tables, and database connections.
 using System.Data.SqlClient;  // This is for connecting to and interacting with a SQL database
 using System.Drawing;  // This helps in working with colors, fonts, and other visual elements
+using System.IO; // Enables the program to work with files and directories (e.g., reading, writing, or saving files).
 using System.Windows.Forms;  // This is for creating windows (forms) and controls, like buttons and text boxes, that users interact with in the application
 
 
@@ -11,6 +14,8 @@ namespace PHCM_last_na_to.Forms
     {       
         // Declaring a variable to hold the current form that's being shown inside the parent form
         private Form currentChildForm;
+        private string selectedGenre = "All"; // Default to "All"
+        private bool isSelectingRow = false; // Flag to indicate row selection
 
         // Constructor for the ReturnBookForm class
         public ReturnBookForm()
@@ -25,8 +30,8 @@ namespace PHCM_last_na_to.Forms
         private void Booknamelbl_Click(object sender, EventArgs e)
         {
             // Focuses on the Booknametxtbox (makes the text box active for user input)
-            bookNameComboBox.Focus();            
-        }     
+            ShowSelection.Visible = true;            
+        }        
 
         // Event handler for when the studentNamelbl label is clicked
         private void studentNamelbl_Click(object sender, EventArgs e)
@@ -52,8 +57,8 @@ namespace PHCM_last_na_to.Forms
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             // Check if any required field is empty
-            if (string.IsNullOrEmpty(bookNameComboBox.Text) || string.IsNullOrEmpty(Authortxtbox.Text) ||
-                string.IsNullOrEmpty(studentNameComboBox.Text) || string.IsNullOrEmpty(publishedDatetxtbox.Text) ||
+            if (string.IsNullOrEmpty(SelectBooks.Text) || string.IsNullOrEmpty(AuthortxtBox.Text) ||
+                string.IsNullOrEmpty(studentNameComboBox.Text) || string.IsNullOrEmpty(publishedDatetxtBox.Text) ||
                 string.IsNullOrEmpty(issueDatetxtbox.Text) || string.IsNullOrEmpty(returnDatetxtbox.Text) ||
                 string.IsNullOrEmpty(conditiontxtbox.Text))
             {
@@ -84,10 +89,10 @@ namespace PHCM_last_na_to.Forms
                     // Step 1️⃣: Insert the returned book details into the returnBook table
                     using (SqlCommand cmdInsert = new SqlCommand(insertQuery, connection, transaction))
                     {
-                        cmdInsert.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
-                        cmdInsert.Parameters.AddWithValue("@author", Authortxtbox.Text); // Author Name
+                        cmdInsert.Parameters.AddWithValue("@bookName", SelectBooks.Text); // Book Name
+                        cmdInsert.Parameters.AddWithValue("@author", AuthortxtBox.Text); // Author Name
                         cmdInsert.Parameters.AddWithValue("@studentName", studentNameComboBox.SelectedItem.ToString()); // Student Name
-                        cmdInsert.Parameters.AddWithValue("@publishedDate", DateTime.Parse(publishedDatetxtbox.Text).Date); // Published Date
+                        cmdInsert.Parameters.AddWithValue("@publishedDate", DateTime.Parse(publishedDatetxtBox.Text).Date); // Published Date
                         cmdInsert.Parameters.AddWithValue("@issueDate", DateTime.Parse(issueDatetxtbox.Text).Date); // Issue Date
                         cmdInsert.Parameters.AddWithValue("@returnDate", DateTime.Parse(returnDatetxtbox.Text).Date); // Return Date
                         cmdInsert.Parameters.AddWithValue("@condition", conditiontxtbox.Text); // Condition of the Book
@@ -98,14 +103,14 @@ namespace PHCM_last_na_to.Forms
                     // Step 2️⃣: Update the books table to increase the book quantity by 1
                     using (SqlCommand cmdUpdate = new SqlCommand(updateQuery, connection, transaction))
                     {
-                        cmdUpdate.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
+                        cmdUpdate.Parameters.AddWithValue("@bookName", SelectBooks.Text); // Book Name
                         cmdUpdate.ExecuteNonQuery(); // Execute the query to update quantity
                     }
 
                     // Step 3️⃣: Delete the issued book record from the issue table (book is returned)
                     using (SqlCommand cmdDelete = new SqlCommand(deleteQuery, connection, transaction))
                     {
-                        cmdDelete.Parameters.AddWithValue("@bookName", bookNameComboBox.SelectedItem.ToString()); // Book Name
+                        cmdDelete.Parameters.AddWithValue("@bookname", SelectBooks.Text); // Book Name
                         cmdDelete.Parameters.AddWithValue("@studentName", studentNameComboBox.SelectedItem.ToString()); // Student Name
                         cmdDelete.ExecuteNonQuery(); // Execute the query to delete the issued record
                     }
@@ -113,18 +118,17 @@ namespace PHCM_last_na_to.Forms
                     transaction.Commit(); // Commit the transaction to save all changes
                     MessageBox.Show("Book returned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); // Success message
 
-                    // Reset form fields and clear input
-                    bookNameComboBox.SelectedIndexChanged -= bookNameComboBox_SelectedIndexChanged; // Temporarily remove event handler
+                    // Reset form fields and clear input                   
 
-                    Authortxtbox.Clear(); // Clear author textbox
-                    publishedDatetxtbox.Clear(); // Clear published date textbox
+                    AuthortxtBox.Clear(); // Clear author textbox
+                    publishedDatetxtBox.Clear(); // Clear published date textbox
                     issueDatetxtbox.Clear(); // Clear issue date textbox
                     returnDatetxtbox.Clear(); // Clear return date textbox
-                    textBox1.Clear(); // Clear additional textbox (if used)
+                    SelectBooks.Clear(); // Clear additional textbox (if used)
                     textBox2.Clear(); // Clear additional textbox (if used)
                     genretxtbox.Clear(); // Clear genre textbox
+                    SelectBooks.Clear(); // Clear book name textbox
 
-                    bookNameComboBox.SelectedIndex = -1; // Reset book selection
                     studentNameComboBox.SelectedIndex = -1; // Reset student selection
                     studentNameComboBox.Items.Clear(); // Clear student list
 
@@ -139,7 +143,7 @@ namespace PHCM_last_na_to.Forms
 
                     conditiontxtbox.Clear(); // Clear condition textbox
                     label2.Visible = true; // Make label visible
-                    bookNameComboBox.SelectedIndexChanged += bookNameComboBox_SelectedIndexChanged; // Re-add event handler
+                    
                 }
                 catch (SqlException ex)
                 {
@@ -156,18 +160,18 @@ namespace PHCM_last_na_to.Forms
         // Event handler for the "ClearBtn" button click
         private void ClearBtn_Click(object sender, EventArgs e)
         {
-            bookNameComboBox.SelectedIndexChanged -= bookNameComboBox_SelectedIndexChanged; //Unsubscribe the select event
+            
 
             // Clear all input fields and reset controls to their default state
-            Authortxtbox.Clear();
-            publishedDatetxtbox.Clear();
+            AuthortxtBox.Clear();
+            publishedDatetxtBox.Clear();
             issueDatetxtbox.Clear();
             returnDatetxtbox.Clear();
-            textBox1.Clear();
+            SelectBooks.Clear();
             textBox2.Clear();
             genretxtbox.Clear();
 
-            bookNameComboBox.SelectedIndex = -1;  //unselect the Combo Box
+            
             studentNameComboBox.SelectedIndex = -1;
             studentNameComboBox.Items.Clear(); // Clear student names
 
@@ -182,7 +186,7 @@ namespace PHCM_last_na_to.Forms
 
             conditiontxtbox.Clear(); //Clear the text box inside of Condition
             label2.Visible = true; //Make all label visible again
-            bookNameComboBox.SelectedIndexChanged += bookNameComboBox_SelectedIndexChanged; //Subscribe the Select Event
+            
 
         }
 
@@ -219,17 +223,17 @@ namespace PHCM_last_na_to.Forms
         // Event handler for when the form is loaded (sets the tab order for controls and other settings)
         private void ReturnBookForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'books.books' table. You can move, or remove it, as needed.
+            this.booksTableAdapter.Fill(this.books.books);
             // Set the tab order for all controls on the form (used for keyboard navigation)
-            Authortxtbox.TabIndex = 0;
-            publishedDatetxtbox.TabIndex = 1;
+            AuthortxtBox.TabIndex = 0;
+            publishedDatetxtBox.TabIndex = 1;
             issueDatetxtbox.TabIndex = 2;
             returnDatetxtbox.TabIndex = 3;
 
             SaveBtn.TabIndex = 6;
             ViewBtn.TabIndex = 7;
-            ClearBtn.TabIndex = 8; 
-            
-            LoadBookNames();
+            ClearBtn.TabIndex = 8;                        
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -249,162 +253,12 @@ namespace PHCM_last_na_to.Forms
                 label2.Visible = true; //show the label
             }
         }
-        private void bookNameComboBox_Enter(object sender, EventArgs e)
-        {
-            SendKeys.Send("{F4}"); //open the combo box
-            Booknamelbl.Visible = false; //hiding the book name label
-        }
-        private void LoadBookNames()
-        {
-            //connecting to the Database
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"; 
-            string query = "SELECT DISTINCT bookName FROM issue"; // Fetch all book names
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    try
-                    {
-                        conn.Open(); //open the datbase
-                        SqlDataReader reader = cmd.ExecuteReader();
-
-                        while (reader.Read()) // Loop through each book name
-                        {
-                            bookNameComboBox.Items.Add(reader["bookName"].ToString()); // Add to ComboBox
-                        }
-                        reader.Close(); // Close the reading
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //Send error message
-                    }
-                }
-            }
-        }
-        private void bookNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Check if a book is selected in the ComboBox
-            if (bookNameComboBox.SelectedItem != null)
-            {
-                // Hide labels that display book-related information
-                Booknamelbl.Visible = false;
-                Authorlbl.Visible = false;
-                publishedDatelbl.Visible = false;
-                returnDatelbl.Visible = false;
-                genrelbl.Visible = false;
-
-                // Reset the student name ComboBox
-                studentNameComboBox.SelectedIndex = -1; // Unselect any previous selection
-                studentNameComboBox.Items.Clear(); // Remove any previously loaded student names
-
-                // Show the student name label
-                studentNamelbl.Visible = true;
-
-                // Clear any previous text in textBox2
-                textBox2.Clear();
-
-                // Show the issue date label and clear any previous date
-                issueDatelbl.Visible = true;
-                issueDatetxtbox.Clear();
-
-                // Set the return date to today's date and format it
-                DateTimePicker dateTimePicker = new DateTimePicker();
-                dateTimePicker.Value = DateTime.Now; // Get the current date
-                dateTimePicker.Format = DateTimePickerFormat.Short; // Set format to short (MM/DD/YYYY)
-                returnDatetxtbox.Text = dateTimePicker.Value.ToString(); // Display the date in the return date textbox
-
-                // Store the selected book name
-                string selectedBookName = bookNameComboBox.SelectedItem.ToString();
-                textBox1.Text = selectedBookName; // Display selected book name in textBox1
-
-                // SQL query to retrieve book details (author, published date, and issue date)
-                string query = "SELECT author, publishedDate, issueDate, genre FROM issue WHERE bookName = @bookName";
-
-                // SQL query to retrieve student names who have borrowed this book
-                string studentQuery = "SELECT DISTINCT studentName FROM issue WHERE bookName = @bookName";
-
-                // Create a connection to the database
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
-                {
-                    try
-                    {
-                        conn.Open(); // Open database connection
-
-                        // Fetch Book Details (author, published date, issue date)
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@bookName", selectedBookName); // Set the book name parameter
-
-                            using (SqlDataReader reader = cmd.ExecuteReader()) // Execute the query
-                            {
-                                if (reader.Read()) // If a record is found
-                                {
-                                    // Store the retrieved author name in the text box
-                                    Authortxtbox.Text = reader["author"].ToString();
-                                    genretxtbox.Text = reader["genre"].ToString(); // Store the genre in the text box
-
-                                    // Check if the published date exists in the database and format it properly
-                                    publishedDatetxtbox.Text = reader["publishedDate"] != DBNull.Value
-                                        ? Convert.ToDateTime(reader["publishedDate"]).ToString("yyyy-MM-dd")
-                                        : "N/A";  // If no published date is found, display "N/A"
-                                }
-                            }
-                        }
-
-                        // Fetch Student Names who have borrowed the selected book
-                        using (SqlCommand studentCmd = new SqlCommand(studentQuery, conn))
-                        {
-                            studentCmd.Parameters.AddWithValue("@bookName", selectedBookName); // Set book name parameter
-
-                            using (SqlDataReader studentReader = studentCmd.ExecuteReader()) // Execute the query
-                            {
-                                studentNameComboBox.Items.Clear(); // Clear any previously loaded student names
-
-                                while (studentReader.Read()) // Loop through each student record
-                                {
-                                    // Add each student's name to the ComboBox
-                                    studentNameComboBox.Items.Add(studentReader["studentName"].ToString());
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Show an error message if something goes wrong
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
-            }
-            else
-            {
-                // Display a message if no book is selected
-                MessageBox.Show("Please select a book first.");
-            }
-        }
-
-        // When the dropdown list of bookNameComboBox closes
-        private void bookNameComboBox_DropDownClosed(object sender, EventArgs e)
-        {
-            // If no book is selected (ComboBox is empty), show the label
-            if (string.IsNullOrEmpty(bookNameComboBox.Text))
-            {
-                Booknamelbl.Visible = true;
-            }
-        }
-
-        // When the user opens the dropdown list of bookNameComboBox
-        private void bookNameComboBox_DropDown(object sender, EventArgs e)
-        {
-            // Hide the label when the dropdown opens
-            Booknamelbl.Visible = false;
-        }
-
+        
         // When the user clicks textBox1 (which displays the selected book name)
         private void textBox1_Click(object sender, EventArgs e)
         {
             // Move focus to the bookNameComboBox to allow the user to select a book
-            bookNameComboBox.Focus();
+            ShowSelection.Visible = true;
         }
 
         // When the user enters the studentNameComboBox (i.e., clicks or tabs into it)
@@ -441,7 +295,7 @@ namespace PHCM_last_na_to.Forms
         private void studentNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Ensure that both a student and a book are selected
-            if (studentNameComboBox.SelectedItem != null && bookNameComboBox.SelectedItem != null)
+            if (studentNameComboBox.SelectedItem != null && !string.IsNullOrEmpty(SelectBooks.Text))
             {
                 // Hide the issue date label
                 issueDatelbl.Visible = false;
@@ -450,8 +304,7 @@ namespace PHCM_last_na_to.Forms
                 string selectedStudent = studentNameComboBox.SelectedItem.ToString();
                 textBox2.Text = selectedStudent; // Display selected student in textBox2
 
-                // Store selected book name
-                string selectedBook = bookNameComboBox.SelectedItem.ToString();
+                // Store selected book name                
 
                 // SQL query to retrieve the issue date of the selected book for the selected student
                 string query = "SELECT issueDate FROM issue WHERE bookName = @bookName AND studentName = @studentName";
@@ -466,7 +319,7 @@ namespace PHCM_last_na_to.Forms
                         // Create and execute the SQL command
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            cmd.Parameters.AddWithValue("@bookName", selectedBook); // Add book name as a parameter
+                            cmd.Parameters.AddWithValue("@bookName", SelectBooks.Text); // Add book name as a parameter
                             cmd.Parameters.AddWithValue("@studentName", selectedStudent); // Add student name as a parameter
 
                             // Execute the query and get the result (issueDate)
@@ -491,6 +344,461 @@ namespace PHCM_last_na_to.Forms
                         MessageBox.Show("An error occurred: " + ex.Message);
                     }
                 }
+            }
+        }
+
+        private void SelectingBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                isSelectingRow = false; // Reset the flag when a cell is clicked
+            }
+        }
+
+        private void SelectingBooks_SelectionChanged(object sender, EventArgs e)
+        {
+            isSelectingRow = true; // Set the flag to true when a row is selected
+        }
+
+        private void currentGnre_Click(object sender, EventArgs e)
+        {
+            genreselectorpanel.Visible = true;
+            genreselectorpanel.BringToFront();
+        }
+        private void CurrentDate()
+        {
+            // Set the current date in the return date text box
+            returnDatetxtbox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            returnDatelbl.Visible = false;
+        }
+        private void SaveBookbtn_Click(object sender, EventArgs e)
+        {
+            // Check if the user has selected at least one row from the list of books
+            if (SelectingBooks.SelectedRows.Count > 0)
+            {
+                // Get the first selected row (assuming only one row is selected)
+                DataGridViewRow selectedRow = SelectingBooks.SelectedRows[0];
+
+                // Retrieve the book name from the selected row
+                object SelectedBookName = selectedRow.Cells["bookNameDataGridViewTextBoxColumn"].Value;
+                // Retrieve the author from the selected row
+                object DisplayAuthor = selectedRow.Cells["authorDataGridViewTextBoxColumn"].Value;
+                // Retrieve the publication date from the selected row
+                object DisplayDate = selectedRow.Cells["datePickDataGridViewTextBoxColumn"].Value;
+                // Retrieve the genre from the selected row
+                object DisplayGenre = selectedRow.Cells["genreDataGridViewTextBoxColumn"].Value;
+
+                // If a book name is found in the selected row
+                if (SelectedBookName != null)
+                {
+                    // Display the selected book name in the text box outside the panel
+                    SelectBooks.Text = SelectedBookName.ToString();
+                    // Hide the label that prompts for the book name
+                    Booknamelbl.Visible = false;
+                    // Hide the selection panel
+                    ShowSelection.Visible = false;
+                    // Update the current date or perform a date-related action (via the CurrentDate() method)
+                    CurrentDate();
+                }
+                else
+                {
+                    // If no book name is found, show a prompt asking to select a book first
+                    new SelectBooksFirst().Show();
+                }
+
+                // If an author is found in the selected row
+                if (DisplayAuthor != null)
+                {
+                    // Display the author in the appropriate text box
+                    AuthortxtBox.Text = DisplayAuthor.ToString();
+                    // Hide the label that prompts for the author
+                    Authorlbl.Visible = false;
+                    // Hide the selection panel
+                    ShowSelection.Visible = false;
+                    // Update the current date or perform a date-related action
+                    CurrentDate();
+                }
+                else
+                {
+                    // If no author is found, clear the author text box
+                    AuthortxtBox.Text = string.Empty;
+                }
+
+                // If a publication date is found in the selected row
+                if (DisplayDate != null)
+                {
+                    // Convert the date to a short date string and display it in the text box
+                    publishedDatetxtBox.Text = Convert.ToDateTime(DisplayDate).ToShortDateString();
+                    // Hide the label that prompts for the publication date
+                    publishedDatelbl.Visible = false;
+                    // Hide the selection panel
+                    ShowSelection.Visible = false;
+                    // Update the current date or perform a date-related action
+                    CurrentDate();
+                }
+                else
+                {
+                    // If no publication date is found, clear the text box
+                    publishedDatetxtBox.Text = string.Empty;
+                }
+
+                // If a genre is found in the selected row
+                if (DisplayGenre != null)
+                {
+                    // Display the genre in the appropriate text box
+                    genretxtbox.Text = DisplayGenre.ToString();
+                    // Hide the label that prompts for the genre
+                    genrelbl.Visible = false;
+                    // Hide the selection panel
+                    ShowSelection.Visible = false;
+                    // Update the current date or perform a date-related action
+                    CurrentDate();
+                }
+                else
+                {
+                    // If no genre is found, clear the text box
+                    genretxtbox.Text = string.Empty;
+                }
+
+                // Populate the student ComboBox with students who borrowed the selected book
+                PopulateStudentComboBox(SelectedBookName.ToString());
+            }
+            else
+            {
+                // If no row is selected, show a message asking to select a book first
+                new SelectBooksFirst().Show();
+            }
+        }
+
+        private void PopulateStudentComboBox(string bookName)
+        {
+            // Remove any previously listed student names from the ComboBox.
+            studentNameComboBox.Items.Clear();
+
+            // Define the connection details to the database.
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\blood\OneDrive\Documents\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30";
+
+            // Create an SQL query that gets unique student names from the "issue" table for the given book.
+            string query = "SELECT DISTINCT studentName FROM issue WHERE bookName = @bookName";
+
+            // Open a connection to the database using the connection string.
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Open the database connection.
+                    conn.Open();
+
+                    // Create an SQL command with the query and the database connection.
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Add the book name to the SQL query as a parameter.
+                        cmd.Parameters.AddWithValue("@bookName", bookName);
+
+                        // Execute the query and get the results.
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            // Loop through each record returned by the query.
+                            while (reader.Read())
+                            {
+                                // Get the student name from the current record.
+                                string studentName = reader["studentName"].ToString();
+                                // Add this student name to the ComboBox list.
+                                studentNameComboBox.Items.Add(studentName);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // If an error happens, show an error message with details.
+                    MessageBox.Show("An error occurred while retrieving student data: " + ex.Message);
+                }
+            }
+
+            // If any student names were added, select the first one in the ComboBox.
+            if (studentNameComboBox.Items.Count > 0)
+            {
+                studentNameComboBox.SelectedIndex = 0;
+            }
+        }
+
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            // Hide the selection panel.
+            ShowSelection.Visible = false;
+            // If no book has been selected (the text box is empty), show the book name label as a prompt.
+            if (string.IsNullOrEmpty(SelectBooks.Text))
+            {
+                Booknamelbl.Visible = true;
+            }
+        }
+
+        private void searchbox_TextChanged(object sender, EventArgs e)
+        {
+            // Skip search logic if a row is being selected
+            if (isSelectingRow)
+            {
+                return; // Exit the method if a row is being selected
+            }
+
+            // If the search box is empty, hide the messages and reload books based on the selected genre
+            if (string.IsNullOrEmpty(searchbox.Text))
+            {
+                Notfound.Visible = false;
+                Question.Visible = false;
+
+                // Check if the selected genre is "All" or a specific genre
+                if (selectedGenre.ToLower() == "all")
+                {
+                    LoadAllBooks(); // Reload all books if "All" is selected
+                }
+                else
+                {
+                    // If a specific genre is selected, filter books by that genre
+                    SearchGenre(selectedGenre); // Call the method to search by the selected genre
+                }
+            }
+            else
+            {
+                SearchBooks(searchbox.Text); // Perform search with the current genre
+            }
+        }
+
+        private void searchbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // If the Enter key is pressed, perform the search
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Check if the search box is empty
+                if (string.IsNullOrEmpty(searchbox.Text) || searchbox.Text.Trim() == "")
+                {
+                    // If empty, check the selected genre
+                    if (selectedGenre.ToLower() == "all")
+                    {
+                        LoadAllBooks(); // Load all books if "All" is selected
+                    }
+                    else
+                    {
+                        SearchGenre(selectedGenre); // Call the method to search by the selected genre
+                    }
+                }
+                else
+                {
+                    // If not empty, perform a search with the current text
+                    SearchBooks(searchbox.Text); // Perform the search
+                }
+            }
+        }
+
+        private void closepnl_Click(object sender, EventArgs e)
+        {
+            genreselectorpanel.Visible = false;
+        }
+
+        private void genreSelection(object sender, EventArgs e)
+        {
+            if (sender is Label selectGenre)
+            {
+                selectedGenre = selectGenre.Text; // Store the selected genre
+                currentGnre.Text = selectGenre.Text; // Update the UI to show the selected genre
+                genreselectorpanel.Visible = false; // Hide the genre selection panel
+                searchbox.Text = ""; // Clear the search box
+                // Perform a search based on the selected genre
+                if (selectedGenre.ToLower() == "all")
+                {
+                    LoadAllBooks(); // Load all books if "All" is selected
+                }
+                else
+                {
+                    SearchGenre(selectedGenre); // Search by the selected genre
+
+                }
+            }
+        }
+
+        private void genreHover(object sender, EventArgs e) // When the mouse hovers over a genre label
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                HoverGenre.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the label
+            }
+        }
+
+        private void genreOut(object sender, EventArgs e) // When the mouse leaves a genre label
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
+            }
+        }
+        private void SearchGenre(string searchTerm)
+        {
+            Notfound.Visible = false; // Hide 'Not Found' message
+            Question.Visible = false; // Hide 'Question' message
+            try
+            {
+                DataTable dt = new DataTable(); // Create a new DataTable to store search results
+                using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
+                {
+                    // Prepare a query to search books by name or author
+                    string query = "SELECT id, bookName, author, datePick, quantity, bookPicture, picture, genre FROM books " +
+                                   "WHERE genre LIKE @search";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%"); // Bind search term
+
+                        connect.Open(); // Open connection to the database
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Use adapter to fill the DataTable with results
+                        adapter.Fill(dt);
+
+                        // If no records are found, show 'Not Found' message
+                        if (dt.Rows.Count == 0)
+                        {
+                            Notfound.ForeColor = Color.Black; // Set color of message to black
+                            Notfound.Visible = true; // Make 'Not Found' message visible
+                            Question.Visible = true; // Make 'Question' message visible
+                        }
+
+                        // Convert Image Data from BYTE[] to Bitmap
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            if (row["picture"] != DBNull.Value) // Check if the row contains an image
+                            {
+                                byte[] imageBytes = (byte[])row["picture"]; // Retrieve image bytes from the row
+                                using (MemoryStream ms = new MemoryStream(imageBytes))
+                                {
+                                    // Convert byte array to Image
+                                    System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
+
+                                    // Convert the Image back to byte array to store it in the DataTable
+                                    using (MemoryStream saveStream = new MemoryStream())
+                                    {
+                                        img.Save(saveStream, img.RawFormat); // Save the image to the stream
+                                        byte[] imageBytesToStore = saveStream.ToArray(); // Get byte array
+
+                                        // Store the byte array back in the 'picture' column
+                                        row["picture"] = imageBytesToStore;
+                                    }
+                                }
+                            }
+                        }
+
+                        // Refresh DataGridView to display changes
+                        SelectingBooks.DataSource = dt; // Set the DataGridView's data source
+                        SelectingBooks.Refresh(); // Refresh the DataGridView to show the updated data
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // If an error occurs, show the error message
+                MessageBox.Show("Error: " + ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAllBooks()
+        {
+            try
+            {
+                Notfound.Visible = false; // Hide 'Not Found' message
+                Question.Visible = false; // Hide 'Question' message
+                DataTable dt = new DataTable(); // Create a new DataTable for all books
+                using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
+                {
+                    string query = "SELECT id, bookName, author, datePick, quantity, bookPicture, picture, genre FROM books"; // Query to fetch all books
+                    using (SqlCommand cmd = new SqlCommand(query, connect))
+                    {
+                        connect.Open(); // Open connection to the database
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Use adapter to fill the DataTable
+                        adapter.Fill(dt);
+
+                        SelectingBooks.DataSource = dt; // Display all books in the DataGridView
+                        SelectingBooks.Refresh(); // Refresh the DataGridView to show the updated data
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // If an error occurs, show the error message
+                MessageBox.Show("Error: " + ex.Message, "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SearchBooks(string searchTerm)
+        {
+            Notfound.Visible = false; // Hide 'Not Found' message
+            Question.Visible = false; // Hide 'Question' message
+            try
+            {
+                DataTable dt = new DataTable(); // Create a new DataTable to store search results
+                using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
+                {
+                    // Prepare a query to search books by name or author, and filter by genre
+                    string query = "SELECT id, bookName, author, datePick, quantity, bookPicture, picture, genre FROM books " +
+                                   "WHERE (bookName LIKE @search OR author LIKE @search)";
+
+                    // If a specific genre is selected, add it to the query
+                    if (selectedGenre.ToLower() != "all")
+                    {
+                        query += " AND genre LIKE @genre";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%"); // Bind search term
+
+                        // If a specific genre is selected, bind the genre parameter
+                        if (selectedGenre.ToLower() != "all")
+                        {
+                            cmd.Parameters.AddWithValue("@genre", "%" + selectedGenre + "%");
+                        }
+
+                        connect.Open(); // Open connection to the database
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Use adapter to fill the DataTable with results
+                        adapter.Fill(dt);
+
+                        // If no records are found, show 'Not Found' message
+                        if (dt.Rows.Count == 0)
+                        {
+                            Notfound.ForeColor = Color.Black; // Set color of message to black
+                            Notfound.Visible = true; // Make 'Not Found' message visible
+                            Question.Visible = true; // Make 'Question' message visible
+                        }
+
+                        // Convert Image Data from BYTE[] to Bitmap
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            if (row["picture"] != DBNull.Value) // Check if the row contains an image
+                            {
+                                byte[] imageBytes = (byte[])row["picture"]; // Retrieve image bytes from the row
+                                using (MemoryStream ms = new MemoryStream(imageBytes))
+                                {
+                                    // Convert byte array to Image
+                                    System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
+
+                                    // Convert the Image back to byte array to store it in the DataTable
+                                    using (MemoryStream saveStream = new MemoryStream())
+                                    {
+                                        img.Save(saveStream, img.RawFormat); // Save the image to the stream
+                                        byte[] imageBytesToStore = saveStream.ToArray(); // Get byte array
+
+                                        // Store the byte array back in the 'picture' column
+                                        row["picture"] = imageBytesToStore;
+                                    }
+                                }
+                            }
+                        }
+
+                        // Refresh DataGridView to display changes
+                        SelectingBooks.DataSource = dt; // Set the DataGridView's data source
+                        SelectingBooks.Refresh(); // Refresh the DataGridView to show the updated data
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // If an error occurs, show the error message
+                MessageBox.Show("Error: " + ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

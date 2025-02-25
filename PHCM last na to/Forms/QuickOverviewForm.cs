@@ -164,7 +164,7 @@ namespace PHCM_last_na_to.Forms
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 // Ask the user if they are sure about deleting the record
-                DialogResult askUSR = MessageBox.Show("Do you wish to delete this account?", "You're About to Delete a Data!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult askUSR = MessageBox.Show("Do you wish to delete the selected Data?", "You're About to Delete a Data!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (askUSR == DialogResult.Yes)
                 {
