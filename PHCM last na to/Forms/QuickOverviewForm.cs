@@ -206,5 +206,13 @@ namespace PHCM_last_na_to.Forms
                 }
             }
         }
+
+        private void QuickOverviewForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Right) // When the right key is pressed
+            {
+                OpenChildForm(new ReturnDetailsForm()); // Show the ReturnDetailsForm               
+            }
+        }
     }
 }    

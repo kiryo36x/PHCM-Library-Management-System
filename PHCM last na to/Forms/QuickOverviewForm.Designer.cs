@@ -41,11 +41,6 @@
             this.form1 = new System.Windows.Forms.Label();
             this.next = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.issuedBooks = new PHCM_last_na_to.IssuedBooks();
-            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.issueTableAdapter = new PHCM_last_na_to.IssuedBooksTableAdapters.issueTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +48,17 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.issuedBooks = new PHCM_last_na_to.IssuedBooks();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.issueTableAdapter = new PHCM_last_na_to.IssuedBooksTableAdapters.issueTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // Question
@@ -224,38 +224,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1287, 631);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(505, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 54);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ISSUE DETAILS";
-            // 
-            // issuedBooks
-            // 
-            this.issuedBooks.DataSetName = "IssuedBooks";
-            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // issueBindingSource
-            // 
-            this.issueBindingSource.DataMember = "issue";
-            this.issueBindingSource.DataSource = this.issuedBooks;
-            // 
-            // issueTableAdapter
-            // 
-            this.issueTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -320,6 +288,38 @@
             this.genreDataGridViewTextBoxColumn.ReadOnly = true;
             this.genreDataGridViewTextBoxColumn.Width = 250;
             // 
+            // issueBindingSource
+            // 
+            this.issueBindingSource.DataMember = "issue";
+            this.issueBindingSource.DataSource = this.issuedBooks;
+            // 
+            // issuedBooks
+            // 
+            this.issuedBooks.DataSetName = "IssuedBooks";
+            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(505, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(295, 54);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ISSUE DETAILS";
+            // 
+            // issueTableAdapter
+            // 
+            this.issueTableAdapter.ClearBeforeFill = true;
+            // 
             // QuickOverviewForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -341,12 +341,13 @@
             this.Name = "QuickOverviewForm";
             this.Text = "Quick Overview";
             this.Load += new System.EventHandler(this.QuickOverviewForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QuickOverviewForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.Question)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
