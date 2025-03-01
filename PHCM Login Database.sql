@@ -1,6 +1,6 @@
 ﻿CREATE TABLE admin
 (
-	id INT PRIMARY KEY IDENTITY(1,1),
+	id INT PRIMARY KEY IDENTITY(1,1), 
     firstName NVARCHAR(50) NOT NULL,
     middleName NVARCHAR(50),
     surname NVARCHAR(50) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE student
 CREATE TABLE books
 (
     id INT PRIMARY KEY IDENTITY(1,1),
-    bookName NVARCHAR(50) NOT NULL,
+    bookName NVARCHAR(100) NOT NULL,
     author NVARCHAR(50) NOT NULL,
     datePick DATE NOT NULL,
     quantity BIGINT NOT NULL,
@@ -35,9 +35,10 @@ CREATE TABLE books
 CREATE TABLE issue
 (
     id INT PRIMARY KEY IDENTITY(1,1),
-    bookName NVARCHAR(50) NOT NULL,
-    author NVARCHAR(50) NOT NULL,
+    studentImage IMAGE NOT NULL,
     studentName NVARCHAR(50) NOT NULL,
+    bookName NVARCHAR(50) NOT NULL,
+    author NVARCHAR(50) NOT NULL,    
     publishedDate DATE NOT NULL,
     issueDate DATE NOT NULL,
     genre NVARCHAR(100) NOT NULL
@@ -46,16 +47,16 @@ CREATE TABLE issue
 CREATE TABLE returnBook
 (
     id INT PRIMARY KEY IDENTITY(1,1),
-    bookName NVARCHAR(50) NOT NULL,
-    author NVARCHAR(50) NOT NULL,
     studentName NVARCHAR(50) NOT NULL,
+    studentImage IMAGE NOT NULL,
+    bookName NVARCHAR(50) NOT NULL,
+    author NVARCHAR(50) NOT NULL,    
     publishedDate DATE NOT NULL,
     issueDate DATE NOT NULL,
     returnDate DATE NOT NULL,
     genre NVARCHAR(100) NOT NULL,
     condition NVARCHAR(4000) NOT NULL
 )
-
 
 SELECT * FROM admin
 SELECT * FROM student
@@ -69,9 +70,14 @@ ADD genre NVARCHAR(100) NOT NULL
 DROP TABLE returnBook;
 ALTER TABLE books DROP COLUMN isDeleted;
 
+ALTER TABLE books
+ALTER COLUMN bookName NVARCHAR(100) NOT NULL;
 
-DELETE FROM returnBook
-WHERE author = 'NARUTO';
+ALTER TABLE returnBook
+ADD studentImage IMAGE NOT NULL;
+
+DELETE FROM books
+WHERE author = 'testing';
 
 UPDATE admin
 SET isAdmin = 1

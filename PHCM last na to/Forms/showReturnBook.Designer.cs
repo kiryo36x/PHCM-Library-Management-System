@@ -41,13 +41,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.returnBooks = new PHCM_last_na_to.ReturnBooks();
+            this.returnBookUpdate = new PHCM_last_na_to.returnBookUpdate();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.returnBookTableAdapter = new PHCM_last_na_to.ReturnBooksTableAdapters.returnBookTableAdapter();
+            this.returnBookTableAdapter = new PHCM_last_na_to.returnBookUpdateTableAdapters.returnBookTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.returnBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnBookUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,11 +98,11 @@
             this.Notfound.AutoSize = true;
             this.Notfound.BackColor = System.Drawing.Color.White;
             this.Notfound.Font = new System.Drawing.Font("Nirmala UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notfound.Location = new System.Drawing.Point(276, 152);
+            this.Notfound.Location = new System.Drawing.Point(250, 152);
             this.Notfound.Name = "Notfound";
-            this.Notfound.Size = new System.Drawing.Size(675, 45);
+            this.Notfound.Size = new System.Drawing.Size(702, 45);
             this.Notfound.TabIndex = 3;
-            this.Notfound.Text = "BOOKS NOT FOUND! TRY CREATING ONE?";
+            this.Notfound.Text = "STUDENTS NOT FOUND! TRY ADDING ONE?";
             this.Notfound.Visible = false;
             // 
             // srcbtn
@@ -110,21 +111,22 @@
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.srcbtn.IconSize = 31;
-            this.srcbtn.Location = new System.Drawing.Point(1200, 13);
+            this.srcbtn.IconSize = 33;
+            this.srcbtn.Location = new System.Drawing.Point(1188, 11);
             this.srcbtn.Name = "srcbtn";
-            this.srcbtn.Size = new System.Drawing.Size(32, 31);
+            this.srcbtn.Size = new System.Drawing.Size(33, 34);
             this.srcbtn.TabIndex = 2;
             this.srcbtn.TabStop = false;
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
             // 
             // searchbox
             // 
-            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(969, 13);
+            this.searchbox.Location = new System.Drawing.Point(836, 11);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(231, 36);
+            this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 1;
             this.searchbox.Text = "Search";
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
@@ -145,7 +147,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
@@ -155,9 +157,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.studentImageDataGridViewImageColumn,
+            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
@@ -193,12 +196,12 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DividerHeight = 2;
-            this.dataGridView1.RowTemplate.Height = 150;
+            this.dataGridView1.RowTemplate.Height = 250;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1227, 554);
             this.dataGridView1.TabIndex = 0;
@@ -232,15 +235,15 @@
             this.panel2.TabIndex = 26;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
-            // returnBooks
+            // returnBookUpdate
             // 
-            this.returnBooks.DataSetName = "ReturnBooks";
-            this.returnBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.returnBookUpdate.DataSetName = "returnBookUpdate";
+            this.returnBookUpdate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingSource1
             // 
             this.bindingSource1.DataMember = "returnBook";
-            this.bindingSource1.DataSource = this.returnBooks;
+            this.bindingSource1.DataSource = this.returnBookUpdate;
             // 
             // returnBookTableAdapter
             // 
@@ -255,6 +258,25 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // studentImageDataGridViewImageColumn
+            // 
+            this.studentImageDataGridViewImageColumn.DataPropertyName = "studentImage";
+            this.studentImageDataGridViewImageColumn.HeaderText = "Student Image";
+            this.studentImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.studentImageDataGridViewImageColumn.MinimumWidth = 6;
+            this.studentImageDataGridViewImageColumn.Name = "studentImageDataGridViewImageColumn";
+            this.studentImageDataGridViewImageColumn.ReadOnly = true;
+            this.studentImageDataGridViewImageColumn.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "studentName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Student Name";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 250;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -274,15 +296,6 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 250;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "studentName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Student Name";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 250;
-            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "publishedDate";
@@ -299,7 +312,7 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 250;
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -346,7 +359,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.returnBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnBookUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -372,13 +385,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn returnDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn conditionDataGridViewTextBoxColumn;
-        private ReturnBooks returnBooks;
+        private returnBookUpdate returnBookUpdate;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private ReturnBooksTableAdapters.returnBookTableAdapter returnBookTableAdapter;
+        private returnBookUpdateTableAdapters.returnBookTableAdapter returnBookTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn studentImageDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;

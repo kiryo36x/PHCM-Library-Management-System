@@ -1,6 +1,6 @@
 ﻿namespace PHCM_last_na_to.Other_Toast_Message
 {
-    partial class SelectBooksFirst
+    partial class SelectStudentFirst
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             this.iconPictureBox1.Location = new System.Drawing.Point(12, 9);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(50, 53);
-            this.iconPictureBox1.TabIndex = 16;
+            this.iconPictureBox1.TabIndex = 20;
             this.iconPictureBox1.TabStop = false;
             // 
             // label2
@@ -58,9 +58,9 @@
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(59, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Select a Book to Add";
+            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Select a Student to Add";
             // 
             // label1
             // 
@@ -69,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(58, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 18;
             this.label1.Text = "Notice";
             // 
             // panel1
@@ -78,7 +78,7 @@
             this.panel1.Location = new System.Drawing.Point(-14, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(24, 61);
-            this.panel1.TabIndex = 13;
+            this.panel1.TabIndex = 17;
             // 
             // AnimationTimer
             // 
@@ -90,18 +90,17 @@
             this.AnimationEndTimer.Interval = 10;
             this.AnimationEndTimer.Tick += new System.EventHandler(this.AnimationEndTimer_Tick);
             // 
-            // SelectBooksFirst
+            // SelectStudentFirst
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(298, 59);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SelectBooksFirst";
-            this.Text = "SelectBooksFirst";
+            this.Name = "SelectStudentFirst";
+            this.Text = "SelectStudentFirst";
             this.Load += new System.EventHandler(this.SelectBooksFirst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);

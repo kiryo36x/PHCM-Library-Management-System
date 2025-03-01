@@ -261,8 +261,8 @@ namespace PHCM_last_na_to
         private void LogOut_MouseLeave(object sender, EventArgs e)
         {
             Cursor = System.Windows.Forms.Cursors.Default;  // Change the cursor back to the default arrow when the mouse leaves the LogOut button
-            LogOut.ForeColor = System.Drawing.Color.FromArgb(80, 60, 176);  // Change the text color of the LogOut button back to its original color
-            LogOut.IconColor = System.Drawing.Color.FromArgb(80, 60, 176);  // Change the icon color back to its original color
+            LogOut.ForeColor = System.Drawing.Color.FromArgb(107, 87, 208);  // Change the text color of the LogOut button back to its original color
+            LogOut.IconColor = System.Drawing.Color.FromArgb(107, 87, 208);  // Change the icon color back to its original color
             LogOut.TextAlign = ContentAlignment.MiddleLeft;  // Align the text of the LogOut button to the left
             LogOut.TextImageRelation = TextImageRelation.ImageBeforeText;  // Place the icon before the text in the LogOut button
             LogOut.ImageAlign = ContentAlignment.MiddleLeft;  // Align the icon to the left of the button

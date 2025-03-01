@@ -44,6 +44,12 @@
             this.Namelbl = new System.Windows.Forms.Label();
             this.FirstNumbertxtbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ThirdNumbertxtbox = new System.Windows.Forms.TextBox();
+            this.SecondNumbertxtbox = new System.Windows.Forms.TextBox();
+            this.thirdIndexLbl = new System.Windows.Forms.Label();
+            this.secondIndexLbl = new System.Windows.Forms.Label();
+            this.startingIndexLbl = new System.Windows.Forms.Label();
             this.Departmenttxtbox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Departmentlbl = new System.Windows.Forms.Label();
@@ -71,17 +77,12 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.startingIndexLbl = new System.Windows.Forms.Label();
-            this.SecondNumbertxtbox = new System.Windows.Forms.TextBox();
-            this.secondIndexLbl = new System.Windows.Forms.Label();
-            this.thirdIndexLbl = new System.Windows.Forms.Label();
-            this.ThirdNumbertxtbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -89,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureTake)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).BeginInit();
             this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,9 +175,10 @@
             // 
             this.Picture.BackgroundImage = global::PHCM_last_na_to.Properties.Resources._16410;
             this.Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Picture.Location = new System.Drawing.Point(-59, -18);
+            this.Picture.Image = global::PHCM_last_na_to.Properties.Resources.add_pictures;
+            this.Picture.Location = new System.Drawing.Point(0, 0);
             this.Picture.Name = "Picture";
-            this.Picture.Size = new System.Drawing.Size(491, 404);
+            this.Picture.Size = new System.Drawing.Size(379, 343);
             this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picture.TabIndex = 16;
             this.Picture.TabStop = false;
@@ -250,7 +251,7 @@
             this.Namelbl.AutoSize = true;
             this.Namelbl.BackColor = System.Drawing.Color.White;
             this.Namelbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Namelbl.ForeColor = System.Drawing.Color.DimGray;
+            this.Namelbl.ForeColor = System.Drawing.Color.Gray;
             this.Namelbl.Location = new System.Drawing.Point(154, 12);
             this.Namelbl.Name = "Namelbl";
             this.Namelbl.Size = new System.Drawing.Size(284, 41);
@@ -279,6 +280,76 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(593, 67);
             this.panel3.TabIndex = 5;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.ThirdNumbertxtbox);
+            this.panel13.Controls.Add(this.SecondNumbertxtbox);
+            this.panel13.Controls.Add(this.thirdIndexLbl);
+            this.panel13.Controls.Add(this.FirstNumbertxtbox);
+            this.panel13.Controls.Add(this.secondIndexLbl);
+            this.panel13.Controls.Add(this.startingIndexLbl);
+            this.panel13.Location = new System.Drawing.Point(5, 6);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(582, 69);
+            this.panel13.TabIndex = 18;
+            // 
+            // ThirdNumbertxtbox
+            // 
+            this.ThirdNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
+            this.ThirdNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ThirdNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.ThirdNumbertxtbox.ForeColor = System.Drawing.Color.Black;
+            this.ThirdNumbertxtbox.Location = new System.Drawing.Point(400, 3);
+            this.ThirdNumbertxtbox.Name = "ThirdNumbertxtbox";
+            this.ThirdNumbertxtbox.Size = new System.Drawing.Size(95, 69);
+            this.ThirdNumbertxtbox.TabIndex = 8;
+            this.ThirdNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ThirdNumbertxtbox.TextChanged += new System.EventHandler(this.ThirdNumbertxtbox_TextChanged);
+            // 
+            // SecondNumbertxtbox
+            // 
+            this.SecondNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
+            this.SecondNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SecondNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.SecondNumbertxtbox.ForeColor = System.Drawing.Color.Black;
+            this.SecondNumbertxtbox.Location = new System.Drawing.Point(247, 3);
+            this.SecondNumbertxtbox.Name = "SecondNumbertxtbox";
+            this.SecondNumbertxtbox.Size = new System.Drawing.Size(119, 69);
+            this.SecondNumbertxtbox.TabIndex = 5;
+            this.SecondNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SecondNumbertxtbox.TextChanged += new System.EventHandler(this.SecondNumbertxtbox_TextChanged);
+            // 
+            // thirdIndexLbl
+            // 
+            this.thirdIndexLbl.AutoSize = true;
+            this.thirdIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.thirdIndexLbl.Location = new System.Drawing.Point(358, -7);
+            this.thirdIndexLbl.Name = "thirdIndexLbl";
+            this.thirdIndexLbl.Size = new System.Drawing.Size(51, 70);
+            this.thirdIndexLbl.TabIndex = 7;
+            this.thirdIndexLbl.Text = "-";
+            // 
+            // secondIndexLbl
+            // 
+            this.secondIndexLbl.AutoSize = true;
+            this.secondIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.secondIndexLbl.Location = new System.Drawing.Point(208, -5);
+            this.secondIndexLbl.Name = "secondIndexLbl";
+            this.secondIndexLbl.Size = new System.Drawing.Size(51, 70);
+            this.secondIndexLbl.TabIndex = 6;
+            this.secondIndexLbl.Text = "-";
+            // 
+            // startingIndexLbl
+            // 
+            this.startingIndexLbl.AutoSize = true;
+            this.startingIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
+            this.startingIndexLbl.Location = new System.Drawing.Point(61, -7);
+            this.startingIndexLbl.Name = "startingIndexLbl";
+            this.startingIndexLbl.Size = new System.Drawing.Size(75, 70);
+            this.startingIndexLbl.TabIndex = 4;
+            this.startingIndexLbl.Text = "m";
             // 
             // Departmenttxtbox
             // 
@@ -309,7 +380,7 @@
             this.Departmentlbl.AutoSize = true;
             this.Departmentlbl.BackColor = System.Drawing.Color.White;
             this.Departmentlbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Departmentlbl.ForeColor = System.Drawing.Color.DimGray;
+            this.Departmentlbl.ForeColor = System.Drawing.Color.Gray;
             this.Departmentlbl.Location = new System.Drawing.Point(172, 14);
             this.Departmentlbl.Name = "Departmentlbl";
             this.Departmentlbl.Size = new System.Drawing.Size(254, 41);
@@ -346,7 +417,7 @@
             this.Contactlbl.AutoSize = true;
             this.Contactlbl.BackColor = System.Drawing.Color.White;
             this.Contactlbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contactlbl.ForeColor = System.Drawing.Color.DimGray;
+            this.Contactlbl.ForeColor = System.Drawing.Color.Gray;
             this.Contactlbl.Location = new System.Drawing.Point(156, 13);
             this.Contactlbl.Name = "Contactlbl";
             this.Contactlbl.Size = new System.Drawing.Size(308, 41);
@@ -614,76 +685,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "STUDENT INFORMATION";
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.ThirdNumbertxtbox);
-            this.panel13.Controls.Add(this.SecondNumbertxtbox);
-            this.panel13.Controls.Add(this.thirdIndexLbl);
-            this.panel13.Controls.Add(this.FirstNumbertxtbox);
-            this.panel13.Controls.Add(this.secondIndexLbl);
-            this.panel13.Controls.Add(this.startingIndexLbl);
-            this.panel13.Location = new System.Drawing.Point(5, 6);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(582, 69);
-            this.panel13.TabIndex = 18;
-            // 
-            // startingIndexLbl
-            // 
-            this.startingIndexLbl.AutoSize = true;
-            this.startingIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.startingIndexLbl.Location = new System.Drawing.Point(61, -7);
-            this.startingIndexLbl.Name = "startingIndexLbl";
-            this.startingIndexLbl.Size = new System.Drawing.Size(75, 70);
-            this.startingIndexLbl.TabIndex = 4;
-            this.startingIndexLbl.Text = "m";
-            // 
-            // SecondNumbertxtbox
-            // 
-            this.SecondNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
-            this.SecondNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SecondNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.SecondNumbertxtbox.ForeColor = System.Drawing.Color.Black;
-            this.SecondNumbertxtbox.Location = new System.Drawing.Point(247, 3);
-            this.SecondNumbertxtbox.Name = "SecondNumbertxtbox";
-            this.SecondNumbertxtbox.Size = new System.Drawing.Size(119, 69);
-            this.SecondNumbertxtbox.TabIndex = 5;
-            this.SecondNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SecondNumbertxtbox.TextChanged += new System.EventHandler(this.SecondNumbertxtbox_TextChanged);
-            // 
-            // secondIndexLbl
-            // 
-            this.secondIndexLbl.AutoSize = true;
-            this.secondIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.secondIndexLbl.Location = new System.Drawing.Point(208, -5);
-            this.secondIndexLbl.Name = "secondIndexLbl";
-            this.secondIndexLbl.Size = new System.Drawing.Size(51, 70);
-            this.secondIndexLbl.TabIndex = 6;
-            this.secondIndexLbl.Text = "-";
-            // 
-            // thirdIndexLbl
-            // 
-            this.thirdIndexLbl.AutoSize = true;
-            this.thirdIndexLbl.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.thirdIndexLbl.Location = new System.Drawing.Point(358, -7);
-            this.thirdIndexLbl.Name = "thirdIndexLbl";
-            this.thirdIndexLbl.Size = new System.Drawing.Size(51, 70);
-            this.thirdIndexLbl.TabIndex = 7;
-            this.thirdIndexLbl.Text = "-";
-            // 
-            // ThirdNumbertxtbox
-            // 
-            this.ThirdNumbertxtbox.BackColor = System.Drawing.Color.LightGray;
-            this.ThirdNumbertxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ThirdNumbertxtbox.Font = new System.Drawing.Font("Nirmala UI", 31F);
-            this.ThirdNumbertxtbox.ForeColor = System.Drawing.Color.Black;
-            this.ThirdNumbertxtbox.Location = new System.Drawing.Point(400, 3);
-            this.ThirdNumbertxtbox.Name = "ThirdNumbertxtbox";
-            this.ThirdNumbertxtbox.Size = new System.Drawing.Size(95, 69);
-            this.ThirdNumbertxtbox.TabIndex = 8;
-            this.ThirdNumbertxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ThirdNumbertxtbox.TextChanged += new System.EventHandler(this.ThirdNumbertxtbox_TextChanged);
-            // 
             // AddStudentInformationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -704,6 +705,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -715,8 +718,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.realTimeCamera)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -102,6 +102,12 @@
     <Compile Include="catana_button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="designing the genre selection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designing the genre selection.Designer.cs">
+      <DependentUpon>designing the genre selection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,11 +221,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </Compile>
+    <Compile Include="issuedBooks1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>issuedBooks1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Other Toast Message\SelectBooksFirst.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Other Toast Message\SelectBooksFirst.Designer.cs">
       <DependentUpon>SelectBooksFirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Toast Message\SelectStudentFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Toast Message\SelectStudentFirst.Designer.cs">
+      <DependentUpon>SelectStudentFirst.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +250,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReturnBooks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="returnBookUpdate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>returnBookUpdate.xsd</DependentUpon>
     </Compile>
     <Compile Include="StudentInformation.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -314,6 +336,9 @@
     <EmbeddedResource Include="Catana Button.resx">
       <DependentUpon>Catana Button.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="designing the genre selection.resx">
+      <DependentUpon>designing the genre selection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exited.resx">
       <DependentUpon>Exited.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Other Toast Message\SelectBooksFirst.resx">
       <DependentUpon>SelectBooksFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Toast Message\SelectStudentFirst.resx">
+      <DependentUpon>SelectStudentFirst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -445,6 +473,17 @@
     <None Include="IssuedBooks.xss">
       <DependentUpon>IssuedBooks.xsd</DependentUpon>
     </None>
+    <None Include="issuedBooks1.xsc">
+      <DependentUpon>issuedBooks1.xsd</DependentUpon>
+    </None>
+    <None Include="issuedBooks1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>issuedBooks1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="issuedBooks1.xss">
+      <DependentUpon>issuedBooks1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -465,6 +504,17 @@
     </None>
     <None Include="ReturnBooks.xss">
       <DependentUpon>ReturnBooks.xsd</DependentUpon>
+    </None>
+    <None Include="returnBookUpdate.xsc">
+      <DependentUpon>returnBookUpdate.xsd</DependentUpon>
+    </None>
+    <None Include="returnBookUpdate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>returnBookUpdate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="returnBookUpdate.xss">
+      <DependentUpon>returnBookUpdate.xsd</DependentUpon>
     </None>
     <None Include="StudentInformation.xsc">
       <DependentUpon>StudentInformation.xsd</DependentUpon>
@@ -508,6 +558,7 @@
     <Content Include="Resources1\users-alt %281%29 %281%29.ico" />
     <Content Include="Resources1\users-alt %281%29 %281%291.ico" />
     <Content Include="Resources1\users-alt %281%29.ico" />
+    <None Include="Resources\add pictures.png" />
     <None Include="Resources\issue book.png" />
     <None Include="Resources\bokokosk.png" />
     <None Include="Resources\Book one.png" />

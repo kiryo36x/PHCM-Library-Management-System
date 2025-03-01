@@ -301,17 +301,15 @@ namespace PHCM_last_na_to.Forms
             // Check if any field is empty
             if (string.IsNullOrEmpty(studentNametxtbox.Text) || string.IsNullOrEmpty(studentNumbertxtbox.Text) || string.IsNullOrEmpty(departmenttxtbox.Text) || string.IsNullOrEmpty(contacttxtbox.Text))
             {
-                EmptyField emptyField = new EmptyField(); // Show error message for empty fields
-                emptyField.Show();
+                new EmptyField().Show(); // Show error message for empty fields                
             }
             else if (studentNametxtbox.Text.Any(Char.IsDigit)) // Check if student name contains digits
             {
-                StudentName studentName = new StudentName(); // Show error message for invalid student name
-                studentName.Show();
+                new StudentName().Show(); // Show error message for invalid student name                
             }
             else if (contacttxtbox.Text.Any(Char.IsLetter)) // Check if contact number contains letters
             {
-                StudentContact1 contact1 = new StudentContact1(); // Show error message for invalid contact number
+                new StudentContact1().Show(); // Show error message for invalid contact number
             }
             else
             {

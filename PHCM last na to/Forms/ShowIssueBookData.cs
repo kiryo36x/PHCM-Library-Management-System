@@ -35,6 +35,12 @@ namespace PHCM_last_na_to.Forms
         private void ShowIssueBookData_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
             this.issueTableAdapter.Fill(this.issuedBooks.issue);                     
         }
 
@@ -54,7 +60,7 @@ namespace PHCM_last_na_to.Forms
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30")) // Connect to the database.
                 {
                     // SQL query to search the 'issue' table based on book name, author, or student name.
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate FROM issue WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search";
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, studentImage, genre FROM issue WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search OR genre LIKE @search";
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%"); // Use the search term in the query.
@@ -108,7 +114,7 @@ namespace PHCM_last_na_to.Forms
                 DataTable dt = new DataTable(); // Create a new table to hold all book data.
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30")) // Connect to the database.
                 {
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate FROM issue"; // Query to get all books.
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, genre,studentImage FROM issue"; // Query to get all books.
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         connect.Open(); // Open the connection to the database.

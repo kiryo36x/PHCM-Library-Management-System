@@ -40,17 +40,17 @@
             this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
             this.searchbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformation = new PHCM_last_na_to.StudentInformation();
-            this.ReturnAddStudent = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.studentTableAdapter = new PHCM_last_na_to.StudentInformationTableAdapters.studentTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformation = new PHCM_last_na_to.StudentInformation();
+            this.ReturnAddStudent = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.studentTableAdapter = new PHCM_last_na_to.StudentInformationTableAdapters.studentTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
@@ -109,21 +109,22 @@
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.srcbtn.IconSize = 31;
-            this.srcbtn.Location = new System.Drawing.Point(1200, 13);
+            this.srcbtn.IconSize = 33;
+            this.srcbtn.Location = new System.Drawing.Point(1188, 11);
             this.srcbtn.Name = "srcbtn";
-            this.srcbtn.Size = new System.Drawing.Size(32, 31);
+            this.srcbtn.Size = new System.Drawing.Size(33, 34);
             this.srcbtn.TabIndex = 2;
             this.srcbtn.TabStop = false;
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
             // 
             // searchbox
             // 
-            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(969, 13);
+            this.searchbox.Location = new System.Drawing.Point(836, 11);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(231, 36);
+            this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 1;
             this.searchbox.Text = "Search";
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
@@ -144,7 +145,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
@@ -179,7 +180,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -189,7 +190,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
@@ -198,48 +199,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1227, 554);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.studentInformation;
-            // 
-            // studentInformation
-            // 
-            this.studentInformation.DataSetName = "StudentInformation";
-            this.studentInformation.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ReturnAddStudent
-            // 
-            this.ReturnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ReturnAddStudent.FlatAppearance.BorderSize = 0;
-            this.ReturnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReturnAddStudent.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnAddStudent.ForeColor = System.Drawing.Color.White;
-            this.ReturnAddStudent.Location = new System.Drawing.Point(1113, 670);
-            this.ReturnAddStudent.Name = "ReturnAddStudent";
-            this.ReturnAddStudent.Size = new System.Drawing.Size(154, 66);
-            this.ReturnAddStudent.TabIndex = 24;
-            this.ReturnAddStudent.Text = "return";
-            this.ReturnAddStudent.UseVisualStyleBackColor = false;
-            this.ReturnAddStudent.Click += new System.EventHandler(this.ReturnAddStudent_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.ReturnAddStudent);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 80);
-            this.panel2.Size = new System.Drawing.Size(1287, 744);
-            this.panel2.TabIndex = 25;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -296,6 +255,48 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 250;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.studentInformation;
+            // 
+            // studentInformation
+            // 
+            this.studentInformation.DataSetName = "StudentInformation";
+            this.studentInformation.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ReturnAddStudent
+            // 
+            this.ReturnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.ReturnAddStudent.FlatAppearance.BorderSize = 0;
+            this.ReturnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReturnAddStudent.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnAddStudent.ForeColor = System.Drawing.Color.White;
+            this.ReturnAddStudent.Location = new System.Drawing.Point(1113, 670);
+            this.ReturnAddStudent.Name = "ReturnAddStudent";
+            this.ReturnAddStudent.Size = new System.Drawing.Size(154, 66);
+            this.ReturnAddStudent.TabIndex = 24;
+            this.ReturnAddStudent.Text = "return";
+            this.ReturnAddStudent.UseVisualStyleBackColor = false;
+            this.ReturnAddStudent.Click += new System.EventHandler(this.ReturnAddStudent_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.ReturnAddStudent);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 80);
+            this.panel2.Size = new System.Drawing.Size(1287, 744);
+            this.panel2.TabIndex = 25;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // ViewStudent
             // 

@@ -41,18 +41,19 @@
             this.form1 = new System.Windows.Forms.Label();
             this.next = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.issuedBooks = new PHCM_last_na_to.issuedBooks();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.issueTableAdapter = new PHCM_last_na_to.issuedBooksTableAdapters.issueTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.issuedBooks = new PHCM_last_na_to.IssuedBooks();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.issueTableAdapter = new PHCM_last_na_to.IssuedBooksTableAdapters.issueTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
@@ -81,11 +82,11 @@
             this.Notfound.AutoSize = true;
             this.Notfound.BackColor = System.Drawing.Color.White;
             this.Notfound.Font = new System.Drawing.Font("Nirmala UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notfound.Location = new System.Drawing.Point(288, 131);
+            this.Notfound.Location = new System.Drawing.Point(262, 131);
             this.Notfound.Name = "Notfound";
-            this.Notfound.Size = new System.Drawing.Size(675, 45);
+            this.Notfound.Size = new System.Drawing.Size(702, 45);
             this.Notfound.TabIndex = 9;
-            this.Notfound.Text = "BOOKS NOT FOUND! TRY CREATING ONE?";
+            this.Notfound.Text = "STUDENTS NOT FOUND! TRY ADDING ONE?";
             this.Notfound.Visible = false;
             // 
             // srcbtn
@@ -94,21 +95,23 @@
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.srcbtn.IconSize = 31;
-            this.srcbtn.Location = new System.Drawing.Point(1240, 11);
+            this.srcbtn.IconSize = 33;
+            this.srcbtn.Location = new System.Drawing.Point(1239, 11);
             this.srcbtn.Name = "srcbtn";
-            this.srcbtn.Size = new System.Drawing.Size(32, 31);
+            this.srcbtn.Size = new System.Drawing.Size(33, 34);
             this.srcbtn.TabIndex = 8;
             this.srcbtn.TabStop = false;
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
             // 
             // searchbox
             // 
-            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(1009, 11);
+            this.searchbox.Location = new System.Drawing.Point(888, 11);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(231, 36);
+            this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 7;
             this.searchbox.Text = "Search";
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
@@ -169,7 +172,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
@@ -179,9 +182,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
+            this.studentImageDataGridViewImageColumn,
+            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.genreDataGridViewTextBoxColumn});
@@ -214,15 +218,47 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DividerHeight = 2;
-            this.dataGridView1.RowTemplate.Height = 150;
+            this.dataGridView1.RowTemplate.Height = 250;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1287, 631);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // issueBindingSource
+            // 
+            this.issueBindingSource.DataMember = "issue";
+            this.issueBindingSource.DataSource = this.issuedBooks;
+            // 
+            // issuedBooks
+            // 
+            this.issuedBooks.DataSetName = "issuedBooks";
+            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(505, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(325, 54);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ISSUED DETAILS";
+            // 
+            // issueTableAdapter
+            // 
+            this.issueTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -233,6 +269,25 @@
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // studentImageDataGridViewImageColumn
+            // 
+            this.studentImageDataGridViewImageColumn.DataPropertyName = "studentImage";
+            this.studentImageDataGridViewImageColumn.HeaderText = "Student Image";
+            this.studentImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.studentImageDataGridViewImageColumn.MinimumWidth = 6;
+            this.studentImageDataGridViewImageColumn.Name = "studentImageDataGridViewImageColumn";
+            this.studentImageDataGridViewImageColumn.ReadOnly = true;
+            this.studentImageDataGridViewImageColumn.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "studentName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "StudentName";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 250;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -252,15 +307,6 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 250;
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "studentName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Student Name";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 250;
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "publishedDate";
@@ -273,7 +319,7 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "issueDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Issue Date";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Issued Date";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -288,38 +334,6 @@
             this.genreDataGridViewTextBoxColumn.ReadOnly = true;
             this.genreDataGridViewTextBoxColumn.Width = 250;
             // 
-            // issueBindingSource
-            // 
-            this.issueBindingSource.DataMember = "issue";
-            this.issueBindingSource.DataSource = this.issuedBooks;
-            // 
-            // issuedBooks
-            // 
-            this.issuedBooks.DataSetName = "IssuedBooks";
-            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(505, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 54);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ISSUE DETAILS";
-            // 
-            // issueTableAdapter
-            // 
-            this.issueTableAdapter.ClearBeforeFill = true;
-            // 
             // QuickOverviewForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -329,13 +343,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.form1);
             this.Controls.Add(this.next);
-            this.Controls.Add(this.searchbox);
             this.Controls.Add(this.srcbtn);
             this.Controls.Add(this.Question);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.Notfound);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.searchbox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuickOverviewForm";
@@ -370,13 +384,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn publishedDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
-        private IssuedBooks issuedBooks;
+        private issuedBooks issuedBooks;
         private System.Windows.Forms.BindingSource issueBindingSource;
-        private IssuedBooksTableAdapters.issueTableAdapter issueTableAdapter;
+        private issuedBooksTableAdapters.issueTableAdapter issueTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn studentImageDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;

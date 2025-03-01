@@ -98,12 +98,12 @@
             this.LogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LogOut.FlatAppearance.BorderSize = 0;
             this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(60)))), ((int)(((byte)(176)))));
+            this.LogOut.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
             this.LogOut.IconChar = FontAwesome.Sharp.IconChar.LongArrowLeft;
-            this.LogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(60)))), ((int)(((byte)(176)))));
+            this.LogOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(87)))), ((int)(((byte)(208)))));
             this.LogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.LogOut.IconSize = 25;
+            this.LogOut.IconSize = 30;
             this.LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogOut.Location = new System.Drawing.Point(0, 819);
             this.LogOut.Name = "LogOut";
@@ -427,7 +427,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 12);
             this.label6.TabIndex = 10;
-            this.label6.Text = "v1.8.9";
+            this.label6.Text = "v2.0.1";
             // 
             // panel7
             // 

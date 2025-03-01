@@ -1,5 +1,4 @@
-﻿using PHCM_last_na_to.Toast_Message_for_add_books; // Import custom toast message functionality for adding books (likely a notification system)
-using System; // Import the basic System namespace that provides access to common classes (like string, int, etc.)
+﻿using System; // Import the basic System namespace that provides access to common classes (like string, int, etc.)
 using System.Data; // Import the System.Data namespace, which helps with working with data and databases (like tables and datasets)
 using System.Data.SqlClient; // Import the necessary classes for connecting to and interacting with a SQL Server database
 using System.Drawing; // Import the System.Drawing namespace, which helps with working with graphics and images
@@ -25,7 +24,6 @@ namespace PHCM_last_na_to.Forms
         {
             // TODO: This line of code loads data into the 'admin.admin' table. You can move, or remove it, as needed.
             this.adminTableAdapter.Fill(this.admin.admin);            
-            dataGridView1.RowTemplate.Height = 40;//space between each data in data grid
         }
 
         // Save button click event to check input and save/update the record
@@ -184,57 +182,12 @@ namespace PHCM_last_na_to.Forms
             SurnameTextBox.Text = "";
             ContactTextBox.Text = "";
             EditPanel.Visible = false;
-        }
-
-        // Handle editing or deleting a row from the DataGridView when a button is clicked        
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // If the edit button is clicked, fill the form with the row data
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                // Get the current row that was clicked in the DataGridView
-                DataGridViewRow dr = dataGridView1.Rows[e.RowIndex];
-
-                // Set the textboxes to the values from the selected row's cells
-                FirstNameTextBox.Text = dr.Cells["firstNameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set First Name
-                MiddleNameTextBox.Text = dr.Cells["middleNameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Middle Name
-                SurnameTextBox.Text = dr.Cells["surnameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Surname
-                ContactTextBox.Text = dr.Cells["contactNoDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Contact Number
-                UsernameTextBox.Text = dr.Cells["usernameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Username
-                PasswordTextBox.Text = dr.Cells["passowrdDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Password
-
-                // Check if the "isAdmin" value is not null and convert it to a boolean
-                bool isAdmin = dr.Cells["isAdminDataGridViewCheckBoxColumn"].Value != null
-                       && Convert.ToBoolean(dr.Cells["isAdminDataGridViewCheckBoxColumn"].Value);
-
-                // Set the checkbox based on the "isAdmin" value
-                isAdminCheckBox.Checked = isAdmin;
-
-
-                EditPanel.Visible = true; // Show the panel for editing
-            }
-            // If the delete button is clicked, delete the row and update the DataGridView
-            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                DialogResult askUSR = MessageBox.Show("Do you wish to delete this account?", "You're About to Delete an account!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (askUSR == DialogResult.Yes)
-                {
-                    Deleting deleting = new Deleting();
-                    deleting.ShowDialog(); //show the form as modal                    
-                    DataGridViewRow dr = dataGridView1.Rows[e.RowIndex];
-                    int id = Convert.ToInt32(dr.Cells["idDataGridViewTextBoxColumn"].Value); // Get the ID of the record
-                    DeleteRow(id); // Call the delete method
-
-                    // Remove the row from the DataGridView
-                    dataGridView1.Rows.RemoveAt(e.RowIndex);
-                }                                
-            }
-        }
+        }        
 
         // When the search button is clicked, start the search using the text in the search box
         private void srcbtn_Click(object sender, EventArgs e)
         {
-            SearchStudent(searchbox.Text); // Call SearchStudent function with the text entered in the search box
+            SearchAccount(searchbox.Text); // Call SearchStudent function with the text entered in the search box
         }
 
         // When the search box gets focus, clear the text and change text color to black
@@ -266,11 +219,11 @@ namespace PHCM_last_na_to.Forms
 
                 if (!string.IsNullOrEmpty(searchTerm)) // If search box has text
                 {
-                    SearchStudent(searchTerm); // Perform the search with the entered text
+                    SearchAccount(searchTerm); // Perform the search with the entered text
                 }
                 else
                 {
-                    LoadAllStudent(); // If the search box is empty, load all students
+                    LoadAllAccount(); // If the search box is empty, load all students
                 }
             }
         }
@@ -280,12 +233,12 @@ namespace PHCM_last_na_to.Forms
         {
             if (e.KeyChar == (char)Keys.Enter) // If Enter key is pressed
             {
-                SearchStudent(searchbox.Text); // Perform the search
+                SearchAccount(searchbox.Text); // Perform the search
             }
         }
 
         // Function to search students based on the entered search term
-        private void SearchStudent(string searchTerm)
+        private void SearchAccount(string searchTerm)
         {
             Notfound.Visible = false; // Hide "Not Found" label initially
             Question.Visible = false; // Hide question mark label initially
@@ -328,7 +281,7 @@ namespace PHCM_last_na_to.Forms
         }
 
         // Function to load all students (if search box is empty)
-        private void LoadAllStudent()
+        private void LoadAllAccount()
         {
             try
             {
@@ -356,5 +309,55 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
+        private void ButtonClickedControl(object sender, EventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                if (btn.Text == "Edit")
+                {
+                    // Check if a row is selected in the DataGridView
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {                        
+                        // Get the selected row from the grid
+                        DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                        // Populate the textboxes with values from the selected row                        
+                        FirstNameTextBox.Text = selectedRow.Cells["firstNameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set First Name
+                        MiddleNameTextBox.Text = selectedRow.Cells["middleNameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Middle Name
+                        SurnameTextBox.Text = selectedRow.Cells["surnameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Surname
+                        ContactTextBox.Text = selectedRow.Cells["contactNoDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Contact Number
+                        UsernameTextBox.Text = selectedRow.Cells["usernameDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Username
+                        PasswordTextBox.Text = selectedRow.Cells["passowrdDataGridViewTextBoxColumn"].Value?.ToString() ?? ""; // Set Password
+                        isAdminCheckBox.Checked = (bool)selectedRow.Cells["isAdminDataGridViewCheckBoxColumn"].Value; // Set Admin status
+                    }
+                    EditPanel.Visible = true; // Make the edit panel visible
+                }
+                else if (btn.Text == "Delete")
+                {
+                    // Check if a row is selected in the DataGridView
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        // Ask user for confirmation before deleting the data
+                        DialogResult askUSR = MessageBox.Show("Do you wish to delete the selected Data?", "You're About to Delete a Data!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (askUSR == DialogResult.Yes)
+                        {
+                            // Get the selected row from the grid
+                            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                            // Retrieve the ID of the selected row
+                            int id = Convert.ToInt32(selectedRow.Cells["idDataGridViewTextBoxColumn1"].Value); // Get the ID
+
+                            // Call DeleteRow method to delete the record from the database
+                            DeleteRow(id);
+                            dataGridView1.Rows.Remove(selectedRow); // Remove the row from the grid
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a row to delete."); // Prompt if no row is selected
+                    }
+                }
+            }
+        }
     }
 }

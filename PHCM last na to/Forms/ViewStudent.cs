@@ -18,7 +18,8 @@ namespace PHCM_last_na_to.Forms
         private void ViewStudent_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'studentInformation.student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter.Fill(this.studentInformation.student);            
+            this.studentTableAdapter.Fill(this.studentInformation.student);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Nirmala UI", 14, FontStyle.Bold); // Sets the font for the column headers 
         }
 
         private void ReturnAddStudent_Click(object sender, EventArgs e)
@@ -136,11 +137,11 @@ namespace PHCM_last_na_to.Forms
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         connect.Open(); // Opens the connection to the database
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Executes the query and fills the DataTable with all student data
-                        adapter.Fill(dt);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Executes the query and fills the DataTable with all student data                        
+                        adapter.Fill(dt);                        
 
                         // Displays all the student data in the DataGridView
-                        dataGridView1.DataSource = dt;
+                        dataGridView1.DataSource = dt;                        
                         dataGridView1.Refresh();
                     }
                 }

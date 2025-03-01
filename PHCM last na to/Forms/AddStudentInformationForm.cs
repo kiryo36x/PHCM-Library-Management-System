@@ -291,7 +291,7 @@ namespace PHCM_last_na_to.Forms
                             Departmentlbl.Visible = true;
 
                             // Reset the Picture control to a default image (stored in resources)
-                            Picture.Image = Properties.Resources._16410;
+                            Picture.Image = Properties.Resources.add_pictures;
                             // Set the focus back to the name textbox for convenience
                             Nametxtbox.Focus();
                         }
@@ -331,7 +331,7 @@ namespace PHCM_last_na_to.Forms
             Contacttxtbox.Clear();
             ImagePath.Clear();
             changeImagebtn.Text = "Add Picture"; // Default the text
-            Picture.Image = Properties.Resources._16410; // Reset image to default
+            Picture.Image = Properties.Resources.add_pictures; // Reset image to default
             Nametxtbox.Focus(); // Focus back on the Name textbox
 
             // Make sure labels are visible again after saving

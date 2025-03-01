@@ -32,12 +32,12 @@
             this.titleText1 = new System.Windows.Forms.Label();
             this.titleText2 = new System.Windows.Forms.Label();
             this.BGPnL = new System.Windows.Forms.Panel();
+            this.SignUp_label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.USERincIMG2 = new FontAwesome.Sharp.IconPictureBox();
             this.USERincMG1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.SignUp_label = new System.Windows.Forms.Label();
             this.LogInBtn = new System.Windows.Forms.Button();
             this.password = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
@@ -90,12 +90,12 @@
             // 
             this.BGPnL.AccessibleName = "";
             this.BGPnL.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BGPnL.Controls.Add(this.SignUp_label);
             this.BGPnL.Controls.Add(this.label6);
             this.BGPnL.Controls.Add(this.USERincIMG2);
             this.BGPnL.Controls.Add(this.USERincMG1);
             this.BGPnL.Controls.Add(this.label1);
             this.BGPnL.Controls.Add(this.checkBox1);
-            this.BGPnL.Controls.Add(this.SignUp_label);
             this.BGPnL.Controls.Add(this.LogInBtn);
             this.BGPnL.Controls.Add(this.password);
             this.BGPnL.Controls.Add(this.username);
@@ -113,6 +113,21 @@
             this.BGPnL.Size = new System.Drawing.Size(600, 439);
             this.BGPnL.TabIndex = 4;
             // 
+            // SignUp_label
+            // 
+            this.SignUp_label.AutoSize = true;
+            this.SignUp_label.BackColor = System.Drawing.Color.Transparent;
+            this.SignUp_label.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUp_label.ForeColor = System.Drawing.Color.White;
+            this.SignUp_label.Location = new System.Drawing.Point(541, 417);
+            this.SignUp_label.Name = "SignUp_label";
+            this.SignUp_label.Size = new System.Drawing.Size(54, 17);
+            this.SignUp_label.TabIndex = 7;
+            this.SignUp_label.Text = "Sign Up";
+            this.SignUp_label.Click += new System.EventHandler(this.SignUp_label_Click);
+            this.SignUp_label.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
+            this.SignUp_label.MouseLeave += new System.EventHandler(this.SignUp_label_MouseLeave);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -123,7 +138,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 12);
             this.label6.TabIndex = 29;
-            this.label6.Text = "v1.8.9";
+            this.label6.Text = "v2.0.1";
             // 
             // USERincIMG2
             // 
@@ -161,7 +176,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(454, 417);
+            this.label1.Location = new System.Drawing.Point(462, 417);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 6;
@@ -180,29 +195,14 @@
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // SignUp_label
-            // 
-            this.SignUp_label.AutoSize = true;
-            this.SignUp_label.BackColor = System.Drawing.Color.Transparent;
-            this.SignUp_label.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUp_label.ForeColor = System.Drawing.Color.White;
-            this.SignUp_label.Location = new System.Drawing.Point(542, 417);
-            this.SignUp_label.Name = "SignUp_label";
-            this.SignUp_label.Size = new System.Drawing.Size(54, 17);
-            this.SignUp_label.TabIndex = 7;
-            this.SignUp_label.Text = "Sign Up";
-            this.SignUp_label.Click += new System.EventHandler(this.SignUp_label_Click);
-            this.SignUp_label.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
-            this.SignUp_label.MouseLeave += new System.EventHandler(this.SignUp_label_MouseLeave);
-            // 
             // LogInBtn
             // 
             this.LogInBtn.BackColor = System.Drawing.Color.White;
             this.LogInBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.LogInBtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogInBtn.Location = new System.Drawing.Point(227, 335);
+            this.LogInBtn.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            this.LogInBtn.Location = new System.Drawing.Point(206, 315);
             this.LogInBtn.Name = "LogInBtn";
-            this.LogInBtn.Size = new System.Drawing.Size(124, 41);
+            this.LogInBtn.Size = new System.Drawing.Size(176, 70);
             this.LogInBtn.TabIndex = 5;
             this.LogInBtn.Text = "Log In";
             this.LogInBtn.UseVisualStyleBackColor = false;

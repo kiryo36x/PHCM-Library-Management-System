@@ -61,6 +61,10 @@
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.admin = new PHCM_last_na_to.Admin();
             this.adminTableAdapter = new PHCM_last_na_to.AdminTableAdapters.adminTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SaveBTN = new PHCM_last_na_to.catana_button();
+            this.catana_button1 = new PHCM_last_na_to.catana_button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,10 +73,6 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passowrdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.SaveBTN = new PHCM_last_na_to.catana_button();
-            this.catana_button1 = new PHCM_last_na_to.catana_button();
             this.EditPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
@@ -104,9 +104,9 @@
             this.EditPanel.Controls.Add(this.label4);
             this.EditPanel.Controls.Add(this.label2);
             this.EditPanel.Controls.Add(this.label1);
-            this.EditPanel.Location = new System.Drawing.Point(10, 249);
+            this.EditPanel.Location = new System.Drawing.Point(11, 201);
             this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(1247, 450);
+            this.EditPanel.Size = new System.Drawing.Size(1263, 450);
             this.EditPanel.TabIndex = 1;
             this.EditPanel.Visible = false;
             // 
@@ -115,11 +115,11 @@
             this.isAdminCheckBox.AutoSize = true;
             this.isAdminCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.isAdminCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.isAdminCheckBox.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
+            this.isAdminCheckBox.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.isAdminCheckBox.ForeColor = System.Drawing.Color.White;
-            this.isAdminCheckBox.Location = new System.Drawing.Point(43, 262);
+            this.isAdminCheckBox.Location = new System.Drawing.Point(44, 270);
             this.isAdminCheckBox.Name = "isAdminCheckBox";
-            this.isAdminCheckBox.Size = new System.Drawing.Size(126, 42);
+            this.isAdminCheckBox.Size = new System.Drawing.Size(158, 50);
             this.isAdminCheckBox.TabIndex = 6;
             this.isAdminCheckBox.Text = "Admin:";
             this.isAdminCheckBox.UseVisualStyleBackColor = false;
@@ -128,21 +128,21 @@
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.PasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.PasswordTextBox.Location = new System.Drawing.Point(910, 191);
+            this.PasswordTextBox.Location = new System.Drawing.Point(910, 200);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(250, 41);
+            this.PasswordTextBox.Size = new System.Drawing.Size(310, 41);
             this.PasswordTextBox.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(703, 195);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 38);
+            this.label6.Size = new System.Drawing.Size(180, 46);
             this.label6.TabIndex = 20;
             this.label6.Text = "Password:";
             // 
@@ -150,21 +150,21 @@
             // 
             this.UsernameTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.UsernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.UsernameTextBox.Location = new System.Drawing.Point(910, 109);
+            this.UsernameTextBox.Location = new System.Drawing.Point(910, 120);
             this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(250, 41);
+            this.UsernameTextBox.Size = new System.Drawing.Size(310, 41);
             this.UsernameTextBox.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(703, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 38);
+            this.label5.Size = new System.Drawing.Size(189, 46);
             this.label5.TabIndex = 18;
             this.label5.Text = "Username:";
             // 
@@ -181,7 +181,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1245, 3);
+            this.panel3.Location = new System.Drawing.Point(1261, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(2, 445);
             this.panel3.TabIndex = 17;
@@ -192,7 +192,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 448);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1247, 2);
+            this.panel4.Size = new System.Drawing.Size(1263, 2);
             this.panel4.TabIndex = 17;
             // 
             // panel1
@@ -201,58 +201,58 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1247, 3);
+            this.panel1.Size = new System.Drawing.Size(1263, 3);
             this.panel1.TabIndex = 15;
             // 
             // ContactTextBox
             // 
             this.ContactTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.ContactTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ContactTextBox.Location = new System.Drawing.Point(910, 31);
+            this.ContactTextBox.Location = new System.Drawing.Point(910, 37);
             this.ContactTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ContactTextBox.Name = "ContactTextBox";
-            this.ContactTextBox.Size = new System.Drawing.Size(250, 41);
+            this.ContactTextBox.Size = new System.Drawing.Size(310, 41);
             this.ContactTextBox.TabIndex = 3;
             // 
             // SurnameTextBox
             // 
             this.SurnameTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.SurnameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SurnameTextBox.Location = new System.Drawing.Point(243, 195);
+            this.SurnameTextBox.Location = new System.Drawing.Point(288, 200);
             this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(250, 41);
+            this.SurnameTextBox.Size = new System.Drawing.Size(310, 41);
             this.SurnameTextBox.TabIndex = 2;
             // 
             // MiddleNameTextBox
             // 
             this.MiddleNameTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.MiddleNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.MiddleNameTextBox.Location = new System.Drawing.Point(243, 112);
+            this.MiddleNameTextBox.Location = new System.Drawing.Point(288, 120);
             this.MiddleNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MiddleNameTextBox.Name = "MiddleNameTextBox";
-            this.MiddleNameTextBox.Size = new System.Drawing.Size(250, 41);
+            this.MiddleNameTextBox.Size = new System.Drawing.Size(310, 41);
             this.MiddleNameTextBox.TabIndex = 1;
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Font = new System.Drawing.Font("Nirmala UI", 15F);
             this.FirstNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.FirstNameTextBox.Location = new System.Drawing.Point(243, 31);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(288, 37);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(250, 41);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(310, 41);
             this.FirstNameTextBox.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(703, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 38);
+            this.label3.Size = new System.Drawing.Size(152, 46);
             this.label3.TabIndex = 6;
             this.label3.Text = "Contact:";
             // 
@@ -260,11 +260,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(36, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 38);
+            this.label4.Size = new System.Drawing.Size(171, 46);
             this.label4.TabIndex = 4;
             this.label4.Text = "Surname:";
             // 
@@ -272,11 +272,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(36, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 38);
+            this.label2.Size = new System.Drawing.Size(245, 46);
             this.label2.TabIndex = 2;
             this.label2.Text = "Middle Name:";
             // 
@@ -284,11 +284,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(36, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 38);
+            this.label1.Size = new System.Drawing.Size(202, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
@@ -298,14 +298,12 @@
             this.panel5.Controls.Add(this.Question);
             this.panel5.Controls.Add(this.Notfound);
             this.panel5.Controls.Add(this.srcbtn);
-            this.panel5.Controls.Add(this.EditPanel);
             this.panel5.Controls.Add(this.searchbox);
             this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10, 65, 10, 25);
-            this.panel5.Size = new System.Drawing.Size(1267, 724);
+            this.panel5.Size = new System.Drawing.Size(1264, 644);
             this.panel5.TabIndex = 23;
             // 
             // Question
@@ -341,21 +339,22 @@
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.srcbtn.IconSize = 31;
-            this.srcbtn.Location = new System.Drawing.Point(1200, 13);
+            this.srcbtn.IconSize = 33;
+            this.srcbtn.Location = new System.Drawing.Point(1188, 11);
             this.srcbtn.Name = "srcbtn";
-            this.srcbtn.Size = new System.Drawing.Size(32, 31);
+            this.srcbtn.Size = new System.Drawing.Size(33, 34);
             this.srcbtn.TabIndex = 2;
             this.srcbtn.TabStop = false;
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
             // 
             // searchbox
             // 
-            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(969, 13);
+            this.searchbox.Location = new System.Drawing.Point(836, 11);
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(231, 36);
+            this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 1;
             this.searchbox.Text = "Search";
             this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
@@ -376,7 +375,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
@@ -392,9 +391,7 @@
             this.contactNoDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
             this.passowrdDataGridViewTextBoxColumn,
-            this.isAdminDataGridViewCheckBoxColumn,
-            this.Edit,
-            this.Delete});
+            this.isAdminDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.adminBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -425,16 +422,15 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DividerHeight = 2;
             this.dataGridView1.RowTemplate.Height = 150;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1247, 634);
+            this.dataGridView1.Size = new System.Drawing.Size(1244, 554);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // adminBindingSource
             // 
@@ -449,6 +445,76 @@
             // adminTableAdapter
             // 
             this.adminTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(959, 665);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 66);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ButtonClickedControl);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1120, 665);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 66);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ButtonClickedControl);
+            // 
+            // SaveBTN
+            // 
+            this.SaveBTN.BackColor = System.Drawing.Color.White;
+            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
+            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.SaveBTN.BorderRadius = 0;
+            this.SaveBTN.BorderSize = 0;
+            this.SaveBTN.FlatAppearance.BorderSize = 0;
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
+            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.Location = new System.Drawing.Point(730, 370);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(201, 66);
+            this.SaveBTN.TabIndex = 8;
+            this.SaveBTN.Text = "Save";
+            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.UseVisualStyleBackColor = false;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
+            // 
+            // catana_button1
+            // 
+            this.catana_button1.BackColor = System.Drawing.Color.White;
+            this.catana_button1.BackgroundColor = System.Drawing.Color.White;
+            this.catana_button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.catana_button1.BorderRadius = 0;
+            this.catana_button1.BorderSize = 0;
+            this.catana_button1.FlatAppearance.BorderSize = 0;
+            this.catana_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.catana_button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
+            this.catana_button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.catana_button1.Location = new System.Drawing.Point(318, 370);
+            this.catana_button1.Name = "catana_button1";
+            this.catana_button1.Size = new System.Drawing.Size(201, 66);
+            this.catana_button1.TabIndex = 7;
+            this.catana_button1.Text = "Exit";
+            this.catana_button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.catana_button1.UseVisualStyleBackColor = false;
+            this.catana_button1.Click += new System.EventHandler(this.catana_button1_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -522,73 +588,15 @@
             this.isAdminDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isAdminDataGridViewCheckBoxColumn.Width = 150;
             // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 150;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 150;
-            // 
-            // SaveBTN
-            // 
-            this.SaveBTN.BackColor = System.Drawing.Color.White;
-            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
-            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.SaveBTN.BorderRadius = 0;
-            this.SaveBTN.BorderSize = 0;
-            this.SaveBTN.FlatAppearance.BorderSize = 0;
-            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 22F);
-            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.Location = new System.Drawing.Point(730, 370);
-            this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(201, 66);
-            this.SaveBTN.TabIndex = 8;
-            this.SaveBTN.Text = "Save";
-            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.UseVisualStyleBackColor = false;
-            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
-            // 
-            // catana_button1
-            // 
-            this.catana_button1.BackColor = System.Drawing.Color.White;
-            this.catana_button1.BackgroundColor = System.Drawing.Color.White;
-            this.catana_button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.catana_button1.BorderRadius = 0;
-            this.catana_button1.BorderSize = 0;
-            this.catana_button1.FlatAppearance.BorderSize = 0;
-            this.catana_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.catana_button1.Font = new System.Drawing.Font("Nirmala UI", 22F);
-            this.catana_button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.catana_button1.Location = new System.Drawing.Point(318, 370);
-            this.catana_button1.Name = "catana_button1";
-            this.catana_button1.Size = new System.Drawing.Size(201, 66);
-            this.catana_button1.TabIndex = 7;
-            this.catana_button1.Text = "Exit";
-            this.catana_button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.catana_button1.UseVisualStyleBackColor = false;
-            this.catana_button1.Click += new System.EventHandler(this.catana_button1_Click);
-            // 
             // AdministratorForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1287, 744);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.panel5);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -639,6 +647,8 @@
         private AdminTableAdapters.adminTableAdapter adminTableAdapter;
         private FontAwesome.Sharp.IconPictureBox Question;
         private System.Windows.Forms.Label Notfound;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
@@ -647,7 +657,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passowrdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isAdminDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

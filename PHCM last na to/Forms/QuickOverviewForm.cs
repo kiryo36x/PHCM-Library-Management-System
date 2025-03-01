@@ -20,6 +20,8 @@ namespace PHCM_last_na_to.Forms
         private void QuickOverviewForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
+            this.issueTableAdapter.Fill(this.issuedBooks.issue);
+            // TODO: This line of code loads data into the 'issuedBooks.issue' table. You can move, or remove it, as needed.
             this.issueTableAdapter.Fill(this.issuedBooks.issue);                                    
         }        
 
@@ -97,7 +99,7 @@ namespace PHCM_last_na_to.Forms
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
                     // SQL query to select all book details.
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate FROM issue";
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, genre,studentImage FROM issue";
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         connect.Open(); // Opens the database connection.
@@ -131,8 +133,8 @@ namespace PHCM_last_na_to.Forms
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
                     // SQL query to search for books based on the search term.
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate FROM issue " +
-                                   "WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search";
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, studentImage, genre FROM issue " +
+                                   "WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search OR genre LIKE @search";
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%"); // Adds the search term with wildcards to the query.

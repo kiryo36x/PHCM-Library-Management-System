@@ -34,8 +34,8 @@ namespace PHCM_last_na_to.Forms
         }
         private void showReturnBook_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'returnBooks.returnBook' table. You can move, or remove it, as needed.
-            this.returnBookTableAdapter.Fill(this.returnBooks.returnBook);                   
+            // TODO: This line of code loads data into the 'returnBookUpdate.returnBook' table. You can move, or remove it, as needed.
+            this.returnBookTableAdapter.Fill(this.returnBookUpdate.returnBook);            
         }
         private void SearchBooks(string searchTerm)
         {
@@ -47,8 +47,8 @@ namespace PHCM_last_na_to.Forms
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
                     // SQL query to search for books by name, author, student name, or condition.
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition FROM returnBook " +
-                                   "WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search OR condition LIKE @search";
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition, studentImage, genre FROM returnBook " +
+                                   "WHERE bookName LIKE @search OR author LIKE @search OR studentName LIKE @search OR condition LIKE @search OR genre LIKE @search";
 
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
@@ -104,7 +104,7 @@ namespace PHCM_last_na_to.Forms
                 DataTable dt = new DataTable(); // Creates a new table to load all books.
                 using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
-                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition, genre FROM returnBook"; // SQL query to get all books.
+                    string query = "SELECT id, bookName, author, studentName, publishedDate, issueDate, returnDate, condition, genre, studentImage FROM returnBook"; // SQL query to get all books.
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         connect.Open(); // Opens the connection to the database.

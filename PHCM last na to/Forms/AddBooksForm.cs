@@ -6,7 +6,8 @@ using System.Linq;  // Provides LINQ functionality for querying data in collecti
 using System.Windows.Forms;  // Provides classes for creating Windows Forms applications (e.g., Form, Button, TextBox)
 using System.IO;  // Allows for file input/output operations, like reading/writing files (e.g., File, FileStream, StreamReader)
 using PHCM_last_na_to.Toast_Message_for_add_student_information;  // Custom class for displaying toast messages when adding student information
-using PHCM_last_na_to.Toast_Message_for_add_books;  // Custom class for displaying toast messages when adding books
+using PHCM_last_na_to.Toast_Message_for_add_books;
+using FontAwesome.Sharp;  // Custom class for displaying toast messages when adding books
 
 namespace PHCM_last_na_to.Forms
 {
@@ -26,8 +27,8 @@ namespace PHCM_last_na_to.Forms
         private void AddBooksForm_Load(object sender, EventArgs e)
         {
             // When the form loads, it sets up the interface
-            panel1.Enabled = true;  // Enables a panel on the form
-            panel1.Visible = true;  // Makes the panel visible            
+            sideMenuPanel.Enabled = true;  // Enables a panel on the form
+            sideMenuPanel.Visible = true;  // Makes the panel visible            
             Booknametxtbox.Focus();  // Focuses on the book name text box (makes it ready for typing)
         }
 
@@ -243,7 +244,7 @@ namespace PHCM_last_na_to.Forms
                     genretxtbox.Clear();
                     changeImagebtn.Text = "Add Picture";
                     publishedDate.TextColor = Color.White;
-                    textBox1.Clear();
+                    publishedDatetxtbox.Clear();
 
                     // Reset the labels and picture
                     Booknamelbl.Visible = true;
@@ -251,7 +252,7 @@ namespace PHCM_last_na_to.Forms
                     Datelbl.Visible = true;
                     Conditionlbl.Visible = true;
                     genrelbl.Visible = true;
-                    Picture.Image = Properties.Resources._16410;  // Set a default image
+                    Picture.Image = Properties.Resources.add_pictures;  // Set a default image
                     Booknametxtbox.Focus();  // Focus on the book name text box again
                 }
                 catch (SqlException ex)  // If a database error occurs
@@ -283,7 +284,7 @@ namespace PHCM_last_na_to.Forms
             genretxtbox.Clear();
             changeImagebtn.Text = "Add Picture";
             publishedDate.TextColor = Color.White;
-            textBox1.Clear();
+            publishedDatetxtbox.Clear();
 
             // Reset the labels and picture
             Booknamelbl.Visible = true;
@@ -291,7 +292,7 @@ namespace PHCM_last_na_to.Forms
             Datelbl.Visible = true;
             Conditionlbl.Visible = true;
             genrelbl.Visible = true;
-            Picture.Image = Properties.Resources._16410;
+            Picture.Image = Properties.Resources.add_pictures;
             Booknametxtbox.Focus();  // Focus on the book name text box again
         }
 
@@ -373,8 +374,8 @@ namespace PHCM_last_na_to.Forms
             childForm.Dock = DockStyle.Fill;  // Makes the form fill the entire panel
 
             // Adds the new form to the panel where it will be displayed
-            panel11.Controls.Add(childForm);
-            panel11.Tag = childForm;  // Stores the form in the panel's tag property
+            formPanel.Controls.Add(childForm);
+            formPanel.Tag = childForm;  // Stores the form in the panel's tag property
 
             childForm.BringToFront();  // Brings the new form to the front to make it visible
             childForm.Show();  // Displays the form
@@ -430,7 +431,7 @@ namespace PHCM_last_na_to.Forms
             // change the text color of the date control to black,
             publishedDate.TextColor = Color.Black;
             // and update textBox1 to show the selected date.
-            textBox1.Text = publishedDate.Value.ToString();
+            publishedDatetxtbox.Text = publishedDate.Value.ToString();
         }
 
         private void Datelbl_Click(object sender, EventArgs e)
@@ -444,44 +445,14 @@ namespace PHCM_last_na_to.Forms
         {
             // When the user clicks the genre label,
             // show the panel where genres are listed.
-            genreselectorpanel.Visible = true;
+            Categoryselectorpanel.Visible = true;
         }
 
         private void genretxtbox_Click(object sender, EventArgs e)
         {
             // When the user clicks the textbox for genre,
             // show the panel where genres are listed.
-            genreselectorpanel.Visible = true;
-        }
-
-        private void closepnl_Click(object sender, EventArgs e)
-        {
-            // When the user clicks the close button on the genre panel,
-            // hide the genre selection panel.
-            genreselectorpanel.Visible = false;
-        }
-
-        private void hoverSelection(object sender, EventArgs e) // When the mouse moves over a label
-        {
-            if (sender is Label Hover)
-            {
-                // Change the label's background color to a lighter shade,
-                // indicating it is being hovered over.
-                Hover.BackColor = Color.FromArgb(76, 75, 105);
-            }
-        }
-
-        private void genreSelection(object sender, EventArgs e) // When a genre label is clicked
-        {
-            if (sender is Label selection)
-            {
-                // Set the genre textbox to the text from the clicked label,
-                genretxtbox.Text = selection.Text;
-                // hide the genre label (possibly to avoid duplicate information),
-                genrelbl.Visible = false;
-                // and hide the genre selection panel.
-                genreselectorpanel.Visible = false;
-            }
+            Categoryselectorpanel.Visible = true;
         }
 
         private void label44_MouseLeave(object sender, EventArgs e) // When the mouse stops hovering over a label
@@ -490,6 +461,290 @@ namespace PHCM_last_na_to.Forms
             {
                 // Reset the label's background color to a darker shade.
                 Hover.BackColor = Color.FromArgb(31, 30, 68);
+            }
+        }
+
+        private void CategorySelectLeave(object sender, EventArgs e)
+        {
+            if (sender is Button btn) // Check if the sender is a button
+            {
+                btn.Cursor = System.Windows.Forms.Cursors.Default; // Reset cursor to default
+                btn.BackColor = Color.FromArgb(31, 30, 68); // Revert background color to original
+            }
+            else if (sender is IconPictureBox icon)
+            {
+                icon.Cursor = System.Windows.Forms.Cursors.Default; // Reset cursor to default
+                icon.IconColor = Color.White; // Change the color to original
+            }
+        }
+        private void CategorySelectHover(object sender, EventArgs e)
+        {
+            if (sender is Button btn) // Check if the sender is a button
+            {
+                btn.Cursor = System.Windows.Forms.Cursors.Hand; // Change cursor to hand icon
+                btn.BackColor = Color.FromArgb(57, 57, 101); // Change background color to a lighter shade
+            }
+            else if (sender is IconPictureBox icon)
+            {
+                icon.Cursor = System.Windows.Forms.Cursors.Hand; // Change cursor to hand icon
+                icon.IconColor = Color.Black; // Change the color to original
+            }
+        }
+
+        private void fictionBtn_Click(object sender, EventArgs e)
+        {
+            Fictionpnl.Visible = true;
+        }
+
+        private void nonFictionbtn_Click(object sender, EventArgs e)
+        {
+            nonFictionpnl.Visible = true;
+        }
+
+        private void closepnl_Click_1(object sender, EventArgs e)
+        {
+            Categoryselectorpanel.Visible = false;
+        }
+
+        private void exitNonFictionbtn_Click(object sender, EventArgs e)
+        {
+            nonFictionpnl.Visible = false;
+        }
+
+        private void exitFictionbtn_Click(object sender, EventArgs e)
+        {
+            Fictionpnl.Visible = false;
+        }
+
+        private void FictionHover(object sender, EventArgs e)
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                // Set the description based on the text of the hovered label
+                Description2.Visible = true;
+                HoverGenre.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the label
+                if (HoverGenre.Text.ToLower() == "all")
+                {
+                    Description2.Text = "Shows all the Books Genre";
+                }
+                else if (HoverGenre.Text.ToLower() == "adventuren fiction")
+                {
+                    Description2.Text = "Exciting quests, daring journeys.";
+                }
+                else if (HoverGenre.Text.ToLower() == "children's fiction")
+                {
+                    Description2.Text = "Stories for young readers.";
+                }
+                else if (HoverGenre.Text.ToLower() == "classics")
+                {
+                    Description2.Text = "Timeless, influential literature.";
+                }
+                else if (HoverGenre.Text.ToLower() == "contemporary")
+                {
+                    Description2.Text = "Modern, realistic storytelling.";
+                }
+                else if (HoverGenre.Text.ToLower() == "crime fiction")
+                {
+                    Description2.Text = "Criminals, investigations, justice.";
+                }
+                else if (HoverGenre.Text.ToLower() == "drama")
+                {
+                    Description2.Text = "Emotional, character-driven narratives";
+                }
+                else if (HoverGenre.Text.ToLower() == "dystopian")
+                {
+                    Description2.Text = " Oppressive societies, survival themes.";
+                }
+                else if (HoverGenre.Text.ToLower() == "fairy tales")
+                {
+                    Description2.Text = "Magical, folklore-inspired stories.";
+                }
+                else if (HoverGenre.Text.ToLower() == "fantasy")
+                {
+                    Description2.Text = "Mythical worlds, magic, supernatural.";
+                }
+                else if (HoverGenre.Text.ToLower() == "historical fiction")
+                {
+                    Description2.Text = " Fiction set in the past.";
+                }
+                else if (HoverGenre.Text.ToLower() == "horror")
+                {
+                    Description2.Text = "Fear, suspense, supernatural elements.";
+                }
+                else if (HoverGenre.Text.ToLower() == "mystery")
+                {
+                    Description2.Text = "Puzzles, secrets, detective work.";
+                }
+                else if (HoverGenre.Text.ToLower() == "manga")
+                {
+                    Description2.Text = "Japanese comic-style storytelling.";
+                }
+                else if (HoverGenre.Text.ToLower() == "psychological fiction")
+                {
+                    Description2.Text = "Deep mental, emotional exploration.";
+                }
+                else if (HoverGenre.Text.ToLower() == "romance")
+                {
+                    Description2.Text = "Love, relationships, emotional connections.";
+                }
+                else if (HoverGenre.Text.ToLower() == "satire")
+                {
+                    Description2.Text = "Humor, social criticism, irony.";
+                }
+                else if (HoverGenre.Text.ToLower() == "science fiction")
+                {
+                    Description2.Text = " Futuristic, technology, space, time travel.";
+                }
+                else if (HoverGenre.Text.ToLower() == "short story")
+                {
+                    Description2.Text = "Brief, impactful narratives.";
+                }
+                if (HoverGenre.Text.ToLower() == "thriller")
+                {
+                    Description2.Text = "Suspense, tension, fast-paced action.";
+                }
+                else if (HoverGenre.Text.ToLower() == "literary fiction")
+                {
+                    Description2.Text = "Deep themes, character-driven stories.";
+                }
+                else if (HoverGenre.Text.ToLower() == "western fiction")
+                {
+                    Description2.Text = "Cowboys, frontier life, adventure.";
+                }
+                else if (HoverGenre.Text.ToLower() == "magical realism")
+                {
+                    Description2.Text = "Reality with subtle magical elements.";
+                }
+                else if (HoverGenre.Text.ToLower() == "young adult")
+                {
+                    Description2.Text = "Teen-focused themes and storytelling.";
+                }
+            }
+        }
+
+        private void FictionLeave(object sender, EventArgs e)
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
+                Description2.Visible = false;
+            }
+        }
+
+        private void FictionSelection(object sender, EventArgs e)
+        {
+            if (sender is Label selectGenre) // Check if the sender is a label
+            {
+                Fictionpnl.Visible = false;
+                Categoryselectorpanel.Visible = false;
+                genrelbl.Visible = false;
+                genretxtbox.Text = selectGenre.Text;
+            }
+        }
+
+        private void NonFictionHover(object sender, EventArgs e)
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                // Set the description based on the text of the hovered label
+                Description.Visible = true;
+                HoverGenre.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the label
+                if (HoverGenre.Text.ToLower() == "all")
+                {
+                    Description.Text = "Shows all the Books Genre";
+                }
+                else if (HoverGenre.Text.ToLower() == "autobiography")
+                {
+                    Description.Text = "Self-written life story.";
+                }
+                else if (HoverGenre.Text.ToLower() == "biography")
+                {
+                    Description.Text = "Life story written by another.";
+                }
+                else if (HoverGenre.Text.ToLower() == "business")
+                {
+                    Description.Text = "Entrepreneurship, finance, leadership, strategy.";
+                }
+                else if (HoverGenre.Text.ToLower() == "cook books")
+                {
+                    Description.Text = "Recipes, cooking techniques, cuisine.";
+                }
+                else if (HoverGenre.Text.ToLower() == "essay collections")
+                {
+                    Description.Text = "Personal insights, opinions, reflections.";
+                }
+                else if (HoverGenre.Text.ToLower() == "graphic non-fiction")
+                {
+                    Description.Text = "Illustrated storytelling, sequential art, comics.";
+                }
+                else if (HoverGenre.Text.ToLower() == "health and wellness")
+                {
+                    Description.Text = "Fitness, nutrition, self-care.";
+                }
+                else if (HoverGenre.Text.ToLower() == "history")
+                {
+                    Description.Text = "Past events, civilizations, historical analysis.";
+                }
+                else if (HoverGenre.Text.ToLower() == "memoir")
+                {
+                    Description.Text = "Personal experiences, life stories, reflections.";
+                }
+                else if (HoverGenre.Text.ToLower() == "philosophy")
+                {
+                    Description.Text = "Existence, knowledge, reasoning, ethics.";
+                }
+                else if (HoverGenre.Text.ToLower() == "poetry")
+                {
+                    Description.Text = "Expressive, rhythmic, literary art.";
+                }
+                else if (HoverGenre.Text.ToLower() == "political")
+                {
+                    Description.Text = "Government, policies, political analysis.";
+                }
+                else if (HoverGenre.Text.ToLower() == "reference books")
+                {
+                    Description.Text = "Facts, information, research resources.";
+                }
+                else if (HoverGenre.Text.ToLower() == "science")
+                {
+                    Description.Text = "Experiments, discoveries, natural laws.";
+                }
+                else if (HoverGenre.Text.ToLower() == "self-help")
+                {
+                    Description.Text = "Personal growth, motivation, success.";
+                }
+                else if (HoverGenre.Text.ToLower() == "spirituality")
+                {
+                    Description.Text = "Faith, inner peace, beliefs.";
+                }
+                else if (HoverGenre.Text.ToLower() == "true crime")
+                {
+                    Description.Text = "Real cases, investigations, criminals.";
+                }
+                else if (HoverGenre.Text.ToLower() == "western")
+                {
+                    Description.Text = "Cowboys, frontier life, adventure.";
+                }
+            }
+        }
+
+        private void NonFictionLeave(object sender, EventArgs e)
+        {
+            if (sender is Label HoverGenre) // Check if the sender is a Label
+            {
+                HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
+                Description.Visible = false;
+            }
+        }
+
+        private void NonFictionSelection(object sender, EventArgs e)
+        {
+            if (sender is Label selectGenre) // Check if the sender is a label
+            {
+                nonFictionpnl.Visible = false;
+                Categoryselectorpanel.Visible = false;
+                genrelbl.Visible = false;
+                genretxtbox.Text = selectGenre.Text;
             }
         }
     }
