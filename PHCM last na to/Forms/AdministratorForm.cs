@@ -86,34 +86,40 @@ namespace PHCM_last_na_to.Forms
             }
             else
             {
-                // Update the DataGridView with the new or modified values
-                DataGridViewCell cell = dataGridView1.CurrentCell;
-                int rowIndex = cell.RowIndex; // Get the row index of the clicked cell
-                int id = Convert.ToInt32(dataGridView1.Rows[rowIndex].Cells["idDataGridViewTextBoxColumn"].Value); // Get the ID of the record
 
-                // Call method to update the database with the new values
-                UpdateRow(id);
+                DialogResult dialogResult = MessageBox.Show("Do you wish to save the data?", "Save Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //ask the user if they want to save the data
 
-                // Update the DataGridView with the new values
-                dataGridView1.Rows[rowIndex].Cells["firstNameDataGridViewTextBoxColumn"].Value = FirstNameTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["middleNameDataGridViewTextBoxColumn"].Value = MiddleNameTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["surnameDataGridViewTextBoxColumn"].Value = SurnameTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["contactNoDataGridViewTextBoxColumn"].Value = ContactTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["usernameDataGridViewTextBoxColumn"].Value = UsernameTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["passowrdDataGridViewTextBoxColumn"].Value = PasswordTextBox.Text;
-                dataGridView1.Rows[rowIndex].Cells["isAdminDataGridViewCheckBoxColumn"].Value = isAdminCheckBox.Checked;
+                if (dialogResult == DialogResult.Yes)
+                {
+                    // Update the DataGridView with the new or modified values
+                    DataGridViewCell cell = dataGridView1.CurrentCell;
+                    int rowIndex = cell.RowIndex; // Get the row index of the clicked cell
+                    int id = Convert.ToInt32(dataGridView1.Rows[rowIndex].Cells["idDataGridViewTextBoxColumn"].Value); // Get the ID of the record
 
-                // Clear the input fields after saving the data
-                FirstNameTextBox.Text = "";
-                MiddleNameTextBox.Text = "";
-                SurnameTextBox.Text = "";
-                ContactTextBox.Text = "";
-                UsernameTextBox.Text = "";
-                PasswordTextBox.Text = "";
-                isAdminCheckBox.Checked = false;
+                    // Call method to update the database with the new values
+                    UpdateRow(id);
 
-                // Hide the edit panel after saving the data
-                EditPanel.Visible = false;
+                    // Update the DataGridView with the new values
+                    dataGridView1.Rows[rowIndex].Cells["firstNameDataGridViewTextBoxColumn"].Value = FirstNameTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["middleNameDataGridViewTextBoxColumn"].Value = MiddleNameTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["surnameDataGridViewTextBoxColumn"].Value = SurnameTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["contactNoDataGridViewTextBoxColumn"].Value = ContactTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["usernameDataGridViewTextBoxColumn"].Value = UsernameTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["passowrdDataGridViewTextBoxColumn"].Value = PasswordTextBox.Text;
+                    dataGridView1.Rows[rowIndex].Cells["isAdminDataGridViewCheckBoxColumn"].Value = isAdminCheckBox.Checked;
+
+                    // Clear the input fields after saving the data
+                    FirstNameTextBox.Text = "";
+                    MiddleNameTextBox.Text = "";
+                    SurnameTextBox.Text = "";
+                    ContactTextBox.Text = "";
+                    UsernameTextBox.Text = "";
+                    PasswordTextBox.Text = "";
+                    isAdminCheckBox.Checked = false;
+
+                    // Hide the edit panel after saving the data
+                    EditPanel.Visible = false;
+                }                
             }
         }
 

@@ -219,7 +219,7 @@
             this.Categoryselectorpanel.Controls.Add(this.SelectCategoryTitle);
             this.Categoryselectorpanel.Location = new System.Drawing.Point(12, 12);
             this.Categoryselectorpanel.Name = "Categoryselectorpanel";
-            this.Categoryselectorpanel.Size = new System.Drawing.Size(1287, 249);
+            this.Categoryselectorpanel.Size = new System.Drawing.Size(1287, 220);
             this.Categoryselectorpanel.TabIndex = 5124128;
             this.Categoryselectorpanel.Visible = false;
             // 
@@ -1013,7 +1013,7 @@
             // 
             this.BottomCategoryPanel.BackColor = System.Drawing.Color.White;
             this.BottomCategoryPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomCategoryPanel.Location = new System.Drawing.Point(2, 247);
+            this.BottomCategoryPanel.Location = new System.Drawing.Point(2, 218);
             this.BottomCategoryPanel.Name = "BottomCategoryPanel";
             this.BottomCategoryPanel.Size = new System.Drawing.Size(1283, 2);
             this.BottomCategoryPanel.TabIndex = 18;
@@ -1024,7 +1024,7 @@
             this.rightCategoryPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightCategoryPanel.Location = new System.Drawing.Point(1285, 0);
             this.rightCategoryPanel.Name = "rightCategoryPanel";
-            this.rightCategoryPanel.Size = new System.Drawing.Size(2, 249);
+            this.rightCategoryPanel.Size = new System.Drawing.Size(2, 220);
             this.rightCategoryPanel.TabIndex = 18;
             // 
             // leftCategoryBorder
@@ -1033,7 +1033,7 @@
             this.leftCategoryBorder.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftCategoryBorder.Location = new System.Drawing.Point(0, 0);
             this.leftCategoryBorder.Name = "leftCategoryBorder";
-            this.leftCategoryBorder.Size = new System.Drawing.Size(2, 249);
+            this.leftCategoryBorder.Size = new System.Drawing.Size(2, 220);
             this.leftCategoryBorder.TabIndex = 17;
             // 
             // SelectCategoryTitle
@@ -1059,7 +1059,7 @@
             this.ShowSelection.Location = new System.Drawing.Point(9, 363);
             this.ShowSelection.Name = "ShowSelection";
             this.ShowSelection.Padding = new System.Windows.Forms.Padding(10, 65, 10, 25);
-            this.ShowSelection.Size = new System.Drawing.Size(55, 481);
+            this.ShowSelection.Size = new System.Drawing.Size(1070, 481);
             this.ShowSelection.TabIndex = 5124129;
             this.ShowSelection.Visible = false;
             // 

@@ -347,15 +347,29 @@ namespace PHCM_last_na_to
         private void Exit_MouseEnter(object sender, EventArgs e)
         {
             Exit.ForeColor = System.Drawing.Color.Black;  // Change the text color of the Exit button when the mouse enters it
+            Exit.Cursor =  System.Windows.Forms.Cursors.Hand;  // Change the cursor to a hand when the mouse hovers over the Exit button
         }
 
         private void Exit_MouseLeave(object sender, EventArgs e)
         {
             Exit.ForeColor = System.Drawing.Color.White;  // Change the text color of the Exit button when the mouse leaves it
+            Exit.Cursor = System.Windows.Forms.Cursors.Default;  // Change the cursor back to the default arrow when the mouse leaves the Exit button
         }
         private void minimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized; // Form will hide
+        }
+
+        private void minimize_MouseHover(object sender, EventArgs e)
+        {
+            minimize.Cursor = System.Windows.Forms.Cursors.Hand; // Change the cursor to a hand when the mouse hovers over the minimize button
+            minimize.IconColor = System.Drawing.Color.Black; // Change the icon color to black when the mouse hovers over the minimize button
+        }
+
+        private void minimize_MouseLeave(object sender, EventArgs e)
+        {
+            minimize.Cursor = System.Windows.Forms.Cursors.Default; // Change the cursor back to the default arrow when the mouse leaves the minimize button
+            minimize.IconColor = System.Drawing.Color.White; // Change the icon color back to white when the mouse leaves the minimize button
         }
     }
 }

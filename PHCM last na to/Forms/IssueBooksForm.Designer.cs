@@ -179,6 +179,9 @@
             this.booksTableAdapter = new PHCM_last_na_to.BooksTableAdapters.booksTableAdapter();
             this.studentTableAdapter = new PHCM_last_na_to.StudentInformationTableAdapters.studentTableAdapter();
             this.issuedBooks = new PHCM_last_na_to.IssuedBooks();
+            this.fictionTip = new System.Windows.Forms.ToolTip(this.components);
+            this.nonFictionTip = new System.Windows.Forms.ToolTip(this.components);
+            this.genreTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.StudentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
@@ -536,9 +539,9 @@
             this.nonFictionpnl.Controls.Add(this.Political);
             this.nonFictionpnl.Controls.Add(this.Memoir);
             this.nonFictionpnl.Controls.Add(this.Western);
-            this.nonFictionpnl.Location = new System.Drawing.Point(0, 1);
+            this.nonFictionpnl.Location = new System.Drawing.Point(0, 0);
             this.nonFictionpnl.Name = "nonFictionpnl";
-            this.nonFictionpnl.Size = new System.Drawing.Size(1287, 537);
+            this.nonFictionpnl.Size = new System.Drawing.Size(1287, 538);
             this.nonFictionpnl.TabIndex = 5124131;
             this.nonFictionpnl.Visible = false;
             // 
@@ -647,7 +650,7 @@
             // 
             this.BottomNonFictionPanel.BackColor = System.Drawing.Color.White;
             this.BottomNonFictionPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomNonFictionPanel.Location = new System.Drawing.Point(2, 535);
+            this.BottomNonFictionPanel.Location = new System.Drawing.Point(2, 536);
             this.BottomNonFictionPanel.Name = "BottomNonFictionPanel";
             this.BottomNonFictionPanel.Size = new System.Drawing.Size(1283, 2);
             this.BottomNonFictionPanel.TabIndex = 18;
@@ -672,7 +675,7 @@
             this.RightNonFictionBorder.Dock = System.Windows.Forms.DockStyle.Right;
             this.RightNonFictionBorder.Location = new System.Drawing.Point(1285, 0);
             this.RightNonFictionBorder.Name = "RightNonFictionBorder";
-            this.RightNonFictionBorder.Size = new System.Drawing.Size(2, 537);
+            this.RightNonFictionBorder.Size = new System.Drawing.Size(2, 538);
             this.RightNonFictionBorder.TabIndex = 18;
             // 
             // Spiritual
@@ -695,7 +698,7 @@
             this.LeftNonFictionBorder.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftNonFictionBorder.Location = new System.Drawing.Point(0, 0);
             this.LeftNonFictionBorder.Name = "LeftNonFictionBorder";
-            this.LeftNonFictionBorder.Size = new System.Drawing.Size(2, 537);
+            this.LeftNonFictionBorder.Size = new System.Drawing.Size(2, 538);
             this.LeftNonFictionBorder.TabIndex = 17;
             // 
             // healthAndWellness
@@ -1390,6 +1393,8 @@
             this.nonFictionbtn.Size = new System.Drawing.Size(632, 406);
             this.nonFictionbtn.TabIndex = 20;
             this.nonFictionbtn.Text = "NON-FICTION";
+            this.nonFictionTip.SetToolTip(this.nonFictionbtn, "Non-fiction refers to literature or media that presents factual information or\r\na" +
+        "ccounts of real events, people, or places.");
             this.nonFictionbtn.UseVisualStyleBackColor = true;
             this.nonFictionbtn.Click += new System.EventHandler(this.nonFictionbtn_Click);
             this.nonFictionbtn.MouseEnter += new System.EventHandler(this.fictionBtn_MouseEnter);
@@ -1406,6 +1411,9 @@
             this.fictionBtn.Size = new System.Drawing.Size(632, 406);
             this.fictionBtn.TabIndex = 19;
             this.fictionBtn.Text = "FICTION";
+            this.fictionTip.SetToolTip(this.fictionBtn, "Fiction is a literary genre that encompasses imaginative narratives created by th" +
+        "e \r\nauthor, featuring characters, events, and settings that are not based on rea" +
+        "l people \r\nor occurrences.");
             this.fictionBtn.UseVisualStyleBackColor = true;
             this.fictionBtn.Click += new System.EventHandler(this.fictionBtn_Click);
             this.fictionBtn.MouseEnter += new System.EventHandler(this.fictionBtn_MouseEnter);
@@ -1528,6 +1536,7 @@
             this.currentGnre.Size = new System.Drawing.Size(50, 30);
             this.currentGnre.TabIndex = 7;
             this.currentGnre.Text = "ALL";
+            this.genreTip.SetToolTip(this.currentGnre, "Click me to change Genre");
             this.currentGnre.Click += new System.EventHandler(this.currentGnre_Click);
             this.currentGnre.MouseEnter += new System.EventHandler(this.currentGnre_MouseEnter);
             this.currentGnre.MouseLeave += new System.EventHandler(this.currentGnre_MouseLeave);
@@ -2326,5 +2335,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datePickDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolTip nonFictionTip;
+        private System.Windows.Forms.ToolTip fictionTip;
+        private System.Windows.Forms.ToolTip genreTip;
     }
 }

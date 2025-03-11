@@ -635,43 +635,43 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
-        private void fictionBtn_Click(object sender, EventArgs e)
+        private void fictionBtn_Click(object sender, EventArgs e) // Show the Fiction genre selection panel
         {
-            Fictionpnl.Visible = true;
+            Fictionpnl.Visible = true; // Show the Fiction genre selection panel
         }
 
-        private void closepnl_Click_1(object sender, EventArgs e)
+        private void closepnl_Click_1(object sender, EventArgs e) // Close the Fiction genre selection panel
         {
-            Categoryselectorpanel.Visible = false;
+            Categoryselectorpanel.Visible = false; // Hide the Fiction genre selection panel
         }
 
-        private void closepnl_MouseEnter(object sender, EventArgs e)
+        private void closepnl_MouseEnter(object sender, EventArgs e) // Change the color of the close panel icon when the mouse enters
         {
-            closepnl.IconColor = Color.Black;
-            closepnl.Cursor = Cursors.Hand;
+            closepnl.IconColor = Color.Black; // Change the color of the icon to black
+            closepnl.Cursor = Cursors.Hand; // Change the cursor to a hand pointer
         }
 
-        private void closepnl_MouseLeave(object sender, EventArgs e)
+        private void closepnl_MouseLeave(object sender, EventArgs e) // Change the color of the close panel icon when the mouse leaves
         {
-            closepnl.IconColor = Color.White;
-            closepnl.Cursor = Cursors.Default;
+            closepnl.IconColor = Color.White; // Change the color of the icon to white
+            closepnl.Cursor = Cursors.Default; // Change the cursor to the default pointer
         }
 
-        private void fictionBtn_MouseEnter(object sender, EventArgs e)
+        private void fictionBtn_MouseEnter(object sender, EventArgs e) // Change the color of the Fiction genre button when the mouse enters
         {
-            if (sender is Button btn)
+            if (sender is Button btn) // Check if the sender is a Button
             {
-                btn.Cursor = Cursors.Hand;
-                btn.BackColor = Color.FromArgb(57, 57, 101);
+                btn.Cursor = Cursors.Hand; // Change the cursor to a hand pointer
+                btn.BackColor = Color.FromArgb(57, 57, 101); // Change the background color of the button
             }
         }
 
-        private void fictionBtn_MouseLeave(object sender, EventArgs e)
+        private void fictionBtn_MouseLeave(object sender, EventArgs e) // Change the color of the Fiction genre button when the mouse leaves
         {
-            if (sender is Button btn)
+            if (sender is Button btn) // Check if the sender is a Button
             {
-                btn.Cursor = Cursors.Default;
-                btn.BackColor = Color.FromArgb(31, 30, 68);
+                btn.Cursor = Cursors.Default; // Change the cursor to the default pointer
+                btn.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the button
             }
         }
 
@@ -781,52 +781,52 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
-        private void fictionLeave(object sender, EventArgs e)
+        private void fictionLeave(object sender, EventArgs e) // Change the color of the Fiction genre label when the mouse leaves
         {
             if (sender is Label HoverGenre) // Check if the sender is a Label
             {
                 HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
-                Description2.Visible = false;
+                Description2.Visible = false; // Hide the description
             }
         }
 
-        private void exitFictionbtn_Click(object sender, EventArgs e)
+        private void exitFictionbtn_Click(object sender, EventArgs e) // Close the Fiction genre selection panel
         {
-            Fictionpnl.Visible = false;
+            Fictionpnl.Visible = false; // Hide the Fiction genre selection panel
         }
 
-        private void exitFictionbtn_MouseEnter(object sender, EventArgs e)
+        private void exitFictionbtn_MouseEnter(object sender, EventArgs e) // Change the color of the close button when the mouse enters
         {
-            exitFictionbtn.Cursor = Cursors.Hand;
-            exitFictionbtn.IconColor = Color.Black;
+            exitFictionbtn.Cursor = Cursors.Hand;   // Change the cursor to a hand pointer
+            exitFictionbtn.IconColor = Color.Black; // Change the color of the icon to black
         }
 
-        private void exitFictionbtn_MouseLeave(object sender, EventArgs e)
+        private void exitFictionbtn_MouseLeave(object sender, EventArgs e) // Change the color of the close button when the mouse leaves
         {
-            exitFictionbtn.Cursor = Cursors.Default;
-            exitFictionbtn.IconColor = Color.White;
+            exitFictionbtn.Cursor = Cursors.Default; // Change the cursor to the default pointer
+            exitFictionbtn.IconColor = Color.White; // Change the color of the icon to white
         }
 
-        private void exitNonFictionbtn_Click(object sender, EventArgs e)
+        private void exitNonFictionbtn_Click(object sender, EventArgs e) // Close the Non-Fiction genre selection panel
         {
-            nonFictionpnl.Visible = false;
+            nonFictionpnl.Visible = false; // Hide the Non-Fiction genre selection panel
         }
 
-        private void exitNonFictionbtn_MouseEnter(object sender, EventArgs e)
+        private void exitNonFictionbtn_MouseEnter(object sender, EventArgs e) // Change the color of the close button when the mouse enters
         {
-            exitNonFictionbtn.Cursor = Cursors.Hand;
-            exitNonFictionbtn.IconColor = Color.Black;
+            exitNonFictionbtn.Cursor = Cursors.Hand; // Change the cursor to a hand pointer
+            exitNonFictionbtn.IconColor = Color.Black; // Change the color of the icon to black
         }
 
-        private void exitNonFictionbtn_MouseLeave(object sender, EventArgs e)
+        private void exitNonFictionbtn_MouseLeave(object sender, EventArgs e) // Change the color of the close button when the mouse leaves
         {
-            exitNonFictionbtn.Cursor = Cursors.Default;
-            exitNonFictionbtn.IconColor = Color.White;
+            exitNonFictionbtn.Cursor = Cursors.Default; // Change the cursor to the default pointer
+            exitNonFictionbtn.IconColor = Color.White; // Change the color of the icon to white
         }
 
-        private void FictionSelection(object sender, EventArgs e)
+        private void FictionSelection(object sender, EventArgs e) // Select the Fiction genre
         {
-            if (sender is Label selectGenre)
+            if (sender is Label selectGenre) // Check if the sender is a Label
             {
                 selectedGenre = selectGenre.Text; // Store the selected genre
                 currentGnre.Text = selectGenre.Text; // Update the UI to show the selected genre
@@ -906,7 +906,7 @@ namespace PHCM_last_na_to.Forms
                 else if (HoverGenre.Text.ToLower() == "health and wellness")
                 {
                     Description.Text = "Fitness, nutrition, self-care.";
-                }
+                }   
                 else if (HoverGenre.Text.ToLower() == "history")
                 {
                     Description.Text = "Past events, civilizations, historical analysis.";
@@ -953,23 +953,23 @@ namespace PHCM_last_na_to.Forms
                 }
             }
         }
-        private void NonFictionLeave(object sender, EventArgs e)
+        private void NonFictionLeave(object sender, EventArgs e) // Change the color of the Non-Fiction genre label when the mouse leaves
         {
             if (sender is Label HoverGenre) // Check if the sender is a Label
             {
                 HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
-                Description.Visible = false;
+                Description.Visible = false; // Hide the description
             }
         }
 
-        private void nonFictionbtn_Click(object sender, EventArgs e)
+        private void nonFictionbtn_Click(object sender, EventArgs e) // Show the Non-Fiction genre selection panel
         {
-            nonFictionpnl.Visible = true;
+            nonFictionpnl.Visible = true; // Show the Non-Fiction genre selection panel
         }
 
-        private void studentNametxtbox_Click(object sender, EventArgs e)
+        private void studentNametxtbox_Click(object sender, EventArgs e) // Show the student selection panel
         {
-            StudentPanel.Visible = true;
+            StudentPanel.Visible = true; // Show the student selection panel
         }
 
         private void saveStudentbtn_Click(object sender, EventArgs e)
@@ -999,18 +999,18 @@ namespace PHCM_last_na_to.Forms
                     // If no book name is selected, show a message telling the user to select a book first
                     new SelectStudentFirst().Show();
                 }
-                if (DisplayStudentImage != null)
+                if (DisplayStudentImage != null) // Check if the student has an image
                 {
-                    if (DisplayStudentImage is Image studentImage)
+                    if (DisplayStudentImage is Image studentImage) // Check if the image is an Image
                     {
-                        studentPicture.Image = studentImage;
+                        studentPicture.Image = studentImage; // Set the student image to the PictureBox
                     }
-                    else if (DisplayStudentImage is byte[] imageBytes)
+                    else if (DisplayStudentImage is byte[] imageBytes) // Check if the image is a byte array
                     {
                         // Convert byte array to image
                         using (MemoryStream ms = new MemoryStream(imageBytes))
                         {
-                            studentPicture.Image = Image.FromStream(ms);
+                            studentPicture.Image = Image.FromStream(ms); // Set the student image to the PictureBox
                         }
                     }
                     // Hide the selection panel
@@ -1018,7 +1018,7 @@ namespace PHCM_last_na_to.Forms
                 }
                 else
                 {
-                    new EmptyField().Show();
+                    new EmptyField().Show(); // If no image is found, show a message
                 }
             }
             else
@@ -1028,9 +1028,9 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
-        private void returnStudentbtn_Click(object sender, EventArgs e)
+        private void returnStudentbtn_Click(object sender, EventArgs e) // Close the student selection panel
         {
-            StudentPanel.Visible = false;
+            StudentPanel.Visible = false; // Hide the student selection panel
         }
 
         private void searchStudent_TextChanged(object sender, EventArgs e)
@@ -1038,8 +1038,8 @@ namespace PHCM_last_na_to.Forms
             // If the search box is empty, hide the 'not found' and 'question' messages
             if (string.IsNullOrEmpty(searchbox.Text))
             {
-                Notfound.Visible = false;
-                Question.Visible = false;
+                Notfound.Visible = false; // Hide the 'not found' message
+                Question.Visible = false; // Hide the 'question' message
                 string searchTerm = searchbox.Text.Trim(); // Get user input and remove leading/trailing spaces
 
                 if (!string.IsNullOrEmpty(searchTerm)) // If there's input in the search box
@@ -1052,7 +1052,7 @@ namespace PHCM_last_na_to.Forms
                 }
             }
         }
-        private void SearchStudent(string searchTerm)
+        private void SearchStudent(string searchTerm) // Search for students by name, number, or department
         {
             Notfound.Visible = false; // Hides the 'not found' message
             Question.Visible = false; // Hides the 'question' message
@@ -1101,7 +1101,7 @@ namespace PHCM_last_na_to.Forms
 
                         // Refresh DataGridView to display updated student data
                         studentDataTable.DataSource = dt;
-                        studentDataTable.Refresh();
+                        studentDataTable.Refresh(); // Refresh the DataGridView to show the updated data
                     }
                 }
             }
@@ -1143,27 +1143,27 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
-        private void searchStudent_Enter(object sender, EventArgs e)
+        private void searchStudent_Enter(object sender, EventArgs e) // Clear the search box when it is clicked
         {
-            searchStudent.Clear();
-            searchStudent.ForeColor = Color.Black;
+            searchStudent.Clear(); // Clear the search box
+            searchStudent.ForeColor = Color.Black; // Change the text color to black
         }
 
-        private void searchStudent_Leave(object sender, EventArgs e)
+        private void searchStudent_Leave(object sender, EventArgs e) // Set the placeholder text when the search box is empty
         {
-            if (string.IsNullOrEmpty(searchStudent.Text))
+            if (string.IsNullOrEmpty(searchStudent.Text)) // Check if the search box is empty
             {
                 searchStudent.ForeColor = Color.DimGray; // Change the text color to dim gray
                 searchStudent.Text = "Search"; // Set the placeholder text
             }
         }
 
-        private void searchStudent_KeyPress(object sender, KeyPressEventArgs e)
+        private void searchStudent_KeyPress(object sender, KeyPressEventArgs e) // Trigger search when the Enter key is pressed
         {
             // If the Enter key is pressed, perform the search
             if (e.KeyChar == (char)Keys.Enter)
             {
-                SearchStudent(searchbox.Text);
+                SearchStudent(searchbox.Text); // Trigger search with the current text in the search box
             }
         }
 

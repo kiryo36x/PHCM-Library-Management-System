@@ -654,6 +654,7 @@ namespace PHCM_last_na_to.Forms
         {
             if (sender is Label HoverGenre) // Check if the sender is a Label
             {
+                HoverGenre.Cursor = Cursors.Hand; // Change the cursor to a hand symbol
                 // Set the description based on the text of the hovered label
                 Description.Visible = true;
                 HoverGenre.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the label
@@ -740,6 +741,7 @@ namespace PHCM_last_na_to.Forms
         {
             if (sender is Label HoverGenre) // Check if the sender is a Label
             {
+                HoverGenre.Cursor = Cursors.Default; // Change the cursor back to default
                 HoverGenre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
                 Description.Visible = false;
             }
@@ -997,33 +999,40 @@ namespace PHCM_last_na_to.Forms
 
         private void selectCategoryHoverControls(object sender, EventArgs e)
         {
-            // Checks if the sender is both a Button and an IconPictureBox (which is not possible)
-            if (sender is Button btn && sender is IconPictureBox icon)
+            // Checks if the sender is a Button
+            if (sender is Button btn)
             {
                 // Changes the button's cursor to a hand symbol when hovered
-                btn.Cursor = Cursors.Hand;
-
-                // Changes the button's background color to a different shade
-                btn.BackColor = Color.FromArgb(57, 57, 101);
-
+                btn.Cursor = Cursors.Hand;                
+                
+            }
+            // Checks if the sender is a Picture box
+            else if (sender is IconPictureBox icon)
+            {
                 // Changes the icon's cursor to a hand symbol when hovered
                 icon.Cursor = Cursors.Hand;
+                
+                // Changes the icon color to a different shade
+                icon.IconColor = Color.Black;
             }
         }
 
         private void selectCategoryLeaveControls(object sender, EventArgs e)
         {
-            // Checks if the sender is both a Button and an IconPictureBox (which is not possible)
-            if (sender is Button btn && sender is IconPictureBox icon)
+            // Checks if the sender is a Button
+            if (sender is Button btn)
             {
                 // Changes the button's cursor back to default when the mouse leaves
-                btn.Cursor = Cursors.Default;
-
-                // Resets the button's background color when the mouse leaves
-                btn.BackColor = Color.FromArgb(31, 30, 68);
-
+                btn.Cursor = Cursors.Default;                             
+            }
+            // Checks if the sender is an IconPictureBox
+            else if (sender is IconPictureBox icon)
+            {
                 // Changes the icon's cursor back to default when the mouse leaves
                 icon.Cursor = Cursors.Default;
+                
+                // Resets the icon color when the mouse leaves
+                icon.IconColor = Color.White;
             }
         }
 
@@ -1034,6 +1043,18 @@ namespace PHCM_last_na_to.Forms
 
             // Brings the category selection panel to the front to make it visible
             Categoryselectorpanel.BringToFront();
+        }
+
+        private void currentGnre_MouseEnter(object sender, EventArgs e)
+        {
+            currentGnre.Cursor = Cursors.Hand; // Change the cursor to a hand symbol
+            currentGnre.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the label
+        }
+
+        private void currentGnre_MouseLeave(object sender, EventArgs e)
+        {
+            currentGnre.Cursor = Cursors.Default; // Change the cursor back to default
+            currentGnre.BackColor = Color.FromArgb(31, 30, 68); // Change the background color of the label
         }
     }
 }

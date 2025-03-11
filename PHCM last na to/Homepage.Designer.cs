@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.LogOut = new FontAwesome.Sharp.IconButton();
@@ -59,6 +60,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.MissionLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.minimizeTip = new System.Windows.Forms.ToolTip(this.components);
+            this.exitTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -349,7 +352,10 @@
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimize.TabIndex = 5;
             this.minimize.TabStop = false;
+            this.minimizeTip.SetToolTip(this.minimize, "Hide the application");
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            this.minimize.MouseLeave += new System.EventHandler(this.minimize_MouseLeave);
+            this.minimize.MouseHover += new System.EventHandler(this.minimize_MouseHover);
             // 
             // Exit
             // 
@@ -364,6 +370,7 @@
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Exit.TabIndex = 4;
             this.Exit.TabStop = false;
+            this.exitTip.SetToolTip(this.Exit, "Exit the Application");
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             this.Exit.MouseEnter += new System.EventHandler(this.Exit_MouseEnter);
             this.Exit.MouseLeave += new System.EventHandler(this.Exit_MouseLeave);
@@ -592,5 +599,7 @@
         private System.Windows.Forms.Label MissionLabel;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox minimize;
+        private System.Windows.Forms.ToolTip minimizeTip;
+        private System.Windows.Forms.ToolTip exitTip;
     }
 }

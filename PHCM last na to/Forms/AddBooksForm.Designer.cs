@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBooksForm));
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Conditionlbl = new System.Windows.Forms.Label();
@@ -134,6 +135,8 @@
             this.genretxtbox = new System.Windows.Forms.TextBox();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.AddBooksTitle = new System.Windows.Forms.Label();
+            this.ficitonTip = new System.Windows.Forms.ToolTip(this.components);
+            this.nonFictionTip = new System.Windows.Forms.ToolTip(this.components);
             this.quantityBGpanel.SuspendLayout();
             this.dateBGpanel.SuspendLayout();
             this.authorBGpanel.SuspendLayout();
@@ -567,7 +570,7 @@
             this.nonFictionpnl.Controls.Add(this.Western);
             this.nonFictionpnl.Location = new System.Drawing.Point(0, 0);
             this.nonFictionpnl.Name = "nonFictionpnl";
-            this.nonFictionpnl.Size = new System.Drawing.Size(1286, 644);
+            this.nonFictionpnl.Size = new System.Drawing.Size(1287, 644);
             this.nonFictionpnl.TabIndex = 5124131;
             this.nonFictionpnl.Visible = false;
             // 
@@ -625,7 +628,7 @@
             this.exitNonFictionbtn.IconChar = FontAwesome.Sharp.IconChar.X;
             this.exitNonFictionbtn.IconColor = System.Drawing.Color.White;
             this.exitNonFictionbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.exitNonFictionbtn.Location = new System.Drawing.Point(1251, 3);
+            this.exitNonFictionbtn.Location = new System.Drawing.Point(1252, 3);
             this.exitNonFictionbtn.Name = "exitNonFictionbtn";
             this.exitNonFictionbtn.Size = new System.Drawing.Size(32, 32);
             this.exitNonFictionbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -641,7 +644,7 @@
             this.TopNonFictionBorder.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopNonFictionBorder.Location = new System.Drawing.Point(2, 0);
             this.TopNonFictionBorder.Name = "TopNonFictionBorder";
-            this.TopNonFictionBorder.Size = new System.Drawing.Size(1282, 2);
+            this.TopNonFictionBorder.Size = new System.Drawing.Size(1283, 2);
             this.TopNonFictionBorder.TabIndex = 18;
             // 
             // ReferenceBooks
@@ -678,7 +681,7 @@
             this.BottomNonFictionPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomNonFictionPanel.Location = new System.Drawing.Point(2, 642);
             this.BottomNonFictionPanel.Name = "BottomNonFictionPanel";
-            this.BottomNonFictionPanel.Size = new System.Drawing.Size(1282, 2);
+            this.BottomNonFictionPanel.Size = new System.Drawing.Size(1283, 2);
             this.BottomNonFictionPanel.TabIndex = 18;
             // 
             // cookbooks
@@ -699,7 +702,7 @@
             // 
             this.RightNonFictionBorder.BackColor = System.Drawing.Color.White;
             this.RightNonFictionBorder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightNonFictionBorder.Location = new System.Drawing.Point(1284, 0);
+            this.RightNonFictionBorder.Location = new System.Drawing.Point(1285, 0);
             this.RightNonFictionBorder.Name = "RightNonFictionBorder";
             this.RightNonFictionBorder.Size = new System.Drawing.Size(2, 644);
             this.RightNonFictionBorder.TabIndex = 18;
@@ -970,7 +973,7 @@
             this.Fictionpnl.Controls.Add(this.Fiction);
             this.Fictionpnl.Location = new System.Drawing.Point(0, 0);
             this.Fictionpnl.Name = "Fictionpnl";
-            this.Fictionpnl.Size = new System.Drawing.Size(1286, 644);
+            this.Fictionpnl.Size = new System.Drawing.Size(1287, 644);
             this.Fictionpnl.TabIndex = 5124130;
             this.Fictionpnl.Visible = false;
             // 
@@ -1042,7 +1045,7 @@
             this.exitFictionbtn.IconChar = FontAwesome.Sharp.IconChar.X;
             this.exitFictionbtn.IconColor = System.Drawing.Color.White;
             this.exitFictionbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.exitFictionbtn.Location = new System.Drawing.Point(1251, 3);
+            this.exitFictionbtn.Location = new System.Drawing.Point(1252, 3);
             this.exitFictionbtn.Name = "exitFictionbtn";
             this.exitFictionbtn.Size = new System.Drawing.Size(32, 32);
             this.exitFictionbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1353,7 +1356,7 @@
             this.TopFictionBorder.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopFictionBorder.Location = new System.Drawing.Point(2, 0);
             this.TopFictionBorder.Name = "TopFictionBorder";
-            this.TopFictionBorder.Size = new System.Drawing.Size(1282, 2);
+            this.TopFictionBorder.Size = new System.Drawing.Size(1283, 2);
             this.TopFictionBorder.TabIndex = 18;
             // 
             // bottomFictionBorder
@@ -1362,14 +1365,14 @@
             this.bottomFictionBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottomFictionBorder.Location = new System.Drawing.Point(2, 642);
             this.bottomFictionBorder.Name = "bottomFictionBorder";
-            this.bottomFictionBorder.Size = new System.Drawing.Size(1282, 2);
+            this.bottomFictionBorder.Size = new System.Drawing.Size(1283, 2);
             this.bottomFictionBorder.TabIndex = 18;
             // 
             // rightFictionBorder
             // 
             this.rightFictionBorder.BackColor = System.Drawing.Color.White;
             this.rightFictionBorder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightFictionBorder.Location = new System.Drawing.Point(1284, 0);
+            this.rightFictionBorder.Location = new System.Drawing.Point(1285, 0);
             this.rightFictionBorder.Name = "rightFictionBorder";
             this.rightFictionBorder.Size = new System.Drawing.Size(2, 644);
             this.rightFictionBorder.TabIndex = 18;
@@ -1419,6 +1422,7 @@
             this.nonFictionbtn.Size = new System.Drawing.Size(632, 525);
             this.nonFictionbtn.TabIndex = 20;
             this.nonFictionbtn.Text = "NON-FICTION";
+            this.nonFictionTip.SetToolTip(this.nonFictionbtn, "Non-fiction refers to literature or media that presents factual information or");
             this.nonFictionbtn.UseVisualStyleBackColor = true;
             this.nonFictionbtn.Click += new System.EventHandler(this.nonFictionbtn_Click);
             this.nonFictionbtn.MouseEnter += new System.EventHandler(this.CategorySelectHover);
@@ -1435,6 +1439,8 @@
             this.fictionBtn.Size = new System.Drawing.Size(632, 525);
             this.fictionBtn.TabIndex = 19;
             this.fictionBtn.Text = "FICTION";
+            this.ficitonTip.SetToolTip(this.fictionBtn, "Fiction is a literary genre that encompasses imaginative narratives created by th" +
+        "e ");
             this.fictionBtn.UseVisualStyleBackColor = true;
             this.fictionBtn.Click += new System.EventHandler(this.fictionBtn_Click);
             this.fictionBtn.MouseEnter += new System.EventHandler(this.CategorySelectHover);
@@ -1717,5 +1723,7 @@
         private System.Windows.Forms.Panel rightCategoryPanel;
         private System.Windows.Forms.Panel leftCategoryBorder;
         private System.Windows.Forms.Label SelectCategoryTitle;
+        private System.Windows.Forms.ToolTip ficitonTip;
+        private System.Windows.Forms.ToolTip nonFictionTip;
     }
 }

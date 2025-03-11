@@ -46,8 +46,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.searchStudent = new System.Windows.Forms.TextBox();
             this.studentDataTable = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformation = new PHCM_last_na_to.StudentInformation();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.issuedBooks = new PHCM_last_na_to.issuedBooks();
             this.Categoryselectorpanel = new System.Windows.Forms.Panel();
             this.nonFictionpnl = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -174,22 +178,21 @@
             this.SaveBtn = new System.Windows.Forms.Button();
             this.HeaderDesign = new System.Windows.Forms.Panel();
             this.returnBookTitle = new System.Windows.Forms.Label();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformation = new PHCM_last_na_to.StudentInformation();
             this.studentTableAdapter = new PHCM_last_na_to.StudentInformationTableAdapters.studentTableAdapter();
             this.booksTableAdapter = new PHCM_last_na_to.BooksTableAdapters.booksTableAdapter();
-            this.issuedBooks = new PHCM_last_na_to.issuedBooks();
-            this.issueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.issueTableAdapter = new PHCM_last_na_to.issuedBooksTableAdapters.issueTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fictionTip = new System.Windows.Forms.ToolTip(this.components);
+            this.nonFictionTip = new System.Windows.Forms.ToolTip(this.components);
+            this.genreTip = new System.Windows.Forms.ToolTip(this.components);
             this.mainReturnBook.SuspendLayout();
             this.StudentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).BeginInit();
             this.Categoryselectorpanel.SuspendLayout();
             this.nonFictionpnl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -215,8 +218,8 @@
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).BeginInit();
             this.HeaderDesign.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).BeginInit();
             this.SuspendLayout();
             // 
             // mainReturnBook
@@ -410,15 +413,53 @@
             this.studentDataTable.Size = new System.Drawing.Size(1264, 498);
             this.studentDataTable.TabIndex = 0;
             // 
-            // studentBindingSource
+            // idDataGridViewTextBoxColumn
             // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.studentInformation;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // studentInformation
+            // studentImageDataGridViewImageColumn
             // 
-            this.studentInformation.DataSetName = "StudentInformation";
-            this.studentInformation.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.studentImageDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.studentImageDataGridViewImageColumn.DataPropertyName = "studentImage";
+            this.studentImageDataGridViewImageColumn.HeaderText = "Image";
+            this.studentImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.studentImageDataGridViewImageColumn.MinimumWidth = 6;
+            this.studentImageDataGridViewImageColumn.Name = "studentImageDataGridViewImageColumn";
+            this.studentImageDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "studentName";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
+            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // issueDate
+            // 
+            this.issueDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.issueDate.DataPropertyName = "issueDate";
+            this.issueDate.HeaderText = "Issued Date";
+            this.issueDate.MinimumWidth = 6;
+            this.issueDate.Name = "issueDate";
+            this.issueDate.ReadOnly = true;
+            // 
+            // issueBindingSource
+            // 
+            this.issueBindingSource.DataMember = "issue";
+            this.issueBindingSource.DataSource = this.issuedBooks;
+            // 
+            // issuedBooks
+            // 
+            this.issuedBooks.DataSetName = "issuedBooks";
+            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Categoryselectorpanel
             // 
@@ -1322,6 +1363,8 @@
             this.nonFictionbtn.Size = new System.Drawing.Size(632, 406);
             this.nonFictionbtn.TabIndex = 20;
             this.nonFictionbtn.Text = "NON-FICTION";
+            this.nonFictionTip.SetToolTip(this.nonFictionbtn, "Non-fiction refers to literature or media that presents factual information or\r\na" +
+        "ccounts of real events, people, or places.");
             this.nonFictionbtn.UseVisualStyleBackColor = true;
             this.nonFictionbtn.Click += new System.EventHandler(this.nonFictionbtn_Click);
             this.nonFictionbtn.MouseEnter += new System.EventHandler(this.categorySelectHover);
@@ -1338,6 +1381,9 @@
             this.fictionBtn.Size = new System.Drawing.Size(632, 406);
             this.fictionBtn.TabIndex = 19;
             this.fictionBtn.Text = "FICTION";
+            this.fictionTip.SetToolTip(this.fictionBtn, "Fiction is a literary genre that encompasses imaginative narratives created by th" +
+        "e \r\nauthor, featuring characters, events, and settings that are not based on rea" +
+        "l people \r\nor occurrences.");
             this.fictionBtn.UseVisualStyleBackColor = true;
             this.fictionBtn.Click += new System.EventHandler(this.fictionBtn_Click);
             this.fictionBtn.MouseEnter += new System.EventHandler(this.categorySelectHover);
@@ -1478,6 +1524,7 @@
             this.currentGnre.Size = new System.Drawing.Size(50, 30);
             this.currentGnre.TabIndex = 7;
             this.currentGnre.Text = "ALL";
+            this.genreTip.SetToolTip(this.currentGnre, "Click me to change Genre");
             this.currentGnre.Click += new System.EventHandler(this.currentGnre_Click);
             this.currentGnre.MouseEnter += new System.EventHandler(this.currentGnre_MouseEnter);
             this.currentGnre.MouseLeave += new System.EventHandler(this.currentGnre_MouseLeave);
@@ -2099,6 +2146,16 @@
             this.returnBookTitle.TabIndex = 14;
             this.returnBookTitle.Text = "RETURN BOOK";
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "student";
+            this.studentBindingSource.DataSource = this.studentInformation;
+            // 
+            // studentInformation
+            // 
+            this.studentInformation.DataSetName = "StudentInformation";
+            this.studentInformation.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // studentTableAdapter
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
@@ -2107,57 +2164,9 @@
             // 
             this.booksTableAdapter.ClearBeforeFill = true;
             // 
-            // issuedBooks
-            // 
-            this.issuedBooks.DataSetName = "issuedBooks";
-            this.issuedBooks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // issueBindingSource
-            // 
-            this.issueBindingSource.DataMember = "issue";
-            this.issueBindingSource.DataSource = this.issuedBooks;
-            // 
             // issueTableAdapter
             // 
             this.issueTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // studentImageDataGridViewImageColumn
-            // 
-            this.studentImageDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.studentImageDataGridViewImageColumn.DataPropertyName = "studentImage";
-            this.studentImageDataGridViewImageColumn.HeaderText = "Image";
-            this.studentImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.studentImageDataGridViewImageColumn.MinimumWidth = 6;
-            this.studentImageDataGridViewImageColumn.Name = "studentImageDataGridViewImageColumn";
-            this.studentImageDataGridViewImageColumn.ReadOnly = true;
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "studentName";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
-            this.studentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // issueDate
-            // 
-            this.issueDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.issueDate.DataPropertyName = "issueDate";
-            this.issueDate.HeaderText = "Issued Date";
-            this.issueDate.MinimumWidth = 6;
-            this.issueDate.Name = "issueDate";
-            this.issueDate.ReadOnly = true;
             // 
             // ReturnBookForm
             // 
@@ -2178,8 +2187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).EndInit();
             this.Categoryselectorpanel.ResumeLayout(false);
             this.Categoryselectorpanel.PerformLayout();
             this.nonFictionpnl.ResumeLayout(false);
@@ -2220,8 +2229,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).EndInit();
             this.HeaderDesign.ResumeLayout(false);
             this.HeaderDesign.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.issuedBooks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.issueBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2374,5 +2383,8 @@
         private System.Windows.Forms.DataGridViewImageColumn studentImageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
+        private System.Windows.Forms.ToolTip nonFictionTip;
+        private System.Windows.Forms.ToolTip fictionTip;
+        private System.Windows.Forms.ToolTip genreTip;
     }
 }
