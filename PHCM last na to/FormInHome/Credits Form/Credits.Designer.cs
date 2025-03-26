@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.imageHome = new System.Windows.Forms.PictureBox();
             this.nextButton = new System.Windows.Forms.PictureBox();
             this.previousButton = new System.Windows.Forms.PictureBox();
+            this.Tips = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imageHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nextButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previousButton)).BeginInit();
@@ -55,6 +57,7 @@
             this.nextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.nextButton.TabIndex = 1;
             this.nextButton.TabStop = false;
+            this.Tips.SetToolTip(this.nextButton, "Click me to go next page");
             this.nextButton.Click += new System.EventHandler(this.clicked);
             this.nextButton.MouseEnter += new System.EventHandler(this.entered);
             this.nextButton.MouseLeave += new System.EventHandler(this.leaved);
@@ -69,6 +72,8 @@
             this.previousButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.previousButton.TabIndex = 2;
             this.previousButton.TabStop = false;
+            this.Tips.SetToolTip(this.previousButton, "Click me to go previous page");
+            this.previousButton.Visible = false;
             this.previousButton.Click += new System.EventHandler(this.clicked);
             this.previousButton.MouseEnter += new System.EventHandler(this.entered);
             this.previousButton.MouseLeave += new System.EventHandler(this.leaved);
@@ -96,5 +101,6 @@
         private System.Windows.Forms.PictureBox imageHome;
         private System.Windows.Forms.PictureBox nextButton;
         private System.Windows.Forms.PictureBox previousButton;
+        private System.Windows.Forms.ToolTip Tips;
     }
 }
