@@ -6,7 +6,9 @@ using System.Windows;
 using System.Windows.Forms; //classes for creating Windows Forms applications
 using System.Windows.Input;
 using FontAwesome.Sharp; //using the library of FontAwesome package
-using PHCM_last_na_to.Forms; //accessing the form
+using PHCM_last_na_to.Forms;
+using PHCM_last_na_to.FormInHome.About_us_Page_Form;
+using PHCM_last_na_to.HomeForm; //accessing the form
 
 namespace PHCM_last_na_to
 {
@@ -91,6 +93,7 @@ namespace PHCM_last_na_to
             this.CenterToScreen();  // Center the form on the screen
             string fullname = GetFirstNameData(loggInUsername);  // Call the method to retrieve the user's first name using their username
             lblUsername.Text = "WELCOME, " + fullname.ToUpper();  // Display the user's full name in uppercase on the label
+            OpenChildForm(new Home());  // Open the "HomeForm" as a child form by default
         }
 
         // Method to retrieve the user's first name, middle name, and surname from the database
@@ -142,7 +145,7 @@ namespace PHCM_last_na_to
         private void HomeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);  // Activate the clicked button with a color
-            OpenChildForm(new HomeForm());  // Open the "HomeForm" as a child form
+            OpenChildForm(new Home());  // Open the "HomeForm" as a child form            
         }
 
         // Method to handle the Administrator button click event
@@ -218,13 +221,9 @@ namespace PHCM_last_na_to
             ActivateButton(sender, RGBColors.color8);  // Activate the button with a color for "Quick Overview"
 
 
-            QuickOverviewForm quickOverviewForm = new QuickOverviewForm();
-            OpenChildForm(quickOverviewForm);
-
-            // Focusing the child form to enable keyboard navigation
-            quickOverviewForm.Focus();
-            quickOverviewForm.Select();
-            quickOverviewForm.Activate();
+            //QuickOverviewForm quickOverviewForm = new QuickOverviewForm();
+            //OpenChildForm(quickOverviewForm);
+            OpenChildForm(new QuickOverviewForm());  // Open the "QuickOverviewForm" as a child form
         }
 
         // Method to handle the Log Out button click event
@@ -308,6 +307,25 @@ namespace PHCM_last_na_to
                     OpenChildForm(new StudentDetailsForm()); // Open the StudentDetailsForm inside the panel
                     return true; // Stop further processing of this key event
                 }
+
+                if (currentChildForm is About_Us_First) // If the currently open form is "About_Us_First"
+                {
+                    OpenChildForm(new About_Us_Second()); // Open the About_Us_Second inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
+                if (currentChildForm is About_Us_Second) // If the currently open form is "About_Us_Second"
+                {
+                    OpenChildForm(new About_Us_Third()); // Open the About_Us_Third inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
+                if (currentChildForm is About_Us_Third) // If the currently open form is "About_Us_Third"
+                {
+                    OpenChildForm(new About_Us()); // Open the About_Us inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
             }
             // Check if the Left Arrow key is pressed
             else if (keyData == Keys.Left)
@@ -323,6 +341,24 @@ namespace PHCM_last_na_to
                 if (currentChildForm is ReturnDetailsForm)
                 {
                     OpenChildForm(new QuickOverviewForm()); // Open the QuickOverviewForm inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
+                if (currentChildForm is About_Us_Second) // If the currently open form is "About_Us_Second"
+                {
+                    OpenChildForm(new About_Us_First()); // Open the About_Us_First inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
+                if (currentChildForm is About_Us_Third) // If the currently open form is "About_Us_Third"
+                {
+                    OpenChildForm(new About_Us_Second()); // Open the About_Us_Second inside the panel
+                    return true; // Stop further processing of this key event
+                }
+
+                if (currentChildForm is About_Us) // If the currently open form is "About_Us"
+                {
+                    OpenChildForm(new About_Us_Third()); // Open the About_Us_Third inside the panel
                     return true; // Stop further processing of this key event
                 }
             }

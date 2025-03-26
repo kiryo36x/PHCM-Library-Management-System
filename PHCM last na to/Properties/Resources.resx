@@ -118,154 +118,478 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="issue book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\issue book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Student.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Construction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Construction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Real Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Real Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1_BMdNGcek6kqR5J5pwjQwAw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1_BMdNGcek6kqR5J5pwjQwAw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="67b9538cb16dab9dc8111046f1d1eff9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\67b9538cb16dab9dc8111046f1d1eff9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Book one" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Your paragraph text" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Your paragraph text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="calendarDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendarDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="559011235c7aee8908b633df2172cd17" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\559011235c7aee8908b633df2172cd17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add student Information 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add student Information 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users_alt__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users-alt (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Student Information1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Student Information1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Construction1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Construction1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="design purposes2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\design purposes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="design purposes3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\design purposes3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1_Yb2W5n4-ZyQZ8ggggHGCZA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1_Yb2W5n4-ZyQZ8ggggHGCZA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled (700 x 468 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (700 x 468 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Student Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Student Information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="incorrect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\incorrect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\canva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Legit na logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Legit na logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Literally last" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Literally last.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hq720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hq720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="calendarWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendarWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="library" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\library.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HoveredGuiterrez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredGuiterrez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hero-bg-1-scaled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hero-bg-1-scaled-1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1_BMdNGcek6kqR5J5pwjQwAw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_BMdNGcek6kqR5J5pwjQwAw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="defaultButtonAboutus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultButtonAboutus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1_KcQUEkOQ1LoMDHkMZ-Yymw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1_KcQUEkOQ1LoMDHkMZ-Yymw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nextButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bokokosk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bokokosk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="design purposes2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\design purposes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16410" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Your paragraph text2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Your paragraph text2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Last student" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Last student.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="design purposes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\design purposes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perpetual help header" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perpetual help header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HomeHowToUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeHowToUse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Triangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Triangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HoveredMacasang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredMacasang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="28-coding-memes-for-smart-and-spicy-ladies-fixing-bugs-and-forgoing-romance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\28-coding-memes-for-smart-and-spicy-ladies-fixing-bugs-and-forgoing-romance.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="administrator 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrator 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAdministrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAdministrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 1 Final_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 1 Final_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAdorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAdorio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 2 Final_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 2 Final_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAddStudentInformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAddStudentInformation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_KcQUEkOQ1LoMDHkMZ-Yymw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_KcQUEkOQ1LoMDHkMZ-Yymw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="administrator 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrator 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultQuickOverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultQuickOverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultMacasang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultMacasang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero-bg-1-scaled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hero-bg-1-scaled-1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredBlaco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredBlaco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAdorio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAdorio1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAurora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAurora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nextButtonAboutUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButtonAboutUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultVisionAndMissionButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultVisionAndMissionButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Books 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Books 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverButtonHowtoUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverButtonHowtoUse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultSumala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultSumala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultBooks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultBooks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hover About us" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hover About us.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hq720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hq720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultDwayne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultDwayne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Teachers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Teachers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUsPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUsPage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredQuickOverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredQuickOverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Real Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Real Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="administrator 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrator 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAddStudentInformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAddStudentInformation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bokokosk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bokokosk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredCreditsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredCreditsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredDwayne_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredDwayne_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredElpos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredElpos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled (700 x 468 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (700 x 468 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendarWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendarWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PreviousButtonAboutUs_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PreviousButtonAboutUs_Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rightButtonAboutusFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightButtonAboutusFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quick overview 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick overview 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAboutUsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAboutUsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUsPage4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUsPage4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add books" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DefaultButtonHowtoUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultButtonHowtoUse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultAdorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultAdorio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredHowToUseButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredHowToUseButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="67b9538cb16dab9dc8111046f1d1eff9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\67b9538cb16dab9dc8111046f1d1eff9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defaultButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultBlaco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultBlaco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perpetual help header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perpetual help header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverButtonAboutus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverButtonAboutus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 4 Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 4 Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_alt__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users-alt (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultHowToUseButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultHowToUseButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredMagboo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredMagboo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredDwayne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredDwayne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredMagboo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredMagboo_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Speech" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Speech.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nextButtonAboutUsFinal (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButtonAboutUsFinal (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Student Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Student Information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issued book 1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issued book 1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultMagboo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultMagboo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Last student" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Last student.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issued book 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issued book 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Legit na logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Legit na logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredReturnBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredReturnBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 3 Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 3 Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAdministrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAdministrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultMagboo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultMagboo_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issued book 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issued book 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 2 Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 2 Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Construction1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Construction1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 4 Final_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 4 Final_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultReturnBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultReturnBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Literally last" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Literally last.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Books 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Books 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomeHowToUseUpdated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeHowToUseUpdated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Books 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Books 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hover Vision and Mission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hover Vision and Mission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverAboutUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverAboutUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16410" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 3 Final_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 3 Final_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverVisionandMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverVisionandMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultElpos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultElpos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUsPage3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUsPage3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="incorrect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\incorrect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hover How to use" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hover How to use.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredVisionAndMissionButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredVisionAndMissionButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAurora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAurora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nextButtonAboutUsFinal (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButtonAboutUsFinal (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomeHowToUseUpdated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeHowToUseUpdated2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Your paragraph text2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Your paragraph text2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultCreditsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultCreditsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previousButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previousButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAdorio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAdorio1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add pictures" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredSumala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredSumala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issued book 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issued book 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Construction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Construction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PHCM Home UI Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PHCM Home UI Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultDwayne_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultDwayne_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="design purposes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\design purposes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add student Information 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add student Information 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hover Credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hover Credits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rightButtonAboutus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightButtonAboutus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about us page 1 Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about us page 1 Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultHomeForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultHomeForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Student Information1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Student Information1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Your paragraph text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Your paragraph text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nextButtonAboutUsFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextButtonAboutUsFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="design purposes3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\design purposes3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="559011235c7aee8908b633df2172cd17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\559011235c7aee8908b633df2172cd17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issue book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredBooks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredBooks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Student.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Default Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredissuedBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredissuedBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="28-coding-memes-for-smart-and-spicy-ladies-fixing-bugs-and-forgoing-romance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\28-coding-memes-for-smart-and-spicy-ladies-fixing-bugs-and-forgoing-romance.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defaultButtonVisionanMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultButtonVisionanMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_Yb2W5n4-ZyQZ8ggggHGCZA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_Yb2W5n4-ZyQZ8ggggHGCZA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="issued book 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issued book 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultCatana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultCatana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultGuiterrez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultGuiterrez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutUsPage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutUsPage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredAboutUsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredAboutUsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultissuedBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultissuedBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverButtonVisionanMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverButtonVisionanMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="System Contributors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\System Contributors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoverHowToUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverHowToUse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HoveredCatana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoveredCatana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoveredNextButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoveredNextButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoveredPreviousButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoveredPreviousButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

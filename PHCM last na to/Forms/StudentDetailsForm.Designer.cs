@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EditPanel = new System.Windows.Forms.Panel();
+            this.changeimage = new PHCM_last_na_to.catana_button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.picture = new System.Windows.Forms.PictureBox();
             this.contacttxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataupdated = new System.Windows.Forms.Label();
@@ -49,6 +51,8 @@
             this.departmenttxtbox = new System.Windows.Forms.TextBox();
             this.studentNumbertxtbox = new System.Windows.Forms.TextBox();
             this.studentNametxtbox = new System.Windows.Forms.TextBox();
+            this.SaveBTN = new PHCM_last_na_to.catana_button();
+            this.exiteditpanel = new PHCM_last_na_to.catana_button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,21 +72,17 @@
             this.studentTableAdapter = new PHCM_last_na_to.StudentInformationTableAdapters.studentTableAdapter();
             this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
             this.Question = new FontAwesome.Sharp.IconPictureBox();
-            this.picture = new System.Windows.Forms.PictureBox();
             this.deletebtn = new FontAwesome.Sharp.IconButton();
             this.editbtn = new FontAwesome.Sharp.IconButton();
             this.previous = new FontAwesome.Sharp.IconPictureBox();
-            this.changeimage = new PHCM_last_na_to.catana_button();
-            this.SaveBTN = new PHCM_last_na_to.catana_button();
-            this.exiteditpanel = new PHCM_last_na_to.catana_button();
             this.EditPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +111,26 @@
             this.EditPanel.Size = new System.Drawing.Size(1287, 446);
             this.EditPanel.TabIndex = 14;
             this.EditPanel.Visible = false;
+            // 
+            // changeimage
+            // 
+            this.changeimage.BackColor = System.Drawing.Color.White;
+            this.changeimage.BackgroundColor = System.Drawing.Color.White;
+            this.changeimage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.changeimage.BorderRadius = 0;
+            this.changeimage.BorderSize = 0;
+            this.changeimage.FlatAppearance.BorderSize = 0;
+            this.changeimage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeimage.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.changeimage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.changeimage.Location = new System.Drawing.Point(119, 373);
+            this.changeimage.Name = "changeimage";
+            this.changeimage.Size = new System.Drawing.Size(253, 63);
+            this.changeimage.TabIndex = 4;
+            this.changeimage.Text = "Change Picture";
+            this.changeimage.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.changeimage.UseVisualStyleBackColor = false;
+            this.changeimage.Click += new System.EventHandler(this.changeimage_Click);
             // 
             // panel4
             // 
@@ -156,6 +176,18 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(2, 319);
             this.panel5.TabIndex = 1;
+            // 
+            // picture
+            // 
+            this.picture.BackgroundImage = global::PHCM_last_na_to.Properties.Resources._16410;
+            this.picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picture.Image = global::PHCM_last_na_to.Properties.Resources.add_pictures;
+            this.picture.Location = new System.Drawing.Point(0, 0);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(319, 319);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture.TabIndex = 0;
+            this.picture.TabStop = false;
             // 
             // contacttxtbox
             // 
@@ -254,6 +286,46 @@
             this.studentNametxtbox.Size = new System.Drawing.Size(350, 41);
             this.studentNametxtbox.TabIndex = 0;
             // 
+            // SaveBTN
+            // 
+            this.SaveBTN.BackColor = System.Drawing.Color.White;
+            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
+            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.SaveBTN.BorderRadius = 0;
+            this.SaveBTN.BorderSize = 0;
+            this.SaveBTN.FlatAppearance.BorderSize = 0;
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.Location = new System.Drawing.Point(705, 373);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(152, 63);
+            this.SaveBTN.TabIndex = 6;
+            this.SaveBTN.Text = "Save";
+            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.UseVisualStyleBackColor = false;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
+            // 
+            // exiteditpanel
+            // 
+            this.exiteditpanel.BackColor = System.Drawing.Color.White;
+            this.exiteditpanel.BackgroundColor = System.Drawing.Color.White;
+            this.exiteditpanel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.exiteditpanel.BorderRadius = 0;
+            this.exiteditpanel.BorderSize = 0;
+            this.exiteditpanel.FlatAppearance.BorderSize = 0;
+            this.exiteditpanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exiteditpanel.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.exiteditpanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.exiteditpanel.Location = new System.Drawing.Point(497, 373);
+            this.exiteditpanel.Name = "exiteditpanel";
+            this.exiteditpanel.Size = new System.Drawing.Size(152, 63);
+            this.exiteditpanel.TabIndex = 5;
+            this.exiteditpanel.Text = "Exit";
+            this.exiteditpanel.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.exiteditpanel.UseVisualStyleBackColor = false;
+            this.exiteditpanel.Click += new System.EventHandler(this.exiteditpanel_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -339,14 +411,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeight = 38;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -357,38 +429,38 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataGridView1.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
             this.dataGridView1.Location = new System.Drawing.Point(0, 57);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.DividerHeight = 2;
             this.dataGridView1.RowTemplate.Height = 250;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -505,18 +577,6 @@
             this.Question.TabStop = false;
             this.Question.Visible = false;
             // 
-            // picture
-            // 
-            this.picture.BackgroundImage = global::PHCM_last_na_to.Properties.Resources._16410;
-            this.picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picture.Image = global::PHCM_last_na_to.Properties.Resources.add_pictures;
-            this.picture.Location = new System.Drawing.Point(0, 0);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(319, 319);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture.TabIndex = 0;
-            this.picture.TabStop = false;
-            // 
             // deletebtn
             // 
             this.deletebtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -559,66 +619,8 @@
             this.previous.TabIndex = 3;
             this.previous.TabStop = false;
             this.previous.Click += new System.EventHandler(this.previous_Click);
-            // 
-            // changeimage
-            // 
-            this.changeimage.BackColor = System.Drawing.Color.White;
-            this.changeimage.BackgroundColor = System.Drawing.Color.White;
-            this.changeimage.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.changeimage.BorderRadius = 0;
-            this.changeimage.BorderSize = 0;
-            this.changeimage.FlatAppearance.BorderSize = 0;
-            this.changeimage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeimage.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.changeimage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.changeimage.Location = new System.Drawing.Point(119, 373);
-            this.changeimage.Name = "changeimage";
-            this.changeimage.Size = new System.Drawing.Size(253, 63);
-            this.changeimage.TabIndex = 4;
-            this.changeimage.Text = "Change Picture";
-            this.changeimage.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.changeimage.UseVisualStyleBackColor = false;
-            this.changeimage.Click += new System.EventHandler(this.changeimage_Click);
-            // 
-            // SaveBTN
-            // 
-            this.SaveBTN.BackColor = System.Drawing.Color.White;
-            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
-            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.SaveBTN.BorderRadius = 0;
-            this.SaveBTN.BorderSize = 0;
-            this.SaveBTN.FlatAppearance.BorderSize = 0;
-            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.Location = new System.Drawing.Point(705, 373);
-            this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(152, 63);
-            this.SaveBTN.TabIndex = 6;
-            this.SaveBTN.Text = "Save";
-            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.UseVisualStyleBackColor = false;
-            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
-            // 
-            // exiteditpanel
-            // 
-            this.exiteditpanel.BackColor = System.Drawing.Color.White;
-            this.exiteditpanel.BackgroundColor = System.Drawing.Color.White;
-            this.exiteditpanel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.exiteditpanel.BorderRadius = 0;
-            this.exiteditpanel.BorderSize = 0;
-            this.exiteditpanel.FlatAppearance.BorderSize = 0;
-            this.exiteditpanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exiteditpanel.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.exiteditpanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.exiteditpanel.Location = new System.Drawing.Point(497, 373);
-            this.exiteditpanel.Name = "exiteditpanel";
-            this.exiteditpanel.Size = new System.Drawing.Size(152, 63);
-            this.exiteditpanel.TabIndex = 5;
-            this.exiteditpanel.Text = "Exit";
-            this.exiteditpanel.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.exiteditpanel.UseVisualStyleBackColor = false;
-            this.exiteditpanel.Click += new System.EventHandler(this.exiteditpanel_Click);
+            this.previous.MouseEnter += new System.EventHandler(this.previous_MouseEnter);
+            this.previous.MouseLeave += new System.EventHandler(this.previous_MouseLeave);
             // 
             // StudentDetailsForm
             // 
@@ -644,12 +646,12 @@
             this.EditPanel.ResumeLayout(false);
             this.EditPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previous)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

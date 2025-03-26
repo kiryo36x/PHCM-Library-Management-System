@@ -218,5 +218,15 @@ namespace PHCM_last_na_to.Forms
                 OpenChildForm(new StudentDetailsForm());
             }
         }
+
+        private void Entered(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand; // Changes the cursor to a hand when hovering over the PictureBox
+        }
+
+        private void Leaved(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default; // Changes the cursor back to the default arrow when not hovering over the PictureBox
+        }
     }
 }

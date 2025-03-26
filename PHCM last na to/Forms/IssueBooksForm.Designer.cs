@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.StudentPanel = new System.Windows.Forms.Panel();
             this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
@@ -55,6 +55,7 @@
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentInformation = new PHCM_last_na_to.StudentInformation();
             this.ShowSelection = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
             this.Categoryselectorpanel = new System.Windows.Forms.Panel();
             this.nonFictionpnl = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -182,6 +183,7 @@
             this.fictionTip = new System.Windows.Forms.ToolTip(this.components);
             this.nonFictionTip = new System.Windows.Forms.ToolTip(this.components);
             this.genreTip = new System.Windows.Forms.ToolTip(this.components);
+            this.Tips = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.StudentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.srcbtn)).BeginInit();
@@ -245,16 +247,17 @@
             this.StudentPanel.Controls.Add(this.label2);
             this.StudentPanel.Controls.Add(this.searchStudent);
             this.StudentPanel.Controls.Add(this.studentDataTable);
-            this.StudentPanel.Location = new System.Drawing.Point(0, 100);
+            this.StudentPanel.Location = new System.Drawing.Point(0, 93);
             this.StudentPanel.Name = "StudentPanel";
             this.StudentPanel.Padding = new System.Windows.Forms.Padding(10, 65, 10, 25);
-            this.StudentPanel.Size = new System.Drawing.Size(1287, 644);
+            this.StudentPanel.Size = new System.Drawing.Size(1287, 651);
             this.StudentPanel.TabIndex = 5124130;
             this.StudentPanel.Visible = false;
+            this.StudentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StudentPanel_Paint);
             // 
             // srcbtn
             // 
-            this.srcbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.srcbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -264,7 +267,10 @@
             this.srcbtn.Size = new System.Drawing.Size(33, 34);
             this.srcbtn.TabIndex = 22;
             this.srcbtn.TabStop = false;
+            this.Tips.SetToolTip(this.srcbtn, "Click me to search the students!");
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
+            this.srcbtn.MouseEnter += new System.EventHandler(this.srcbtn_MouseEnter);
+            this.srcbtn.MouseLeave += new System.EventHandler(this.srcbtn_MouseLeave);
             // 
             // returnStudentbtn
             // 
@@ -349,14 +355,14 @@
             this.studentDataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.studentDataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.studentDataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.studentDataTable.ColumnHeadersHeight = 38;
             this.studentDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.studentDataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -367,38 +373,38 @@
             this.departmentDataGridViewTextBoxColumn,
             this.studentContactDataGridViewTextBoxColumn});
             this.studentDataTable.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentDataTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentDataTable.DefaultCellStyle = dataGridViewCellStyle10;
             this.studentDataTable.EnableHeadersVisualStyles = false;
             this.studentDataTable.GridColor = System.Drawing.Color.LightGray;
             this.studentDataTable.Location = new System.Drawing.Point(10, 65);
             this.studentDataTable.MultiSelect = false;
             this.studentDataTable.Name = "studentDataTable";
             this.studentDataTable.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.studentDataTable.RowHeadersVisible = false;
             this.studentDataTable.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentDataTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentDataTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.studentDataTable.RowTemplate.DividerHeight = 2;
             this.studentDataTable.RowTemplate.Height = 250;
             this.studentDataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -475,6 +481,7 @@
             // ShowSelection
             // 
             this.ShowSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.ShowSelection.Controls.Add(this.clearButton);
             this.ShowSelection.Controls.Add(this.Categoryselectorpanel);
             this.ShowSelection.Controls.Add(this.Exitbtn);
             this.ShowSelection.Controls.Add(this.SaveBookbtn);
@@ -490,6 +497,25 @@
             this.ShowSelection.Size = new System.Drawing.Size(1287, 644);
             this.ShowSelection.TabIndex = 28;
             this.ShowSelection.Visible = false;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Nirmala UI", 12.5F);
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(1158, 13);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(109, 34);
+            this.clearButton.TabIndex = 5124130;
+            this.clearButton.Text = "Clear";
+            this.clearButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Tips.SetToolTip(this.clearButton, "Click me to clear the search!");
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.MouseEnter += new System.EventHandler(this.clearButton_MouseEnter);
+            this.clearButton.MouseLeave += new System.EventHandler(this.clearButton_MouseLeave);
             // 
             // Categoryselectorpanel
             // 
@@ -1573,7 +1599,7 @@
             this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(922, 13);
+            this.searchbox.Location = new System.Drawing.Point(800, 13);
             this.searchbox.Name = "searchbox";
             this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 1;
@@ -1594,14 +1620,14 @@
             this.SelectingBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SelectingBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.SelectingBooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectingBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectingBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.SelectingBooks.ColumnHeadersHeight = 38;
             this.SelectingBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.SelectingBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1613,38 +1639,38 @@
             this.genreDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn});
             this.SelectingBooks.DataSource = this.booksBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SelectingBooks.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SelectingBooks.DefaultCellStyle = dataGridViewCellStyle14;
             this.SelectingBooks.EnableHeadersVisualStyles = false;
             this.SelectingBooks.GridColor = System.Drawing.Color.LightGray;
             this.SelectingBooks.Location = new System.Drawing.Point(10, 65);
             this.SelectingBooks.MultiSelect = false;
             this.SelectingBooks.Name = "SelectingBooks";
             this.SelectingBooks.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectingBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectingBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.SelectingBooks.RowHeadersVisible = false;
             this.SelectingBooks.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 15F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SelectingBooks.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Nirmala UI", 15F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SelectingBooks.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.SelectingBooks.RowTemplate.DividerHeight = 2;
             this.SelectingBooks.RowTemplate.Height = 250;
             this.SelectingBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1803,11 +1829,11 @@
             this.Booknamelbl.BackColor = System.Drawing.Color.White;
             this.Booknamelbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Booknamelbl.ForeColor = System.Drawing.Color.Gray;
-            this.Booknamelbl.Location = new System.Drawing.Point(225, 16);
+            this.Booknamelbl.Location = new System.Drawing.Point(221, 16);
             this.Booknamelbl.Name = "Booknamelbl";
-            this.Booknamelbl.Size = new System.Drawing.Size(186, 41);
+            this.Booknamelbl.Size = new System.Drawing.Size(196, 41);
             this.Booknamelbl.TabIndex = 2;
-            this.Booknamelbl.Text = "Select Books";
+            this.Booknamelbl.Text = "Select a Book";
             this.Booknamelbl.Click += new System.EventHandler(this.Booknamelbl_Click);
             // 
             // SelectBooks
@@ -1910,13 +1936,13 @@
             // 
             this.studentNamelbl.AutoSize = true;
             this.studentNamelbl.BackColor = System.Drawing.Color.White;
-            this.studentNamelbl.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentNamelbl.Font = new System.Drawing.Font("Nirmala UI", 16.5F);
             this.studentNamelbl.ForeColor = System.Drawing.Color.Gray;
-            this.studentNamelbl.Location = new System.Drawing.Point(128, 16);
+            this.studentNamelbl.Location = new System.Drawing.Point(12, 16);
             this.studentNamelbl.Name = "studentNamelbl";
-            this.studentNamelbl.Size = new System.Drawing.Size(364, 41);
+            this.studentNamelbl.Size = new System.Drawing.Size(568, 38);
             this.studentNamelbl.TabIndex = 5;
-            this.studentNamelbl.Text = "Enter name of the Student";
+            this.studentNamelbl.Text = "Select a Student to display name and picture";
             this.studentNamelbl.Click += new System.EventHandler(this.studentNamelbl_Click);
             // 
             // studentNametxtbox
@@ -2338,5 +2364,7 @@
         private System.Windows.Forms.ToolTip nonFictionTip;
         private System.Windows.Forms.ToolTip fictionTip;
         private System.Windows.Forms.ToolTip genreTip;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.ToolTip Tips;
     }
 }

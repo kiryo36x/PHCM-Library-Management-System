@@ -132,6 +132,72 @@
     <Compile Include="Exited.Designer.cs">
       <DependentUpon>Exited.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us First.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us First.Designer.cs">
+      <DependentUpon>About Us First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us Second.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us Second.Designer.cs">
+      <DependentUpon>About Us Second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us Third.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us Third.Designer.cs">
+      <DependentUpon>About Us Third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\Credits Form\Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\Credits Form\Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Add Student Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Add Student Information.Designer.cs">
+      <DependentUpon>How to use Add Student Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Administrator.Designer.cs">
+      <DependentUpon>How to use Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Books.Designer.cs">
+      <DependentUpon>How to use Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Issued Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Issued Book.Designer.cs">
+      <DependentUpon>How to use Issued Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How To Use Page Form Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How To Use Page Form Home.Designer.cs">
+      <DependentUpon>How To Use Page Form Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Quick overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Quick overview.Designer.cs">
+      <DependentUpon>How to use Quick overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Return Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\How to use Page Form\How to use Return Book.Designer.cs">
+      <DependentUpon>How to use Return Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,11 +216,11 @@
     <Compile Include="Forms\AdministratorForm.Designer.cs">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HomeForm.cs">
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HomeForm.Designer.cs">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IssueBooksForm.cs">
       <SubType>Form</SubType>
@@ -209,6 +275,18 @@
     </Compile>
     <Compile Include="Forms\ViewStudent.Designer.cs">
       <DependentUpon>ViewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us fourth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\About us Page Form\About Us fourth.Designer.cs">
+      <DependentUpon>About Us fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHome\Mission and Vision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHome\Mission and Vision.Designer.cs">
+      <DependentUpon>Mission and Vision.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -351,6 +429,39 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\About us Page Form\About Us First.resx">
+      <DependentUpon>About Us First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\About us Page Form\About Us Second.resx">
+      <DependentUpon>About Us Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\About us Page Form\About Us Third.resx">
+      <DependentUpon>About Us Third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\Credits Form\Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Add Student Information.resx">
+      <DependentUpon>How to use Add Student Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Administrator.resx">
+      <DependentUpon>How to use Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Books.resx">
+      <DependentUpon>How to use Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Issued Book.resx">
+      <DependentUpon>How to use Issued Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How To Use Page Form Home.resx">
+      <DependentUpon>How To Use Page Form Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Quick overview.resx">
+      <DependentUpon>How to use Quick overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\How to use Page Form\How to use Return Book.resx">
+      <DependentUpon>How to use Return Book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddBooksForm.resx">
       <DependentUpon>AddBooksForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,8 +471,8 @@
     <EmbeddedResource Include="Forms\AdministratorForm.resx">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IssueBooksForm.resx">
       <DependentUpon>IssueBooksForm.cs</DependentUpon>
@@ -389,6 +500,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewStudent.resx">
       <DependentUpon>ViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\About us Page Form\About Us fourth.resx">
+      <DependentUpon>About Us fourth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInHome\Mission and Vision.resx">
+      <DependentUpon>Mission and Vision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
@@ -564,6 +681,114 @@
     <Content Include="Resources1\users-alt %281%29 %281%29.ico" />
     <Content Include="Resources1\users-alt %281%29 %281%291.ico" />
     <Content Include="Resources1\users-alt %281%29.ico" />
+    <None Include="Resources\hoveredPreviousButtonCredits.png" />
+    <None Include="Resources\hoveredNextButtonCredits.png" />
+    <None Include="Resources\previousButtonCredits.png" />
+    <None Include="Resources\nextButtonCredits.png" />
+    <None Include="Resources\Teachers.png" />
+    <None Include="Resources\System Contributors.png" />
+    <None Include="Resources\Speech.png" />
+    <None Include="Resources\HoveredDwayne_1.png" />
+    <None Include="Resources\DefaultDwayne_1.png" />
+    <None Include="Resources\issued book 1_1.png" />
+    <None Include="Resources\HoveredMagboo_2.png" />
+    <None Include="Resources\DefaultMagboo_2.png" />
+    <None Include="Resources\HomeHowToUseUpdated2.png" />
+    <None Include="Resources\HomeHowToUseUpdated.png" />
+    <None Include="Resources\HoveredAdorio1.png" />
+    <None Include="Resources\DefaultAdorio1.png" />
+    <None Include="Resources\HoverButtonVisionanMission.png" />
+    <None Include="Resources\HoverButtonHowtoUse.png" />
+    <None Include="Resources\HoverButtonCredits.png" />
+    <None Include="Resources\HoverButtonAboutus.png" />
+    <None Include="Resources\defaultButtonVisionanMission.png" />
+    <None Include="Resources\DefaultButtonHowtoUse.png" />
+    <None Include="Resources\defaultButtonCredits.png" />
+    <None Include="Resources\defaultButtonAboutus.png" />
+    <None Include="Resources\PHCM Home UI Design.png" />
+    <None Include="Resources\quick overview 1.png" />
+    <None Include="Resources\Add student Information 2.png" />
+    <None Include="Resources\Add student Information 1.png" />
+    <None Include="Resources\issued book 4.png" />
+    <None Include="Resources\issued book 3.png" />
+    <None Include="Resources\issued book 2.png" />
+    <None Include="Resources\issued book 1.png" />
+    <None Include="Resources\Add Books 3.png" />
+    <None Include="Resources\Add Books 2.png" />
+    <None Include="Resources\Add Books 1.png" />
+    <None Include="Resources\administrator 3.png" />
+    <None Include="Resources\administrator 2.png" />
+    <None Include="Resources\administrator 1.png" />
+    <None Include="Resources\HoveredReturnBook.png" />
+    <None Include="Resources\HoveredQuickOverview.png" />
+    <None Include="Resources\HoveredissuedBook.png" />
+    <None Include="Resources\HoveredBooks.png" />
+    <None Include="Resources\HoveredAdministrator.png" />
+    <None Include="Resources\HoveredAddStudentInformation.png" />
+    <None Include="Resources\DefaultReturnBook.png" />
+    <None Include="Resources\DefaultQuickOverview.png" />
+    <None Include="Resources\DefaultissuedBook.png" />
+    <None Include="Resources\DefaultBooks.png" />
+    <None Include="Resources\DefaultAdministrator.png" />
+    <None Include="Resources\DefaultAddStudentInformation.png" />
+    <None Include="Resources\HomeHowToUse.png" />
+    <None Include="Resources\about us page 4 Final_2.png" />
+    <None Include="Resources\about us page 3 Final_2.png" />
+    <None Include="Resources\about us page 2 Final_2.png" />
+    <None Include="Resources\HoveredSumala.png" />
+    <None Include="Resources\HoveredMagboo.png" />
+    <None Include="Resources\HoveredMacasang.png" />
+    <None Include="Resources\HoveredGuiterrez.png" />
+    <None Include="Resources\HoveredElpos.png" />
+    <None Include="Resources\HoveredDwayne.png" />
+    <None Include="Resources\HoveredCatana.png" />
+    <None Include="Resources\HoveredBlaco.png" />
+    <None Include="Resources\HoveredAurora.png" />
+    <None Include="Resources\HoveredAdorio.png" />
+    <None Include="Resources\DefaultSumala.png" />
+    <None Include="Resources\DefaultMacasang.png" />
+    <None Include="Resources\DefaultGuiterrez.png" />
+    <None Include="Resources\DefaultElpos.png" />
+    <None Include="Resources\DefaultDwayne.png" />
+    <None Include="Resources\DefaultCatana.png" />
+    <None Include="Resources\DefaultBlaco.png" />
+    <None Include="Resources\DefaultAurora.png" />
+    <None Include="Resources\DefaultAdorio.png" />
+    <None Include="Resources\about us page 1 Final_2.png" />
+    <None Include="Resources\DefaultMagboo.png" />
+    <None Include="Resources\rightButtonAboutusFinal.png" />
+    <None Include="Resources\nextButtonAboutUsFinal.png" />
+    <None Include="Resources\nextButtonAboutUsFinal %283%29.png" />
+    <None Include="Resources\nextButtonAboutUsFinal %282%29.png" />
+    <None Include="Resources\PreviousButtonAboutUs_Final.png" />
+    <None Include="Resources\about us page 4 Final.png" />
+    <None Include="Resources\about us page 3 Final.png" />
+    <None Include="Resources\about us page 2 Final.png" />
+    <None Include="Resources\about us page 1 Final.png" />
+    <None Include="Resources\rightButtonAboutus.png" />
+    <None Include="Resources\nextButtonAboutUs.png" />
+    <None Include="Resources\AboutUsPage4.png" />
+    <None Include="Resources\AboutUsPage3.png" />
+    <None Include="Resources\AboutUsPage2.png" />
+    <None Include="Resources\AboutUsPage1.png" />
+    <None Include="Resources\HoveredVisionAndMissionButton.png" />
+    <None Include="Resources\HoveredHowToUseButton.png" />
+    <None Include="Resources\HoveredCreditsButton.png" />
+    <None Include="Resources\HoveredAboutUsButton.png" />
+    <None Include="Resources\DefaultVisionAndMissionButton.png" />
+    <None Include="Resources\DefaultHowToUseButton.png" />
+    <None Include="Resources\DefaultCreditsButton.png" />
+    <None Include="Resources\DefaultAboutUsButton.png" />
+    <None Include="Resources\HoverVisionandMission.png" />
+    <None Include="Resources\HoverHowToUse.png" />
+    <None Include="Resources\HoverCredits.png" />
+    <None Include="Resources\HoverAboutUs.png" />
+    <None Include="Resources\DefaultHomeForm.png" />
+    <None Include="Resources\Hover Vision and Mission.png" />
+    <None Include="Resources\Default Home.png" />
+    <None Include="Resources\Hover How to use.png" />
+    <None Include="Resources\Hover Credits.png" />
+    <None Include="Resources\Hover About us.png" />
     <None Include="Resources\add pictures.png" />
     <None Include="Resources\issue book.png" />
     <None Include="Resources\bokokosk.png" />

@@ -37,15 +37,6 @@
             this.searchbox = new System.Windows.Forms.TextBox();
             this.form2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.returnBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.returnBookUpdate = new PHCM_last_na_to.returnBookUpdate();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Question = new FontAwesome.Sharp.IconPictureBox();
-            this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
-            this.deletebtn = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.next = new FontAwesome.Sharp.IconPictureBox();
-            this.returnBookTableAdapter = new PHCM_last_na_to.returnBookUpdateTableAdapters.returnBookTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +47,15 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.returnBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.returnBookUpdate = new PHCM_last_na_to.returnBookUpdate();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Question = new FontAwesome.Sharp.IconPictureBox();
+            this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
+            this.deletebtn = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.next = new FontAwesome.Sharp.IconPictureBox();
+            this.returnBookTableAdapter = new PHCM_last_na_to.returnBookUpdateTableAdapters.returnBookTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnBookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnBookUpdate)).BeginInit();
@@ -174,104 +174,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1287, 631);
             this.dataGridView1.TabIndex = 0;
             // 
-            // returnBookBindingSource
-            // 
-            this.returnBookBindingSource.DataMember = "returnBook";
-            this.returnBookBindingSource.DataSource = this.returnBookUpdate;
-            // 
-            // returnBookUpdate
-            // 
-            this.returnBookUpdate.DataSetName = "returnBookUpdate";
-            this.returnBookUpdate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(505, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "RETURN DETAILS";
-            // 
-            // Question
-            // 
-            this.Question.BackColor = System.Drawing.Color.White;
-            this.Question.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Question.IconChar = FontAwesome.Sharp.IconChar.PersonCircleQuestion;
-            this.Question.IconColor = System.Drawing.SystemColors.ControlText;
-            this.Question.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Question.IconSize = 84;
-            this.Question.Location = new System.Drawing.Point(965, 115);
-            this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(91, 84);
-            this.Question.TabIndex = 12;
-            this.Question.TabStop = false;
-            this.Question.Visible = false;
-            // 
-            // srcbtn
-            // 
-            this.srcbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.srcbtn.IconColor = System.Drawing.Color.White;
-            this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.srcbtn.IconSize = 33;
-            this.srcbtn.Location = new System.Drawing.Point(1239, 11);
-            this.srcbtn.Name = "srcbtn";
-            this.srcbtn.Size = new System.Drawing.Size(33, 34);
-            this.srcbtn.TabIndex = 8;
-            this.srcbtn.TabStop = false;
-            this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
-            // 
-            // deletebtn
-            // 
-            this.deletebtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletebtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.deletebtn.IconColor = System.Drawing.Color.Black;
-            this.deletebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deletebtn.Location = new System.Drawing.Point(1145, 691);
-            this.deletebtn.Name = "deletebtn";
-            this.deletebtn.Size = new System.Drawing.Size(130, 50);
-            this.deletebtn.TabIndex = 6;
-            this.deletebtn.Text = "DELETE";
-            this.deletebtn.UseVisualStyleBackColor = true;
-            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.LessThan;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 49;
-            this.iconPictureBox1.Location = new System.Drawing.Point(619, 694);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(52, 49);
-            this.iconPictureBox1.TabIndex = 3;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.previous_Click);
-            // 
-            // next
-            // 
-            this.next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.next.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.next.IconChar = FontAwesome.Sharp.IconChar.GreaterThan;
-            this.next.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.next.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.next.IconSize = 49;
-            this.next.Location = new System.Drawing.Point(726, 694);
-            this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(52, 49);
-            this.next.TabIndex = 2;
-            this.next.TabStop = false;
-            this.next.Click += new System.EventHandler(this.next_Click);
-            // 
-            // returnBookTableAdapter
-            // 
-            this.returnBookTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -363,6 +265,108 @@
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
             this.genreDataGridViewTextBoxColumn.ReadOnly = true;
             this.genreDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // returnBookBindingSource
+            // 
+            this.returnBookBindingSource.DataMember = "returnBook";
+            this.returnBookBindingSource.DataSource = this.returnBookUpdate;
+            // 
+            // returnBookUpdate
+            // 
+            this.returnBookUpdate.DataSetName = "returnBookUpdate";
+            this.returnBookUpdate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(505, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(345, 54);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "RETURN DETAILS";
+            // 
+            // Question
+            // 
+            this.Question.BackColor = System.Drawing.Color.White;
+            this.Question.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Question.IconChar = FontAwesome.Sharp.IconChar.PersonCircleQuestion;
+            this.Question.IconColor = System.Drawing.SystemColors.ControlText;
+            this.Question.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Question.IconSize = 84;
+            this.Question.Location = new System.Drawing.Point(965, 115);
+            this.Question.Name = "Question";
+            this.Question.Size = new System.Drawing.Size(91, 84);
+            this.Question.TabIndex = 12;
+            this.Question.TabStop = false;
+            this.Question.Visible = false;
+            // 
+            // srcbtn
+            // 
+            this.srcbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.srcbtn.IconColor = System.Drawing.Color.White;
+            this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.srcbtn.IconSize = 33;
+            this.srcbtn.Location = new System.Drawing.Point(1239, 11);
+            this.srcbtn.Name = "srcbtn";
+            this.srcbtn.Size = new System.Drawing.Size(33, 34);
+            this.srcbtn.TabIndex = 8;
+            this.srcbtn.TabStop = false;
+            this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
+            // 
+            // deletebtn
+            // 
+            this.deletebtn.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.deletebtn.IconColor = System.Drawing.Color.Black;
+            this.deletebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deletebtn.Location = new System.Drawing.Point(1145, 691);
+            this.deletebtn.Name = "deletebtn";
+            this.deletebtn.Size = new System.Drawing.Size(130, 50);
+            this.deletebtn.TabIndex = 6;
+            this.deletebtn.Text = "DELETE";
+            this.deletebtn.UseVisualStyleBackColor = true;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.LessThan;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 49;
+            this.iconPictureBox1.Location = new System.Drawing.Point(619, 694);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox1.TabIndex = 3;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.previous_Click);
+            this.iconPictureBox1.MouseEnter += new System.EventHandler(this.Entered);
+            this.iconPictureBox1.MouseLeave += new System.EventHandler(this.Leaved);
+            // 
+            // next
+            // 
+            this.next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.next.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.next.IconChar = FontAwesome.Sharp.IconChar.GreaterThan;
+            this.next.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.next.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.next.IconSize = 49;
+            this.next.Location = new System.Drawing.Point(726, 694);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(52, 49);
+            this.next.TabIndex = 2;
+            this.next.TabStop = false;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            this.next.MouseEnter += new System.EventHandler(this.Entered);
+            this.next.MouseLeave += new System.EventHandler(this.Leaved);
+            // 
+            // returnBookTableAdapter
+            // 
+            this.returnBookTableAdapter.ClearBeforeFill = true;
             // 
             // ReturnDetailsForm
             // 

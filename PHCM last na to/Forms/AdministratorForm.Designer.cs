@@ -48,6 +48,8 @@
             this.SurnameTextBox = new System.Windows.Forms.TextBox();
             this.MiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.SaveBTN = new PHCM_last_na_to.catana_button();
+            this.catana_button1 = new PHCM_last_na_to.catana_button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,13 +60,6 @@
             this.srcbtn = new FontAwesome.Sharp.IconPictureBox();
             this.searchbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.admin = new PHCM_last_na_to.Admin();
-            this.adminTableAdapter = new PHCM_last_na_to.AdminTableAdapters.adminTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SaveBTN = new PHCM_last_na_to.catana_button();
-            this.catana_button1 = new PHCM_last_na_to.catana_button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +68,11 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passowrdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.admin = new PHCM_last_na_to.Admin();
+            this.adminTableAdapter = new PHCM_last_na_to.AdminTableAdapters.adminTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.EditPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Question)).BeginInit();
@@ -243,6 +243,46 @@
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(310, 41);
             this.FirstNameTextBox.TabIndex = 0;
+            // 
+            // SaveBTN
+            // 
+            this.SaveBTN.BackColor = System.Drawing.Color.White;
+            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
+            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.SaveBTN.BorderRadius = 0;
+            this.SaveBTN.BorderSize = 0;
+            this.SaveBTN.FlatAppearance.BorderSize = 0;
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
+            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.Location = new System.Drawing.Point(730, 370);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(201, 66);
+            this.SaveBTN.TabIndex = 8;
+            this.SaveBTN.Text = "Save";
+            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.SaveBTN.UseVisualStyleBackColor = false;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
+            // 
+            // catana_button1
+            // 
+            this.catana_button1.BackColor = System.Drawing.Color.White;
+            this.catana_button1.BackgroundColor = System.Drawing.Color.White;
+            this.catana_button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.catana_button1.BorderRadius = 0;
+            this.catana_button1.BorderSize = 0;
+            this.catana_button1.FlatAppearance.BorderSize = 0;
+            this.catana_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.catana_button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
+            this.catana_button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.catana_button1.Location = new System.Drawing.Point(318, 370);
+            this.catana_button1.Name = "catana_button1";
+            this.catana_button1.Size = new System.Drawing.Size(201, 66);
+            this.catana_button1.TabIndex = 7;
+            this.catana_button1.Text = "Exit";
+            this.catana_button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.catana_button1.UseVisualStyleBackColor = false;
+            this.catana_button1.Click += new System.EventHandler(this.catana_button1_Click);
             // 
             // label3
             // 
@@ -432,90 +472,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1244, 554);
             this.dataGridView1.TabIndex = 0;
             // 
-            // adminBindingSource
-            // 
-            this.adminBindingSource.DataMember = "admin";
-            this.adminBindingSource.DataSource = this.admin;
-            // 
-            // admin
-            // 
-            this.admin.DataSetName = "Admin";
-            this.admin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // adminTableAdapter
-            // 
-            this.adminTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(959, 665);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 66);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.ButtonClickedControl);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1120, 665);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 66);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.ButtonClickedControl);
-            // 
-            // SaveBTN
-            // 
-            this.SaveBTN.BackColor = System.Drawing.Color.White;
-            this.SaveBTN.BackgroundColor = System.Drawing.Color.White;
-            this.SaveBTN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.SaveBTN.BorderRadius = 0;
-            this.SaveBTN.BorderSize = 0;
-            this.SaveBTN.FlatAppearance.BorderSize = 0;
-            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBTN.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
-            this.SaveBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.Location = new System.Drawing.Point(730, 370);
-            this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(201, 66);
-            this.SaveBTN.TabIndex = 8;
-            this.SaveBTN.Text = "Save";
-            this.SaveBTN.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.SaveBTN.UseVisualStyleBackColor = false;
-            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
-            // 
-            // catana_button1
-            // 
-            this.catana_button1.BackColor = System.Drawing.Color.White;
-            this.catana_button1.BackgroundColor = System.Drawing.Color.White;
-            this.catana_button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.catana_button1.BorderRadius = 0;
-            this.catana_button1.BorderSize = 0;
-            this.catana_button1.FlatAppearance.BorderSize = 0;
-            this.catana_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.catana_button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F);
-            this.catana_button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.catana_button1.Location = new System.Drawing.Point(318, 370);
-            this.catana_button1.Name = "catana_button1";
-            this.catana_button1.Size = new System.Drawing.Size(201, 66);
-            this.catana_button1.TabIndex = 7;
-            this.catana_button1.Text = "Exit";
-            this.catana_button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.catana_button1.UseVisualStyleBackColor = false;
-            this.catana_button1.Click += new System.EventHandler(this.catana_button1_Click);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -587,6 +543,50 @@
             this.isAdminDataGridViewCheckBoxColumn.Name = "isAdminDataGridViewCheckBoxColumn";
             this.isAdminDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isAdminDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // adminBindingSource
+            // 
+            this.adminBindingSource.DataMember = "admin";
+            this.adminBindingSource.DataSource = this.admin;
+            // 
+            // admin
+            // 
+            this.admin.DataSetName = "Admin";
+            this.admin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // adminTableAdapter
+            // 
+            this.adminTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(959, 665);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 66);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ButtonClickedControl);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1120, 665);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 66);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ButtonClickedControl);
             // 
             // AdministratorForm
             // 

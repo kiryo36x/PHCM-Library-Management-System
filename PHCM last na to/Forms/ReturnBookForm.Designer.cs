@@ -125,6 +125,7 @@
             this.leftCategoryBorder = new System.Windows.Forms.Panel();
             this.SelectCategoryTitle = new System.Windows.Forms.Label();
             this.ShowSelection = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
             this.Exitbtn = new System.Windows.Forms.Button();
             this.SaveBookbtn = new System.Windows.Forms.Button();
             this.genre = new System.Windows.Forms.Label();
@@ -255,16 +256,16 @@
             this.StudentPanel.Controls.Add(this.label2);
             this.StudentPanel.Controls.Add(this.searchStudent);
             this.StudentPanel.Controls.Add(this.studentDataTable);
-            this.StudentPanel.Location = new System.Drawing.Point(0, 98);
+            this.StudentPanel.Location = new System.Drawing.Point(0, 99);
             this.StudentPanel.Name = "StudentPanel";
             this.StudentPanel.Padding = new System.Windows.Forms.Padding(10, 65, 10, 25);
-            this.StudentPanel.Size = new System.Drawing.Size(1287, 646);
+            this.StudentPanel.Size = new System.Drawing.Size(1287, 645);
             this.StudentPanel.TabIndex = 5124131;
             this.StudentPanel.Visible = false;
             // 
             // srcbtn
             // 
-            this.srcbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.srcbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
             this.srcbtn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.srcbtn.IconColor = System.Drawing.Color.White;
             this.srcbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -275,6 +276,8 @@
             this.srcbtn.TabIndex = 22;
             this.srcbtn.TabStop = false;
             this.srcbtn.Click += new System.EventHandler(this.srcbtn_Click);
+            this.srcbtn.MouseEnter += new System.EventHandler(this.srcbtn_MouseEnter);
+            this.srcbtn.MouseLeave += new System.EventHandler(this.srcbtn_MouseLeave);
             // 
             // returnStudentbtn
             // 
@@ -1456,6 +1459,7 @@
             // ShowSelection
             // 
             this.ShowSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.ShowSelection.Controls.Add(this.clearButton);
             this.ShowSelection.Controls.Add(this.Exitbtn);
             this.ShowSelection.Controls.Add(this.SaveBookbtn);
             this.ShowSelection.Controls.Add(this.genre);
@@ -1470,6 +1474,24 @@
             this.ShowSelection.Size = new System.Drawing.Size(1287, 645);
             this.ShowSelection.TabIndex = 5124126;
             this.ShowSelection.Visible = false;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(113)))));
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Nirmala UI", 12.5F);
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(1158, 13);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(109, 34);
+            this.clearButton.TabIndex = 5124131;
+            this.clearButton.Text = "Clear";
+            this.clearButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.MouseEnter += new System.EventHandler(this.clearButton_MouseEnter);
+            this.clearButton.MouseLeave += new System.EventHandler(this.clearButton_MouseLeave);
             // 
             // Exitbtn
             // 
@@ -1561,7 +1583,7 @@
             this.searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchbox.Font = new System.Drawing.Font("Nirmala UI", 19F);
             this.searchbox.ForeColor = System.Drawing.Color.DimGray;
-            this.searchbox.Location = new System.Drawing.Point(922, 13);
+            this.searchbox.Location = new System.Drawing.Point(800, 13);
             this.searchbox.Name = "searchbox";
             this.searchbox.Size = new System.Drawing.Size(352, 43);
             this.searchbox.TabIndex = 1;
@@ -2386,5 +2408,6 @@
         private System.Windows.Forms.ToolTip nonFictionTip;
         private System.Windows.Forms.ToolTip fictionTip;
         private System.Windows.Forms.ToolTip genreTip;
+        private System.Windows.Forms.Button clearButton;
     }
 }

@@ -158,6 +158,8 @@
             this.next.TabIndex = 2;
             this.next.TabStop = false;
             this.next.Click += new System.EventHandler(this.next_Click);
+            this.next.MouseEnter += new System.EventHandler(this.next_MouseEnter);
+            this.next.MouseLeave += new System.EventHandler(this.next_MouseLeave);
             // 
             // dataGridView1
             // 
@@ -283,7 +285,7 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "studentName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "StudentName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Student Name";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;

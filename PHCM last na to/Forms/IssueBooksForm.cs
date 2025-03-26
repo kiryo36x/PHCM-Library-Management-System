@@ -341,6 +341,8 @@ namespace PHCM_last_na_to.Forms
 
         private void currentGnre_Click(object sender, EventArgs e)
         {
+            searchbox.Text = "Search"; // Clear the search box
+            searchbox.ForeColor = Color.DimGray; // Set the text color to dim gray
             // When the current genre control is clicked, show the panel that lets you select a genre
             Categoryselectorpanel.Visible = true;
             // Bring the genre selection panel to the front so it appears on top of other controls
@@ -1194,6 +1196,73 @@ namespace PHCM_last_na_to.Forms
                 searchbox.ForeColor = Color.DimGray; // Change the text color to dim gray
                 searchbox.Text = "Search"; // Set the placeholder text
             }
+        }
+
+        private void StudentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void booksSearch_Click(object sender, EventArgs e)
+        {
+            // Check if the search box is empty
+            if (string.IsNullOrEmpty(searchbox.Text) || searchbox.Text.Trim() == "")
+            {
+                // If empty, check the selected genre
+                if (selectedGenre.ToLower() == "all")
+                {
+                    LoadAllBooks(); // Load all books if "All" is selected
+                }
+                else
+                {
+                    SearchGenre(selectedGenre); // Call the method to search by the selected genre
+                }
+            }
+            else
+            {
+                // If not empty, perform a search with the current text
+                SearchBooks(searchbox.Text); // Perform the search
+            }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            searchbox.Text = "Search"; // Clear the search box
+            searchbox.ForeColor = Color.DimGray; // Change the text color to dim gray
+            // If empty, check the selected genre
+            if (selectedGenre.ToLower() == "all")
+            {
+                LoadAllBooks(); // Load all books if "All" is selected
+            }
+            else
+            {
+                SearchGenre(selectedGenre); // Call the method to search by the selected genre
+            }                
+        }
+
+        private void clearButton_MouseEnter(object sender, EventArgs e)
+        {
+            clearButton.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the button
+            Cursor = Cursors.Hand; // Change the cursor to a hand pointer
+
+        }
+
+        private void clearButton_MouseLeave(object sender, EventArgs e)
+        {
+            clearButton.BackColor = Color.FromArgb(53, 53, 113); // Change the background color of the button
+            Cursor = Cursors.Default; // Change the cursor to the default pointer
+        }
+
+        private void srcbtn_MouseEnter(object sender, EventArgs e)
+        {
+            srcbtn.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the button
+            Cursor = Cursors.Hand; // Change the cursor to a hand pointer
+        }
+
+        private void srcbtn_MouseLeave(object sender, EventArgs e)
+        {
+            srcbtn.BackColor = Color.FromArgb(53, 53, 113); // Change the background color of the button
+            Cursor = Cursors.Default; // Change the cursor to the default pointer
         }
     }
 }

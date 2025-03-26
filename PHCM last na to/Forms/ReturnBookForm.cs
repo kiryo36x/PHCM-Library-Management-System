@@ -479,8 +479,7 @@ namespace PHCM_last_na_to.Forms
             try
             {
                 DataTable dt = new DataTable(); // Create a new DataTable to store search results
-                using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" +
-                    "C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
+                using (SqlConnection connect = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blood\\OneDrive\\Documents\\LogInCapstone.mdf;Integrated Security=True;Connect Timeout=30"))
                 {
                     // Prepare a query to search books by name or author
                     string query = "SELECT id, bookName, author, datePick, quantity, bookPicture, picture, genre FROM books " +
@@ -505,9 +504,9 @@ namespace PHCM_last_na_to.Forms
                         // Convert Image Data from BYTE[] to Bitmap
                         foreach (DataRow row in dt.Rows)
                         {
-                            if (row["studentImage"] != DBNull.Value) // Check if the row contains an image
+                            if (row["picture"] != DBNull.Value) // Check if the row contains an image
                             {
-                                byte[] imageBytes = (byte[])row["studentImage"]; // Retrieve image bytes from the row
+                                byte[] imageBytes = (byte[])row["picture"]; // Retrieve image bytes from the row
                                 using (MemoryStream ms = new MemoryStream(imageBytes))
                                 {
                                     // Convert byte array to Image
@@ -520,7 +519,7 @@ namespace PHCM_last_na_to.Forms
                                         byte[] imageBytesToStore = saveStream.ToArray(); // Get byte array
 
                                         // Store the byte array back in the 'picture' column
-                                        row["studentImage"] = imageBytesToStore;
+                                        row["picture"] = imageBytesToStore;
                                     }
                                 }
                             }
@@ -535,7 +534,7 @@ namespace PHCM_last_na_to.Forms
             catch (Exception ex)
             {
                 // If an error occurs, show the error message
-                System.Windows.Forms.MessageBox.Show("Error: " + ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadAllBooks()
@@ -1167,7 +1166,7 @@ namespace PHCM_last_na_to.Forms
                             MessageBox.Show("No students have borrowed this book.", "No Borrowers", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
-                        // ✅ Bind results to DataGridView
+                        // Bind results to DataGridView
                         studentDataTable.DataSource = dt;
                         studentDataTable.Refresh();
                     }
@@ -1366,5 +1365,43 @@ namespace PHCM_last_na_to.Forms
             }
         }
 
+        private void srcbtn_MouseEnter(object sender, EventArgs e)
+        {
+            srcbtn.BackColor = Color.FromArgb(76, 75, 105); // Change icon color to black
+            srcbtn.Cursor = System.Windows.Forms.Cursors.Hand; // Change cursor to hand icon
+        }
+
+        private void srcbtn_MouseLeave(object sender, EventArgs e)
+        {
+            srcbtn.BackColor = Color.FromArgb(53, 53, 113); // Change icon color to black
+            srcbtn.Cursor = System.Windows.Forms.Cursors.Default; // Change cursor to hand icon
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            searchbox.Text = "Search"; // Clear the search box
+            searchbox.ForeColor = Color.DimGray; // Change the text color to dim gray
+            // If empty, check the selected genre
+            if (selectedGenre.ToLower() == "all")
+            {
+                LoadAllBooks(); // Load all books if "All" is selected
+            }
+            else
+            {
+                SearchGenre(selectedGenre); // Call the method to search by the selected genre
+            }
+        }
+
+        private void clearButton_MouseEnter(object sender, EventArgs e)
+        {
+            clearButton.BackColor = Color.FromArgb(76, 75, 105); // Change the background color of the button
+            Cursor = Cursors.Hand; // Change the cursor to a hand pointer
+        }
+
+        private void clearButton_MouseLeave(object sender, EventArgs e)
+        {
+            clearButton.BackColor = Color.FromArgb(53, 53, 113); // Change the background color of the button
+            Cursor = Cursors.Default; // Change the cursor to the default pointer
+        }
     }
 }

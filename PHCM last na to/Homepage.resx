@@ -123,27 +123,6 @@
   <metadata name="exitTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
   </metadata>
-  <data name="label3.Text" xml:space="preserve">
-    <value>The Perpetual Help College of Manila is dedicated to the development of the Filipino as a leader. 
-It aims to graduate dynamic students who are physically, intellectually, socially and spiritually 
-committed to the achievement of the best quality of life. As a system of services in health and 
-education, the Perpetual Help College of Manila is dedicated to the formation of Christians, 
-service and research-oriented professionals, leaders and citizens with great social concern and 
-with commitment to the delivery of quality education and health care. It shall produce 
-Perpetualites who outstandingly value the virtues of reaching out and helping others in nation 
-building.</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>The Perpetual Help College of Manila is a premier college that provides unique and innovative 
-educational processes, contents, end-result for the pursuit of excellence in academics, 
-technology, and research through community partnership and industry linkages. PHCM 
-takes the lead role as a catalyst for human resource development, and continues to 
-inculcate values as a way of strengthening the moral fiber of the Filipino individuals who 
-are proud of their race and prepared for exemplary global participation in the palm of 
-arts sciences, humanities, and business. It sees the Filipino people enjoying quality and 
-abundant life, living in peace and building a nation that the next generation shall be
-nourishing cherishing and valuing.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

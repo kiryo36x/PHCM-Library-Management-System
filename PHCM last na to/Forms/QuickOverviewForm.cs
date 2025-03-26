@@ -216,5 +216,15 @@ namespace PHCM_last_na_to.Forms
                 OpenChildForm(new ReturnDetailsForm()); // Show the ReturnDetailsForm               
             }
         }
+
+        private void next_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand; // Change the cursor to a hand when hovering over the next button.
+        }
+
+        private void next_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default; // Change the cursor back to the default when not hovering over the next button.
+        }
     }
 }    
